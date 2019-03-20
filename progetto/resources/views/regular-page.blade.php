@@ -41,50 +41,37 @@
                     <!-- Nav Start -->
                     <div class="classynav">
                         <ul>
-                            <li><a href="#">Shop</a>
-                                <div class="megamenu">
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title">Women's Collection</li>
-                                        <li><a href="/shop">Dresses</a></li>
-                                        <li><a href="/shop">Blouses &amp; Shirts</a></li>
-                                        <li><a href="/shop">T-shirts</a></li>
-                                        <li><a href="/shop">Rompers</a></li>
-                                        <li><a href="/shop">Bras &amp; Panties</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title">Men's Collection</li>
-                                        <li><a href="/shop">T-Shirts</a></li>
-                                        <li><a href="/shop">Polo</a></li>
-                                        <li><a href="/shop">Shirts</a></li>
-                                        <li><a href="/shop">Jackets</a></li>
-                                        <li><a href="/shop">Trench</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title">Kid's Collection</li>
-                                        <li><a href="/shop">Dresses</a></li>
-                                        <li><a href="/shop">Shirts</a></li>
-                                        <li><a href="/shop">T-shirts</a></li>
-                                        <li><a href="/shop">Jackets</a></li>
-                                        <li><a href="/shop">Trench</a></li>
-                                    </ul>
-                                    <div class="single-mega cn-col-4">
-                                        <img src="img/bg-img/bg-6.jpg" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">Pages</a>
+
+                            <li><a href="#">Woman</a>
                                 <ul class="dropdown">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/shop">Shop</a></li>
-                                    <li><a href="/single-product-details">Product Details</a></li>
-                                    <li><a href="/checkout">Checkout</a></li>
-                                    <li><a href="/blog">Blog</a></li>
-                                    <li><a href="/single-blog">Single Blog</a></li>
-                                    <li><a href="/regular-page">Regular Page</a></li>
-                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/shop">Dresses</a></li>
+                                    <li><a href="/shop">Blouses &amp; Shirts</a></li>
+                                    <li><a href="/shop">T-shirts</a></li>
+                                    <li><a href="/shop">Rompers</a></li>
+                                    <li><a href="/shop">Bras &amp; Panties</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/blog">Blog</a></li>
+
+                            <li><a href="#">Man</a>
+                                <ul class="dropdown">
+                                    <li><a href="/shop">T-Shirts</a></li>
+                                    <li><a href="/shop">Polo</a></li>
+                                    <li><a href="/shop">Shirts</a></li>
+                                    <li><a href="/shop">Jackets</a></li>
+                                    <li><a href="/shop">Trench</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Kid</a>
+                                <ul class="dropdown">
+                                    <li><a href="/shop">Dresses</a></li>
+                                    <li><a href="/shop">Shirts</a></li>
+                                    <li><a href="/shop">T-shirts</a></li>
+                                    <li><a href="/shop">Jackets</a></li>
+                                    <li><a href="/shop">Trench</a></li>
+                                </ul>
+                            </li>
+
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
@@ -245,7 +232,6 @@
                         <div class="footer_menu">
                             <ul>
                                 <li><a href="/shop">Shop</a></li>
-                                <li><a href="/blog">Blog</a></li>
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
