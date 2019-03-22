@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
+
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -35,9 +33,6 @@ Route::get('/shop', function () {
     return view('shop');
 });
 
-Route::get('/single-blog', function () {
-    return view('single-blog');
-});
 
 Route::get('/single-product-details', function () {
     return view('single-product-details');
