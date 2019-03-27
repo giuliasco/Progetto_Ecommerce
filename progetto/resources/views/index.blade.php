@@ -48,6 +48,9 @@
                                     <li><a href="/shop">T-shirts</a></li>
                                     <li><a href="/shop">Rompers</a></li>
                                     <li><a href="/shop">Bras &amp; Panties</a></li>
+                                    {{--@foreach($categories as $category)
+                                   <li><a href="/shop">{{$category->name}}</a></li>
+                                   @endforeach funzionante --}}
                                 </ul>
                             </li>
 

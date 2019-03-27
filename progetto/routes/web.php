@@ -10,11 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
+/*
+Route::get('/gg', function () {
     return view('index');
 });
+*/
 
+Route::get('/', 'provaController@prova');
 
 
 Route::get('/checkout', function () {
@@ -43,3 +45,4 @@ Route::get('/single-product-details', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+

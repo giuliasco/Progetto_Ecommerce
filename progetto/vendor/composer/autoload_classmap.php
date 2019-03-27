@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -14,6 +15,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\provaController' => $baseDir . '/app/Http/Controllers/provaController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -41,7 +43,9 @@ return array(
     'Arrilot\\Widgets\\Misc\\EncryptException' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/EncryptException.php',
     'Arrilot\\Widgets\\Misc\\InvalidWidgetClassException' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/InvalidWidgetClassException.php',
     'Arrilot\\Widgets\\Misc\\LaravelApplicationWrapper' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/LaravelApplicationWrapper.php',
+    'Arrilot\\Widgets\\Misc\\NamespaceNotFoundException' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/NamespaceNotFoundException.php',
     'Arrilot\\Widgets\\Misc\\ViewExpressionTrait' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/ViewExpressionTrait.php',
+    'Arrilot\\Widgets\\NamespacesRepository' => $vendorDir . '/arrilot/laravel-widgets/src/NamespacesRepository.php',
     'Arrilot\\Widgets\\ServiceProvider' => $vendorDir . '/arrilot/laravel-widgets/src/ServiceProvider.php',
     'Arrilot\\Widgets\\WidgetGroup' => $vendorDir . '/arrilot/laravel-widgets/src/WidgetGroup.php',
     'Arrilot\\Widgets\\WidgetGroupCollection' => $vendorDir . '/arrilot/laravel-widgets/src/WidgetGroupCollection.php',
@@ -1305,6 +1309,7 @@ return array(
     'Illuminate\\Auth\\Events\\Lockout' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/Lockout.php',
     'Illuminate\\Auth\\Events\\Login' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/Login.php',
     'Illuminate\\Auth\\Events\\Logout' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/Logout.php',
+    'Illuminate\\Auth\\Events\\OtherDeviceLogout' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/OtherDeviceLogout.php',
     'Illuminate\\Auth\\Events\\PasswordReset' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/PasswordReset.php',
     'Illuminate\\Auth\\Events\\Registered' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/Registered.php',
     'Illuminate\\Auth\\Events\\Verified' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/Events/Verified.php',
@@ -4309,6 +4314,8 @@ return array(
     'Symfony\\Contracts\\Translation\\TranslatorInterface' => $vendorDir . '/symfony/contracts/Translation/TranslatorInterface.php',
     'Symfony\\Contracts\\Translation\\TranslatorTrait' => $vendorDir . '/symfony/contracts/Translation/TranslatorTrait.php',
     'Symfony\\Polyfill\\Ctype\\Ctype' => $vendorDir . '/symfony/polyfill-ctype/Ctype.php',
+    'Symfony\\Polyfill\\Iconv\\Iconv' => $vendorDir . '/symfony/polyfill-iconv/Iconv.php',
+    'Symfony\\Polyfill\\Intl\\Idn\\Idn' => $vendorDir . '/symfony/polyfill-intl-idn/Idn.php',
     'Symfony\\Polyfill\\Mbstring\\Mbstring' => $vendorDir . '/symfony/polyfill-mbstring/Mbstring.php',
     'Symfony\\Polyfill\\Php72\\Php72' => $vendorDir . '/symfony/polyfill-php72/Php72.php',
     'TCG\\Voyager\\Actions\\AbstractAction' => $vendorDir . '/tcg/voyager/src/Actions/AbstractAction.php',
