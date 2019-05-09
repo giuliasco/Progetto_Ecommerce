@@ -1,5 +1,5 @@
 <?php
-
+use App\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,9 +31,7 @@ Route::get('/regular-page', function () {
     return view('regular-page');
 });
 
-Route::get('/shop', function () {
-    return view('shop');
-});
+Route::get('/shop', 'productController@index');
 
 
 Route::get('/single-product-details', function () {
