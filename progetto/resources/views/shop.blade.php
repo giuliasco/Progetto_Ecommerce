@@ -360,18 +360,14 @@
                         @foreach($products as $product)
 
 
-
-
                             <!-- Single Product -->
                             <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        @foreach($product->paths as $path)
-                                        <img src="{{asset('img/product-img/'.$path->path.'.jpg')}}" alt="">
+                                        <img src="{{asset('img/product-img/'.$product->path.'.jpg')}}" alt="">
                                         <!-- Hover Thumb -->
                                             <!--   <img class="hover-img" src="img/product-img/product-1.jpg" alt="">-->
-                                                 @endforeach
                                                 <!-- Favourite -->
                                         <div class="product-favourite">
                                             <a href="#" class="favme fa fa-heart"></a>
@@ -381,7 +377,7 @@
                                     <!-- Product Description -->
                                     <div class="product-description">
                                         <span>topshop</span>
-                                        <a href="single-product-details.blade.php">
+                                        <a href='single-product-details/{{$product->id}}'>
                                             <h6>{{$product->name}}</h6>
                                         </a>
                                         <p class="product-price">$80.00</p>

@@ -34,9 +34,7 @@ Route::get('/regular-page', function () {
 Route::get('/shop', 'productController@index');
 
 
-Route::get('/single-product-details', function () {
-    return view('single-product-details');
-});
+Route::get('/single-product-details/{id}', 'singleproductController@details');
 
 
 
