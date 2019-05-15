@@ -22,7 +22,7 @@ class RemoveColumnToCategory extends Migration
     public function down()
     {
         Schema::table('category', function (Blueprint $table) {
-            $table->enum('Type',['Woman','Man','Kid']) ;
+            $table->enum('type',['Woman','Man','Kid']) ;
         });
     }
 }
