@@ -16,8 +16,9 @@ Route::get('/gg', function () {
 });
 */
 
-Route::get('/', 'provaController@prova');
-
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -31,12 +32,13 @@ Route::get('/regular-page', function () {
     return view('regular-page');
 });
 
-Route::get('/shop', 'productController@index');
+Route::get('/shop/{sex}', 'productController@index');
+
 
 
 Route::get('/single-product-details/{id}', 'singleproductController@dettagli');
 
-Route::get('/shop/{Type}', 'categoryController@genere');
+
 
 
 

@@ -202,7 +202,7 @@
 
         <!-- Single Product Description -->
         <div class="single_product_desc clearfix">
-            <span>mango</span>
+            <span>{{$details[0]->brand}}</span>
             <a href="cart.html">
                 <h2>{{$details[0]->name}}</h2>
             </a>
