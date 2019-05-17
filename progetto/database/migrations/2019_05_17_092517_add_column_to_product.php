@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DummyClass extends Migration
+class AddColumnToProduct extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class DummyClass extends Migration
      */
     public function up()
     {
-        Schema::create('DummyTable', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('product', function (Blueprint $table) {
+            $table->string('brand');
         });
     }
 
@@ -26,6 +25,8 @@ class DummyClass extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('DummyTable');
+        Schema::table('product', function (Blueprint $table) {
+            $table->dropColumn('brand');
+        });
     }
 }

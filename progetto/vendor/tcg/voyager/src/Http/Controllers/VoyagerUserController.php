@@ -3,7 +3,6 @@
 namespace TCG\Voyager\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use TCG\Voyager\Facades\Voyager;
 
 class VoyagerUserController extends VoyagerBaseController
@@ -19,6 +18,7 @@ class VoyagerUserController extends VoyagerBaseController
         if (app('VoyagerAuth')->user()->getKey() == $id) {
             $request->merge([
                 'role_id'                              => app('VoyagerAuth')->user()->role_id,
+                'user_belongsto_role_relationship'     => app('VoyagerAuth')->user()->role_id,
                 'user_belongstomany_role_relationship' => app('VoyagerAuth')->user()->roles->pluck('id')->toArray(),
             ]);
         }

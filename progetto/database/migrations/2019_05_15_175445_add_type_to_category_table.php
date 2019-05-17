@@ -14,7 +14,7 @@ class AddTypeToCategoryTable extends Migration
     public function up()
     {
         Schema::table('category', function (Blueprint $table) {
-            $table->enum('Man',['Woman','Kid']);
+            $table->enum('type',['Man','Woman','Kid']);
         });
     }
 
@@ -25,6 +25,8 @@ class AddTypeToCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category');
+        Schema::table('category', function (Blueprint $table) {
+            $table->dropColumn('type');
+        });
     }
 }

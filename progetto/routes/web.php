@@ -36,6 +36,8 @@ Route::get('/shop', 'productController@index');
 
 Route::get('/single-product-details/{id}', 'singleproductController@dettagli');
 
+Route::get('/shop/{Type}', 'categoryController@genere');
+
 
 
 Route::group(['prefix' => 'admin'], function () {
