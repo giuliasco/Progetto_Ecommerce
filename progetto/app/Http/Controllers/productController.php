@@ -13,7 +13,7 @@ class productController extends Controller
 
             ->join('category','category.id', '=', 'product.category_id')
             ->join('gallery','product.id','=','gallery.product_id')
-            ->select('product.name', 'gallery.path' , 'product.id', 'product.price')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand')
             ->where('category.type','=', $sex)
             ->groupby('product.id', 'gallery.product_id')
             ->get();
