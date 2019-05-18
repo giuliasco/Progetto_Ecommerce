@@ -34,7 +34,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="page-title text-center">
-                        <h2>dresses</h2>
+                        <h2>Shop</h2>
                     </div>
                 </div>
             </div>
@@ -58,8 +58,8 @@
                             <div class="catagories-menu">
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">clothing</a>
+                                    <li data-toggle="collapse" data-target="#clothing" >
+                                        <a href="/shop/Woman">Woman</a>
                                         <ul class="sub-menu collapse show" id="clothing">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
@@ -76,7 +76,7 @@
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#shoes" class="collapsed">
-                                        <a href="#">shoes</a>
+                                        <a href="/shop/Man">Man</a>
                                         <ul class="sub-menu collapse" id="shoes">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
@@ -93,7 +93,7 @@
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#accessories" class="collapsed">
-                                        <a href="#">accessories</a>
+                                        <a href="/shop/Kid">Kid</a>
                                         <ul class="sub-menu collapse" id="accessories">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>

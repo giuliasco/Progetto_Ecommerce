@@ -24,6 +24,8 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
+
+
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -34,7 +36,7 @@ Route::get('/regular-page', function () {
 
 Route::get('/shop/{sex}', 'productController@index');
 
-
+Route::get('/shop', 'productController@collezione');
 
 Route::get('/single-product-details/{id}', 'singleproductController@dettagli');
 

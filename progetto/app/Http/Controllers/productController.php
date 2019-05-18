@@ -22,6 +22,19 @@ class productController extends Controller
         return view('/shop', compact('products'));
 
     }
+    function collezione() {
+        $products= DB::table('product')
+
+            ->join('category','category.id', '=', 'product.category_id')
+            ->join('gallery','product.id','=','gallery.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand')
+            ->groupby('product.id', 'gallery.product_id')
+            ->get();
+
+
+        return view('/shop', compact('products'));
+
+    }
 
 
 }
