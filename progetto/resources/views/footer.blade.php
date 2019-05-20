@@ -1,3 +1,42 @@
+{{--brand area start--}}
+<div class="brands-area d-flex align-items-center justify-content-between">
+    <div class="single-brands-logo">
+        <img src={{asset("img/core-img/brand1.png")}} alt="">
+    </div>
+    <!-- Brand Logo -->
+    <div class="single-brands-logo">
+        <a href="https://shop.mango.com/it" title="external link"><img src={{asset("img/core-img/brand2.png")}} alt=""></a>
+    </div>
+    <!-- Brand Logo -->
+    <div class="single-brands-logo">
+        <a href="https://www.zara.com/it" title="external link"> <img src={{asset("img/core-img/brand3.png")}} alt=""></a>
+    </div>
+    <!-- Brand Logo -->
+    <div class="single-brands-logo">
+        <a href="https://www.bershka.com/it" title="external link"><img src={{asset("img/core-img/brand4.png")}} alt=""></a>
+    </div>
+    <!-- Brand Logo -->
+    <div class="single-brands-logo">
+        <a href="https://www.asos.com/it" title="external link"><img src={{asset("img/core-img/brand5.png")}} alt=""></a>
+    </div>
+    <!-- Brand Logo -->
+    <div class="single-brands-logo">
+        <a href="https://www.riverisland.com" title="external link"><img src={{asset("img/core-img/brand6.png")}} alt=""></a>
+    </div>
+</div>
+{{--brand area end--}}
+
+{{--footer area start--}}
+<footer class="footer_area clearfix">
+    <div class="container">
+        <div class="row">
+            <!-- Single Widget Area -->
+            <div class="col-12 col-md-6">
+                <div class="single_widget_area d-flex mb-30">
+                    <!-- Logo -->
+                    <div class="footer-logo mr-50">
+                        <a href="#"><img src={{asset("img/core-img/logo2.png")}} alt=""></a>
+                    </div>
 <div class="footer_menu">
     <ul>
         <li><a href="/shop">shop</a></li>
@@ -62,3 +101,5 @@
 
 </div>
 </footer>
+
+{{--footer area end--}}
