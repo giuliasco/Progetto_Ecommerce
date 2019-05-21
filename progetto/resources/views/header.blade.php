@@ -79,7 +79,7 @@
             </div>
             <!--user sign i n -->
             <div class="user-login-info">
-                <a href="/login">Sign in </a>
+                <a href="/login">Log in </a>
             </div>
 
             <!-- Cart Area -->
