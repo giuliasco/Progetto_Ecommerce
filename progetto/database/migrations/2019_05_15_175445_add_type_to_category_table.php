@@ -23,10 +23,10 @@ class AddTypeToCategoryTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('category', function (Blueprint $table) {
-            $table->dropColumn('type');
-        });
-    }
+   // public function down()
+   // {
+      //  Schema::table('category', function (Blueprint $table) {
+       //     $table->dropColumn('type');
+      //  });
+   // }
 }

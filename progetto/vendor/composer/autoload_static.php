@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf08cef14287d29950afa87c68ce0cd74
+class ComposerStaticInit9776e9b7fae72d256a857baa072876af
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -511,7 +511,9 @@ class ComposerStaticInitf08cef14287d29950afa87c68ce0cd74
         'Arrilot\\Widgets\\Misc\\EncryptException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/EncryptException.php',
         'Arrilot\\Widgets\\Misc\\InvalidWidgetClassException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/InvalidWidgetClassException.php',
         'Arrilot\\Widgets\\Misc\\LaravelApplicationWrapper' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/LaravelApplicationWrapper.php',
+        'Arrilot\\Widgets\\Misc\\NamespaceNotFoundException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/NamespaceNotFoundException.php',
         'Arrilot\\Widgets\\Misc\\ViewExpressionTrait' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/ViewExpressionTrait.php',
+        'Arrilot\\Widgets\\NamespacesRepository' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/NamespacesRepository.php',
         'Arrilot\\Widgets\\ServiceProvider' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/ServiceProvider.php',
         'Arrilot\\Widgets\\WidgetGroup' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/WidgetGroup.php',
         'Arrilot\\Widgets\\WidgetGroupCollection' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/WidgetGroupCollection.php',
@@ -5129,10 +5131,10 @@ class ComposerStaticInitf08cef14287d29950afa87c68ce0cd74
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf08cef14287d29950afa87c68ce0cd74::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf08cef14287d29950afa87c68ce0cd74::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf08cef14287d29950afa87c68ce0cd74::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf08cef14287d29950afa87c68ce0cd74::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9776e9b7fae72d256a857baa072876af::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9776e9b7fae72d256a857baa072876af::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit9776e9b7fae72d256a857baa072876af::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit9776e9b7fae72d256a857baa072876af::$classMap;
 
         }, null, ClassLoader::class);
     }
