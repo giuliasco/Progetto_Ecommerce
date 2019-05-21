@@ -81,10 +81,7 @@
             <div class="user-login-info">
                 <a href="/login">Sign in </a>
             </div>
-            <!--user sign out  -->
-            <div class="user-login-info">
-                <a href="#">Sign out </a>
-            </div>
+
             <!-- Cart Area -->
             <div class="cart-area">
                 <a href="#" id="essenceCartBtn"><img src={{asset('img/core-img/bag.svg')}} alt=""> <span>3</span></a>
