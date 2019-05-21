@@ -23,10 +23,10 @@ class AddColumnToProduct extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('product', function (Blueprint $table) {
-            $table->dropColumn('brand');
-        });
-    }
+  //  public function down()
+ //   {
+       // Schema::table('product', function (Blueprint $table) {
+       //     $table->dropColumn('brand');
+     ///   });
+   // }
 }

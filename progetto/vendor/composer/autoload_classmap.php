@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -46,7 +45,9 @@ return array(
     'Arrilot\\Widgets\\Misc\\EncryptException' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/EncryptException.php',
     'Arrilot\\Widgets\\Misc\\InvalidWidgetClassException' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/InvalidWidgetClassException.php',
     'Arrilot\\Widgets\\Misc\\LaravelApplicationWrapper' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/LaravelApplicationWrapper.php',
+    'Arrilot\\Widgets\\Misc\\NamespaceNotFoundException' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/NamespaceNotFoundException.php',
     'Arrilot\\Widgets\\Misc\\ViewExpressionTrait' => $vendorDir . '/arrilot/laravel-widgets/src/Misc/ViewExpressionTrait.php',
+    'Arrilot\\Widgets\\NamespacesRepository' => $vendorDir . '/arrilot/laravel-widgets/src/NamespacesRepository.php',
     'Arrilot\\Widgets\\ServiceProvider' => $vendorDir . '/arrilot/laravel-widgets/src/ServiceProvider.php',
     'Arrilot\\Widgets\\WidgetGroup' => $vendorDir . '/arrilot/laravel-widgets/src/WidgetGroup.php',
     'Arrilot\\Widgets\\WidgetGroupCollection' => $vendorDir . '/arrilot/laravel-widgets/src/WidgetGroupCollection.php',
