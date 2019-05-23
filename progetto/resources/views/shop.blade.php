@@ -58,9 +58,9 @@
                             <div class="catagories-menu">
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse" data-target="#clothing" >
+                                    <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="/shop/Woman">Woman</a>
-                                        <ul class="sub-menu collapse show" id="clothing">
+                                        <ul class="sub-menu collapse show" id="Woman">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
@@ -75,9 +75,9 @@
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse" data-target="#shoes" class="collapsed">
+                                    <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="/shop/Man">Man</a>
-                                        <ul class="sub-menu collapse" id="shoes">
+                                        <ul class="sub-menu collapse" id="Man">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
@@ -92,9 +92,9 @@
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse" data-target="#accessories" class="collapsed">
+                                    <li data-toggle="collapse" data-target="#Kid" class="collapsed">
                                         <a href="/shop/Kid">Kid</a>
-                                        <ul class="sub-menu collapse" id="accessories">
+                                        <ul class="sub-menu collapse" id="Kid">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
