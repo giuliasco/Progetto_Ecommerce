@@ -75,7 +75,7 @@
             </div>
             <!-- User Login Info -->
             <div class="user-login-info">
-                <a href="#"><img src={{asset('img/core-img/user.svg')}} alt="">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</a>
+                <a href="#"><img src={{asset('img/core-img/user.svg')}}> </a>
             </div>
             <!--user sign i n -->
             <div class="user-login-info">
