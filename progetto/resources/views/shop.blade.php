@@ -60,7 +60,7 @@
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="/shop/Woman">Woman</a>
-                                        <ul class="sub-menu collapse show" id="Woman">
+                                        <ul class="sub-menu collapse " id="Woman">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
@@ -118,18 +118,25 @@
                             <h6 class="widget-title mb-30">Filter by</h6>
                             <!-- Widget Title 2 -->
                             <p class="widget-title2 mb-30">Price</p>
-
-                            <div class="widget-desc">
+                            <div class="range-price">
+                            <ul>
+                                <li><a href="#">&lt;20€</a> </li>
+                                <li><a href="#">&gt;250€</a> </li>
+                            </ul>
+                            </div>
+                            {{--<div class="widget-desc">
                                 <div class="slider-range">
                                     <div data-min="49" data-max="360" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="49" data-value-max="360" data-label-result="Range:">
-                                        <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                    </div>
-                                    <div class="range-price">Range: $49.00 - $360.00</div>
-                                </div>
+                                      <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                       <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                       <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                   </div>
+
+                                <div class="range-price">Range: $49.00 - $360.00</div>
                             </div>
-                        </div>
+                        </div>--}}
+                    </div>
+
 
                         <!-- ##### Single Widget ##### -->
                         <div class="widget color mb-50">
