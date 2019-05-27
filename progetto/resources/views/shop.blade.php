@@ -60,7 +60,7 @@
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="/shop/Woman">Woman</a>
-                                        <ul class="sub-menu collapse " id="Woman">
+                                        <ul class="sub-menu collapse  " id="Woman">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
@@ -77,7 +77,7 @@
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="/shop/Man">Man</a>
-                                        <ul class="sub-menu collapse" id="Man">
+                                        <ul class="sub-menu collapse " id="Man">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
@@ -92,9 +92,9 @@
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse" data-target="#Kid" class="collapsed">
+                                    <li data-toggle="collapse " data-target="#Kid" class="collapsed">
                                         <a href="/shop/Kid">Kid</a>
-                                        <ul class="sub-menu collapse" id="Kid">
+                                        <ul class="sub-menu collapse " id="Kid">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
                                             <li><a href="#">Dresses</a></li>
@@ -120,21 +120,12 @@
                             <p class="widget-title2 mb-30">Price</p>
                             <div class="range-price">
                             <ul>
-                                <li><a href="#">&lt;20€</a> </li>
-                                <li><a href="#">&gt;250€</a> </li>
+                                <li> <a href="#"> 0 - 20€</a></li>
+                                <li><a href="#"> 20 - 50€</a></li>
+                                <li><a href="#"> 50 - 100€</a></li>
+                                <li><a href="#"> più di 100€</a></li>
                             </ul>
                             </div>
-                            {{--<div class="widget-desc">
-                                <div class="slider-range">
-                                    <div data-min="49" data-max="360" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="49" data-value-max="360" data-label-result="Range:">
-                                      <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                                       <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                       <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                   </div>
-
-                                <div class="range-price">Range: $49.00 - $360.00</div>
-                            </div>
-                        </div>--}}
                     </div>
 
 
@@ -164,11 +155,11 @@
                             <p class="widget-title2 mb-30">Brands</p>
                             <div class="widget-desc">
                                 <ul>
-                                    <li><a href="#">Asos</a></li>
-                                    <li><a href="#">Mango</a></li>
-                                    <li><a href="#">River Island</a></li>
-                                    <li><a href="#">Topshop</a></li>
-                                    <li><a href="#">Zara</a></li>
+                                    <li><a href="#">Brand1</a></li>
+                                    <li><a href="#">Brand2</a></li>
+                                    <li><a href="#">Brand3</a></li>
+                                    <li><a href="#">Brand4</a></li>
+                                    <li><a href="#">Brand5</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -212,7 +203,7 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="{{asset('img/product-img/'.$product->path.'.jpg')}}" alt="">
+                                        <img src="{{asset('img/product-img/'.$product->path.'jpg')}}" alt="">
                                         <!-- Hover Thumb -->
                                             <!--   <img class="hover-img" src="img/product-img/product-1.jpg" alt="">-->
                                                 <!-- Favourite -->
