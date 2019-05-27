@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnToProduct extends Migration
+class AddPhoneFieldToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddColumnToProduct extends Migration
      */
     public function up()
     {
-        Schema::table('product', function (Blueprint $table) {
-            $table->string('brand');
+        Schema::table('user', function (Blueprint $table) {
+            //
         });
     }
 
@@ -23,10 +23,10 @@ class AddColumnToProduct extends Migration
      *
      * @return void
      */
-  //  public function down()
- //   {
-       // Schema::table('product', function (Blueprint $table) {
-       //     $table->dropColumn('brand');
-     ///   });
-   // }
+    public function down()
+    {
+        Schema::table('user', function (Blueprint $table) {
+            //
+        });
+    }
 }
