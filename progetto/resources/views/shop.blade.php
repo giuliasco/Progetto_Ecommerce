@@ -29,7 +29,7 @@
     <!-- ##### Right Side Cart End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb_area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+    <div class="breadcumb_area bg-img" style="background-image: url(/img/bg-img/breadcumb.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -59,10 +59,10 @@
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
-                                        <a href="/shop/Woman">Woman</a>
+                                        <a href="#">Woman</a>
                                         <ul class="sub-menu collapse  " id="Woman">
-                                            <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
+                                            <li><a id="All">All</a></li>
+                                            <li>Bodysuits</li>
                                             <li><a href="#">Dresses</a></li>
                                             <li><a href="#">Hoodies &amp; Sweats</a></li>
                                             <li><a href="#">Jackets &amp; Coats</a></li>
@@ -120,7 +120,7 @@
                             <p class="widget-title2 mb-30">Price</p>
                             <div class="range-price">
                             <ul>
-                                <li> <a href="#"> 0 - 20€</a></li>
+                                <li> <a href="#" > 0 - 20€</a></li>
                                 <li><a href="#"> 20 - 50€</a></li>
                                 <li><a href="#"> 50 - 100€</a></li>
                                 <li><a href="#"> più di 100€</a></li>
@@ -173,7 +173,7 @@
                                 <div class="product-topbar d-flex align-items-center justify-content-between">
                                     <!-- Total Products -->
                                     <div class="total-products">
-                                        <p><span>186</span> products found</p>
+
                                     </div>
                                     <!-- Sorting -->
                                     <div class="product-sorting d-flex">
@@ -192,45 +192,12 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row destinazione">
 
 
-                        @foreach($products as $product)
+                        @include('productInclude', [$products])
 
 
-                            <!-- Single Product -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-wrapper">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="{{asset('img/product-img/'.$product->path.'jpg')}}" alt="">
-                                        <!-- Hover Thumb -->
-                                            <!--   <img class="hover-img" src="img/product-img/product-1.jpg" alt="">-->
-                                                <!-- Favourite -->
-                                        <div class="product-favourite">
-                                            <a href="#" class="favme fa fa-heart"></a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <span>{{$product->brand}}</span>
-                                        <a href='single-product-details/{{$product->id}}'>
-                                            <h6>{{$product->name}}</h6>
-                                        </a>
-                                        <p class="product-price">{{$product->price}}</p>
-
-                                        <!-- Hover Content -->
-                                        <div class="hover-content">
-                                            <!-- Add to Cart -->
-                                            <div class="add-to-cart-btn">
-                                                <a href="#" class="btn essence-btn">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                              @endforeach
                         </div>
                     </div>
                     <!-- Pagination -->
@@ -267,6 +234,19 @@
     <!-- Active js -->
     <script src={{asset('js/active.js')}}></script>
 
+    <script>
+
+        $(document).ready(function() {
+           // var url = $("#All").getAttribute("href");
+            $('#All').click(function(){
+                $.get("/shop/Woman/All", function( data ) {
+                    $( ".destinazione" ).html( data );
+            });
+        });
+        });
+
+
+    </script>
 </body>
 
 </html>

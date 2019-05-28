@@ -33,23 +33,11 @@
 
 
                         <li><a href="/shop/Man">Man</a></li>
-                        {{--<ul class="dropdown">
-                            <li><a href="/shop">T-Shirts</a></li>
-                            <li><a href="/shop">Polo</a></li>
-                            <li><a href="/shop">Shirts</a></li>
-                            <li><a href="/shop">Jackets</a></li>
-                            <li><a href="/shop">Trench</a></li>
-                        </ul>--}}
+
 
 
                         <li><a href="/shop/Kid">Kid</a></li>
-                        {{--<ul class="dropdown">
-                            <li><a href="/shop">Dresses</a></li>
-                            <li><a href="/shop">Shirts</a></li>
-                            <li><a href="/shop">T-shirts</a></li>
-                            <li><a href="/shop">Jackets</a></li>
-                            <li><a href="/shop">Trench</a></li>
-                        </ul>--}}
+
 
 
                         <li><a href="/contact">Contact</a></li>
