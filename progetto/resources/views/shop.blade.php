@@ -76,7 +76,7 @@
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
-                                        <a href="/shop/Man">Man</a>
+                                        <a href="#">Man</a>
                                         <ul class="sub-menu collapse " id="Man">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
@@ -93,7 +93,7 @@
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse " data-target="#Kid" class="collapsed">
-                                        <a href="/shop/Kid">Kid</a>
+                                        <a href="#">Kid</a>
                                         <ul class="sub-menu collapse " id="Kid">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bodysuits</a></li>
