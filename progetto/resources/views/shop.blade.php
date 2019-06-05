@@ -73,7 +73,7 @@
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse " id="Man">
-                                            <li><a href="#">All</a></li>
+                                            <li><a href="#" ">All</a></li>
                                             <li><a href="#">Trousers</a></li>
                                             <li><a href="#">Jeans</a></li>
                                             <li><a href="#">T-Shirts</a></li>
@@ -110,31 +110,13 @@
                                 <li> <a href="#" > 0 - 20€</a></li>
                                 <li><a href="#"> 20 - 50€</a></li>
                                 <li><a href="#"> 50 - 100€</a></li>
-                                <li><a href="#"> più di 100€</a></li>
+                                <li><a href="#"> >> 100€</a></li>
                             </ul>
                             </div>
                     </div>
 
 
-                        <!-- ##### Single Widget ##### -->
-                        <div class="widget color mb-50">
-                            <!-- Widget Title 2 -->
-                            <p class="widget-title2 mb-30">Color</p>
-                            <div class="widget-desc">
-                                <ul class="d-flex">
-                                    <li><a href="#" class="color1"></a></li>
-                                    <li><a href="#" class="color2"></a></li>
-                                    <li><a href="#" class="color3"></a></li>
-                                    <li><a href="#" class="color4"></a></li>
-                                    <li><a href="#" class="color5"></a></li>
-                                    <li><a href="#" class="color6"></a></li>
-                                    <li><a href="#" class="color7"></a></li>
-                                    <li><a href="#" class="color8"></a></li>
-                                    <li><a href="#" class="color9"></a></li>
-                                    <li><a href="#" class="color10"></a></li>
-                                </ul>
-                            </div>
-                        </div>
+
 
                         <!-- ##### Single Widget ##### -->
                         <div class="widget brands mb-50">
@@ -235,6 +217,7 @@
 
 
     </script>
+
 </body>
 
 </html>

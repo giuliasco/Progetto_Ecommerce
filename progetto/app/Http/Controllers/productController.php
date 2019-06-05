@@ -36,7 +36,7 @@ class productController extends Controller
 
     }
 
-    function ciaociao($sex)
+    function category_filter($sex)
     {
         $products = DB::table('product')
             ->join('category', 'category.id', '=', 'product.category_id')
