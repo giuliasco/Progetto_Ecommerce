@@ -6,7 +6,7 @@
         <div class="single-product-wrapper">
             <!-- Product Image -->
             <div class="product-img">
-                <img src="{{asset('img/product-img/'.$product->path.'jpg')}}" alt="">
+                <img src="{{asset('img/product-img/'.$product->path. '.jpg')}}" alt="">
                 <!-- Hover Thumb -->
                 <!--   <img class="hover-img" src="img/product-img/product-1.jpg" alt="">-->
                 <!-- Favourite -->

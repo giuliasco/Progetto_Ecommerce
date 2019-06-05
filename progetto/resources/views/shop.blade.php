@@ -52,7 +52,7 @@
                         <!-- ##### Single Widget ##### -->
                         <div class="widget catagory mb-50">
                             <!-- Widget Title -->
-                            <h6 class="widget-title mb-30">Catagories</h6>
+                            <h6 class="widget-title mb-30">Categories</h6>
 
                             <!--  Catagories  -->
                             <div class="catagories-menu">
@@ -62,16 +62,11 @@
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse  " id="Woman">
                                             <li><a id="All">All</a></li>
-                                            <li>Bodysuits</li>
                                             <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Hoodies &amp; Sweats</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
+                                            <li><a href="#">T-Shirts</a></li>
                                             <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Pants &amp; Leggings</a></li>
-                                            <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                                            <li><a href="#">Shirts &amp; Blouses</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li>
+                                            <li><a href="#">Skirts</a></li>
+                                            <li><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
@@ -79,33 +74,25 @@
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse " id="Man">
                                             <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Hoodies &amp; Sweats</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
+                                            <li><a href="#">Trousers</a></li>
                                             <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Pants &amp; Leggings</a></li>
-                                            <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                                            <li><a href="#">Shirts &amp; Blouses</a></li>
+                                            <li><a href="#">T-Shirts</a></li>
                                             <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li>
+                                            <li><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse " data-target="#Kid" class="collapsed">
-                                        <a href="#">Kid</a>
-                                        <ul class="sub-menu collapse " id="Kid">
+                                    <li data-toggle="collapse " data-target="#Accessories" class="collapsed">
+                                        <a href="#">Accessories</a>
+                                        <ul class="sub-menu collapse " id="Accessories">
                                             <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Hoodies &amp; Sweats</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Pants &amp; Leggings</a></li>
-                                            <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                                            <li><a href="#">Shirts &amp; Blouses</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li>
+                                            <li><a href="#">Bags</a></li>
+                                            <li><a href="#">Caps</a></li>
+                                            <li><a href="#">Scarfs</a></li>
+                                            <li><a href="#">Bowties</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                            <li><a href="#">Belts</a></li>
+                                            <li><a href="#">Wallets</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -155,11 +142,12 @@
                             <p class="widget-title2 mb-30">Brands</p>
                             <div class="widget-desc">
                                 <ul>
-                                    <li><a href="#">Brand1</a></li>
-                                    <li><a href="#">Brand2</a></li>
-                                    <li><a href="#">Brand3</a></li>
-                                    <li><a href="#">Brand4</a></li>
-                                    <li><a href="#">Brand5</a></li>
+                                    <li><a href="#">Levi's</a></li>
+                                    <li><a href="#">Mango</a></li>
+                                    <li><a href="#">Bershka</a></li>
+                                    <li><a href="#">Napapijri</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Adidas</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -36,7 +36,7 @@
 
 
 
-                        <li><a href="/shop/Kid">Kid</a></li>
+                        <li><a href="/shop/Accessories">Accessories</a></li>
 
 
 

@@ -19,7 +19,7 @@ class CreateFavoriteTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
         });
     }

@@ -23,7 +23,7 @@ class CreateOrderTable extends Migration
             $table->unsignedBigInteger('payment_id');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('status_order_id')->references('id')->on('status_order')->onDelete('cascade');
             $table->foreign('courier_id')->references('id')->on('courier');
             $table->foreign('payment_id')->references('id')->on('payment');
