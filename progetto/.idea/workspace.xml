@@ -23,9 +23,6 @@
       <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/var-dump-server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/ro_RO/PersonTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/ro_RO/PersonTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/mockery/mockery/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/iso-2022-jp/one.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/iso-2022-jp/one.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/singleproductController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
-              <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+              <caret line="35" selection-start-line="35" selection-end-line="36" />
               <folding>
                 <element signature="e#39#55#0#PHP" expanded="true" />
               </folding>
@@ -296,7 +293,7 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="725" />
     <option name="y" value="-19" />
     <option name="width" value="1110" />
@@ -453,12 +450,12 @@
       <workItem from="1559738185354" duration="2449000" />
       <workItem from="1559742015640" duration="6259000" />
       <workItem from="1559984412140" duration="13607000" />
-      <workItem from="1560714677529" duration="622000" />
+      <workItem from="1560714677529" duration="926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66901000" />
+    <option name="totallyTimeSpent" value="67205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,9 +468,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49786323" visible="true" weight="0.24181964" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49786323" visible="true" weight="0.24181964" />
       <window_info id="Structure" order="1" sideWeight="0.50213677" side_tool="true" weight="0.2751678" />
       <window_info id="Favorites" order="2" sideWeight="0.50213677" side_tool="true" weight="0.2751678" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -487,7 +483,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21172638" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21172638" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -738,7 +734,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/singleproductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+          <caret line="35" selection-start-line="35" selection-end-line="36" />
           <folding>
             <element signature="e#39#55#0#PHP" expanded="true" />
           </folding>
