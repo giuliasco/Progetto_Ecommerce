@@ -64,5 +64,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/shop/{sex}/All', 'productController@ciaociao');
 Route::get('/search', 'singleproductController@search')->name('search');
+
+Route::get('/shop/{sex}/All', 'productController@category_filter');
+
