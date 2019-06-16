@@ -49,12 +49,17 @@ class productController extends Controller
         return view('/productInclude', compact('products'));
 
     }
+
+
 }
 /*->join('gallery', 'product.id', '=', 'gallery.product_id')
                    ->select('product.name', 'gallery.path' , 'product.id')
                    ->groupby('product.id', 'gallery.product_id')
                    ->get() ;*/
 
+function search (Request $request){
+     return view ('search_results');
+}
 
 
 

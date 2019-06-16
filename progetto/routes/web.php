@@ -34,6 +34,10 @@ Route::get('/regular-page', function () {
     return view('regular-page');
 });
 
+Route::get('/Profile', function () {
+    return view('Profile');
+});
+
 Route::get('/shop/{sex}', 'productController@index');
 
 Route::get('/shop', 'productController@collezione');
@@ -61,3 +65,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/shop/{sex}/All', 'productController@ciaociao');
+Route::get('/search', 'singleproductController@search')->name('search');

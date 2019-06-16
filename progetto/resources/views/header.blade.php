@@ -52,8 +52,8 @@
         <div class="header-meta d-flex clearfix justify-content-end">
             <!-- Search Area -->
             <div class="search-area">
-                <form action="#" method="post">
-                    <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                <form action="{{route('search')}}" method="GET">
+                    <input type="text" name="query" id="query" value ="{{request()->input('query')}}" placeholder="Type for search">
                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
@@ -63,7 +63,7 @@
             </div>
             <!-- User Login Info -->
             <div class="user-login-info">
-                <a href="#"><img src={{asset('img/core-img/user.svg')}}> </a>
+                <a href="/Profile"><img src={{asset('img/core-img/user.svg')}}> Log in </a>
             </div>
             <!--user sign i n -->
             <div class="user-login-info">

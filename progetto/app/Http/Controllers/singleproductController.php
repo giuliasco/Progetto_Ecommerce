@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Product;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
@@ -19,5 +20,19 @@ class singleproductController extends Controller
 
         //echo $details;
         return view('/single-product-details', compact('details'));
+    }
+
+    function search (Request $request){
+        $query = $request->input('query');
+        $products = DB::table('product')
+            ->join('category','category.id', '=', 'product.category_id')
+            ->join('gallery','product.id','=','gallery.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand')
+        ->where('product.name','like',"%$query%",'OR','product.brand','like',"%$query%" )
+        ->Orwhere('product.price','like',"%$query%",'OR','product.brand','like',"%$query%" )
+        ->Orwhere('product.brand','like',"%$query%",'OR','product.brand','like',"%$query%" )->get();
+
+
+        return view ('search_results')->with('products', $products);
     }
 }
