@@ -44,6 +44,7 @@
 
     <!-- ##### Shop Grid Area Start ##### -->
     <section class="shop_grid_area section-padding-80">
+
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 col-lg-3">

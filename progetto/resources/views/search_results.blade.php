@@ -34,13 +34,19 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="page-title text-center">
-                    <h2>Search Results</h2>
-                    <p> {{$products->count()}} results for {{request()->input('query')}}<br></p>
+                    <h2 align="center">Search Results</h2>
+                  <p>      @if($products->count()==0)
+                        <P> No Results </P>
+                      @else{{$products->count()}} results for {{request()->input('query')}}<br></p>
+                               @endif
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 <!-- ##### Breadcumb Area End ##### -->
 
 <!-- ##### Shop Grid Area Start ##### -->
@@ -57,6 +63,9 @@
                                 <!-- Total Products -->
                                 <div class="total-products">
 
+
+                                </div>
+
                                 </div>
                                 <!-- Sorting -->
 
@@ -64,10 +73,14 @@
                         </div>
                     </div>
 
+                @if($products->count()==0)
+
+
+            @else
+
                     <div class="row destinazione">
 
-
-                        @include('productInclude', [$products])
+                              @include('productInclude', [$products])
 
 
                     </div>
@@ -85,6 +98,7 @@
                     </ul>
                 </nav>
             </div>
+        @endif
         </div>
     </div>
 </section>

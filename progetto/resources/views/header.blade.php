@@ -62,13 +62,39 @@
                 <a href="#"><img src={{asset('img/core-img/heart.svg')}} alt=""></a>
             </div>
             <!-- User Login Info -->
-            <div class="user-login-info">
-                <a href="/Profile"><img src={{asset('img/core-img/user.svg')}}> Log in </a>
-            </div>
+
+            @guest
+                   <div class="user-login-info">
+                <a href="/login"><img src={{asset('img/core-img/user.svg')}}> {{ __('Login') }}</a>
+                </li> </a>
+                   </div>
+                 @else
+                <div class="user-login-info">
+                           <a id="navbarDropdown"  href="/Profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                               <img src={{asset('img/core-img/user.svg')}}> {{ Auth::user()->name }}</a>
+                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                   <a href="{{ route('logout') }}"
+                                      onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       {{ __('Logout') }}
+                                   </a>
+                                   <a href="/Profile"
+                                      >
+                                       My Profile
+                                   </a>
+                               </div>
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                               @csrf
+                           </form>
+                           
+                </div>
+                           @endguest
+
+
+
+
             <!--user sign i n -->
-            <div class="user-login-info">
-                <a href="/login">Log in </a>
-            </div>
+
 
             <!-- Cart Area -->
             <div class="cart-area">

@@ -34,7 +34,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="page-title text-center">
-                    <h2>Ciao ?</h2>
+                    <h2> ESSENCE</h2>
                 </div>
             </div>
         </div>
@@ -44,9 +44,14 @@
 
 <!-- ##### Shop Grid Area Start ##### -->
 <section class="shop_grid_area section-padding-80">
+
     <div class="container">
+
         <div class="row">
+
             <div class="col-12 col-md-4 col-lg-3">
+
+
                 <div class="shop_sidebar_area">
 
                     <!-- ##### Single Widget ##### -->
@@ -64,34 +69,26 @@
                             </ul>
                         </div>
                     </div>
-
-                    <!-- ##### Single Widget ##### -->
-
-
-
-                    <!-- ##### Single Widget ##### -->
-                    <div class="widget color mb-50">
-
-
-                    <!-- ##### Single Widget ##### -->
-                    <div class="widget brands mb-50">
-
+                </div>
             </div>
 
+
+
+                        <div class="col-12 col-md-8 col-lg-9">
+
+
+
+
+                            <h3> Welcome {{ Auth::user()->name }}!</h3>
+                            <div>
+                            <P>From your ESSENCE account you can manage your orders, data and adresses details.</P>
+                            <div/>
 
                 <!-- Pagination -->
                 <nav aria-label="navigation">
-                    <ul class="pagination mt-50 mb-70">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">21</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
+
                 </nav>
-            </div>
+
         </div>
     </div>
 </section>
