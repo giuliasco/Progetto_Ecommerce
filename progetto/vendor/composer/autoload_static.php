@@ -8,20 +8,20 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
     );
 
@@ -83,6 +83,7 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Prophecy\\' => 9,
             'PhpParser\\' => 10,
         ),
         'O' => 
@@ -134,6 +135,7 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\DBAL\\' => 14,
+            'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\' => 16,
@@ -164,8 +166,8 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -311,6 +313,10 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Prophecy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -395,6 +401,10 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         array (
             0 => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL',
         ),
+        'Doctrine\\Common\\Lexer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+        ),
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
@@ -456,10 +466,6 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
     public static $prefixesPsr0 = array (
         'P' => 
         array (
-            'Prophecy\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
-            ),
             'PhpOption\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpoption/phpoption/src',
@@ -481,13 +487,6 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
             'Mockery' => 
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
-            ),
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Common\\Lexer\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
         ),
     );
@@ -532,9 +531,7 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         'Arrilot\\Widgets\\Misc\\EncryptException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/EncryptException.php',
         'Arrilot\\Widgets\\Misc\\InvalidWidgetClassException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/InvalidWidgetClassException.php',
         'Arrilot\\Widgets\\Misc\\LaravelApplicationWrapper' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/LaravelApplicationWrapper.php',
-        'Arrilot\\Widgets\\Misc\\NamespaceNotFoundException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/NamespaceNotFoundException.php',
         'Arrilot\\Widgets\\Misc\\ViewExpressionTrait' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/ViewExpressionTrait.php',
-        'Arrilot\\Widgets\\NamespacesRepository' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/NamespacesRepository.php',
         'Arrilot\\Widgets\\ServiceProvider' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/ServiceProvider.php',
         'Arrilot\\Widgets\\WidgetGroup' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/WidgetGroup.php',
         'Arrilot\\Widgets\\WidgetGroupCollection' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/WidgetGroupCollection.php',

@@ -35,7 +35,7 @@
                 <div class="single_widget_area d-flex mb-30">
                     <!-- Logo -->
                     <div class="footer-logo mr-50">
-                        <a href="#"><img src={{asset("img/core-img/logo2.png")}} alt=""></a>
+                        <a href="/"><img src={{asset("img/core-img/logo2.png")}} alt=""></a>
                     </div>
 <div class="footer_menu">
     <ul>
@@ -49,12 +49,8 @@
 <div class="col-12 col-md-6">
     <div class="single_widget_area mb-30">
         <ul class="footer_widget_menu">
-            <li><a href="#">Order Status</a></li>
-            <li><a href="#">Payment Options</a></li>
-            <li><a href="#">Shipping and Delivery</a></li>
-            <li><a href="#">Guides</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a href="https://static.zara.net/static//pdfs/IT/privacy-policy/privacy-policy-it_IT-20190514.pdf">Privacy Policy</a></li>
+
         </ul>
     </div>
 </div>
@@ -79,11 +75,10 @@
     <div class="col-12 col-md-6">
         <div class="single_widget_area">
             <div class="footer_social_area">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="https://facebook.com" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://instagram.com" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://youtube.com" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

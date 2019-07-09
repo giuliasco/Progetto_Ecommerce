@@ -50,6 +50,7 @@
 <!-- ##### Breadcumb Area End ##### -->
 
 <!-- ##### Shop Grid Area Start ##### -->
+@include('filter')
 <section class="shop_grid_area section-padding-80">
     <div class="container">
         <div class="row">
