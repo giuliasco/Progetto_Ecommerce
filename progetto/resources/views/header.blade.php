@@ -70,9 +70,10 @@
                    </div>
                  @else
                 <div class="user-login-info">
+
                            <a id="navbarDropdown"  href="/Profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                <img src={{asset('img/core-img/user.svg')}}> {{ Auth::user()->name }}</a>
-                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                               <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                    <a href="{{ route('logout') }}"
                                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
