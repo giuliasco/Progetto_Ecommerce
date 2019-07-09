@@ -55,8 +55,8 @@
                             <!-- Widget Title -->
                             <h6 class="widget-title mb-30">Categories</h6>
 
-                            <!--  Catagories  -->
-                            <div class="catagories-menu">
+                            <!--  Categories  -->
+                            <div class="categories-menu">
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
@@ -74,7 +74,7 @@
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse " id="Man">
-                                            <li><a href="#" ">All</a></li>
+                                            <li><a href="#">All</a></li>
                                             <li><a href="#">Trousers</a></li>
                                             <li><a href="#">Jeans</a></li>
                                             <li><a href="#">T-Shirts</a></li>

@@ -45,7 +45,7 @@ Route::get('/shop/{sex}', 'productController@index');
 
 Route::get('/shop', 'productController@collezione');
 
-Route::get('/single-product-details/{id}', 'singleproductController@dettagli');
+Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 
 
 
