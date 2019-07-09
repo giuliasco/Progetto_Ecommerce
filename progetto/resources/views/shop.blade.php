@@ -43,8 +43,8 @@
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- ##### Shop Grid Area Start ##### -->
-<<<<<<< HEAD
-=======
+
+
     <section class="shop_grid_area section-padding-80">
 
         <div class="container">
@@ -57,26 +57,26 @@
                             <!-- Widget Title -->
                             <h6 class="widget-title mb-30">Categories</h6>
 
-                            <!--  Categories  -->
-                            <div class="categories-menu">
+                            <!--  Catagories  -->
+                            <div class="catagories-menu">
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
-                                        <ul class="sub-menu collapse  " id="Woman">
-                                            <li><a id="All">All</a></li>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">T-Shirts</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Skirts</a></li>
-                                            <li><a href="#">Sweaters</a></li>
+                                        <ul class="sub-menu collapse" id="Woman">
+                                            <li><a class="Woman" id="All">All</a></li>
+                                            <li><a class="Woman" href="#">Dresses</a></li>
+                                            <li><a class="Woman" href="#">T-Shirts</a></li>
+                                            <li><a class="Woman" href="#">Jeans</a></li>
+                                            <li><a class="Woman" href="#">Skirts</a></li>
+                                            <li><a class="Woman" href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
-                                        <ul class="sub-menu collapse " id="Man">
-                                            <li><a href="#">All</a></li>
+                                        <ul class="sub-menu collapse" id="Man">
+                                            <li><a href="#" ">All</a></li>
                                             <li><a href="#">Trousers</a></li>
                                             <li><a href="#">Jeans</a></li>
                                             <li><a href="#">T-Shirts</a></li>
@@ -85,9 +85,9 @@
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
-                                    <li data-toggle="collapse " data-target="#Accessories" class="collapsed">
+                                    <li data-toggle="collapse" data-target="#Accessories" class="collapsed">
                                         <a href="#">Accessories</a>
-                                        <ul class="sub-menu collapse " id="Accessories">
+                                        <ul class="sub-menu collapse" id="Accessories">
                                             <li><a href="#">All</a></li>
                                             <li><a href="#">Bags</a></li>
                                             <li><a href="#">Caps</a></li>
@@ -109,14 +109,14 @@
                             <!-- Widget Title 2 -->
                             <p class="widget-title2 mb-30">Price</p>
                             <div class="range-price">
-                            <ul>
-                                <li> <a href="#" > 0 - 20€</a></li>
-                                <li><a href="#"> 20 - 50€</a></li>
-                                <li><a href="#"> 50 - 100€</a></li>
-                                <li><a href="#"> >> 100€</a></li>
-                            </ul>
+                                <ul>
+                                    <li> <a href="#" > 0 - 20€</a></li>
+                                    <li><a href="#"> 20 - 50€</a></li>
+                                    <li><a href="#"> 50 - 100€</a></li>
+                                    <li><a href="#"> > 100€</a></li>
+                                </ul>
                             </div>
-                    </div>
+                        </div>
 
 
 
@@ -148,28 +148,14 @@
                                     <div class="total-products">
 
                                     </div>
-                                    <!-- Sorting -->
-                                    <div class="product-sorting d-flex">
-                                        <p>Sort by:</p>
-                                        <form action="#" method="get">
-                                            <select name="select" id="sortByselect">
-                                                <option value="value">Highest Rated</option>
-                                                <option value="value">Newest</option>
-                                                <option value="value">Price: $$ - $</option>
-                                                <option value="value">Price: $ - $$</option>
-                                            </select>
-                                            <input type="submit" class="d-none" value="">
-                                        </form>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="row destinazione">
->>>>>>> 88ce056fd633ebb9695dad9e4334d11e3ebe9c9a
 
-
-                        @include('productInclude', [$products])
+                            @include('productInclude', [$products])
 
 
                         </div>
@@ -211,12 +197,12 @@
     <script>
 
         $(document).ready(function() {
+
            // var url = $("#All").getAttribute("href");
-            $('#All').click(function(){
-                $.get("/shop/Woman/All", function( data ) {
-                    $( ".destinazione" ).html( data );
-            });
-        });
+            $('.Woman').click().val()/*(function(){
+                var a = $(this).val();
+                console.log(a);
+        });*/
         });
 
 

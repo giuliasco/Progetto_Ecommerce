@@ -30,7 +30,7 @@
     <!-- ##### Right Side Cart End ##### -->
 
     <!-- ##### Single Product Details Area Start ##### -->
-    @include('filter')
+
     <section class="single_product_details_area d-flex align-items-center">
 
         <!-- Single Product Thumb -->
