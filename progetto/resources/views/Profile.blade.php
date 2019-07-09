@@ -62,8 +62,8 @@
                         <!--  Catagories  -->
                         <div class="catagories-menu">
                             <ul>
-                                <li> <a href="#" > My Orders</a></li>
-                                <li><a href="#"> My Data</a></li>
+                                <li > <a id="myorders" href="" > My Orders</a></li>
+                                <li><a href={{route('users.edit')}}> My Data</a></li>
                                 <li><a href="#">  My Adresses</a></li>
 
                             </ul>
@@ -73,16 +73,19 @@
             </div>
 
 
+            <div class="destinazione">
 
-                        <div class="col-12 col-md-8 col-lg-9">
+            </div>
+
+                 <div id="d" class="col-12 col-md-8 col-lg-9">
 
 
+                     <h3> Welcome {{ Auth::user()->name }}!</h3>
+
+                                <P>From your ESSENCE account you can manage your orders, data and adresses details.</P>
 
 
-                            <h3> Welcome {{ Auth::user()->name }}!</h3>
-                            <div>
-                            <P>From your ESSENCE account you can manage your orders, data and adresses details.</P>
-                            <div/>
+                            </div>
 
                 <!-- Pagination -->
                 <nav aria-label="navigation">
@@ -108,18 +111,25 @@
 <!-- Classy Nav js -->
 <script src={{asset('js/classy-nav.min.js')}}></script>
 <!-- Active js -->
+<!-- Active js -->
 <script src={{asset('js/active.js')}}></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
 
-    $(document).ready(function() {
+   // $(document).ready(function() {
         // var url = $("#All").getAttribute("href");
-        $('#All').click(function(){
-            $.get("/shop/Woman/All", function( data ) {
-                $( ".destinazione" ).html( data );
-            });
-        });
-    });
+      //  $('#myorders').click(function(){
+         //   $.get("#d", function( data ) {
+       //         $( ".destinazione" ).html( data );
+           // });
+      //  });
+  //  });
+   $(document).ready(function(){
+       $("#myorders").click(function(){
+           $("d").hide();
+       });
+   });
 
 
 </script>

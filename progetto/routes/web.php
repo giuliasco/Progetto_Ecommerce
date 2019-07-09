@@ -38,6 +38,9 @@ Route::get('/Profile', function () {
     return view('Profile');
 });
 
+Route::get('/data' , 'UsersController@edit')->name('users.edit');
+Route::patch('/data' , 'UsersController@update')->name('users.update');
+
 Route::get('/shop/{sex}', 'productController@index');
 
 Route::get('/shop', 'productController@collezione');
@@ -52,13 +55,6 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

@@ -57,9 +57,7 @@ class productController extends Controller
                    ->groupby('product.id', 'gallery.product_id')
                    ->get() ;*/
 
-function search (Request $request){
-     return view ('search_results');
-}
+
 
 
 
