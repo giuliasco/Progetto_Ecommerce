@@ -35,13 +35,10 @@
 
         <!-- Single Product Thumb -->
         <div class="single_product_thumb clearfix">
-            <div class="product_thumbnail_slides owl-carousel">
-                <img src="{{asset('img/product-img/product-big-1.jpg')}}" alt="">
-                <img src="{{asset('img/product-img/product-big-2.jpg')}}" alt="">
-                <img src="{{asset('img/product-img/product-big-3.jpg')}}" alt="">
+                <div class="product-img">
+                    <img src="{{asset('img/product-img/'.$details[0]->path.'.jpg')}}" alt="">
             </div>
         </div>
-
 
         <!-- Single Product Description -->
         <div class="single_product_desc clearfix">
@@ -51,7 +48,6 @@
             </a>
             <p class="product-price">{{$details[0]->price}}</p>
             <p class="product-desc">{{$details[0]->description}}</p>
-
 
             <!-- Form -->
             <form class="cart-form clearfix" method="post">
