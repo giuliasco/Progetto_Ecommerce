@@ -23,8 +23,10 @@
 <body>
     <!-- ##### Header Area Start ##### -->
    @include('header')
-    <!-- ##### Right Side Cart Area ##### -->
-   @include('cart')
+    <div class="right-side-cart-area">
+    @include ('cartprod', ['carts' => $carts])
+    <!-- ##### Right Side Cart End ##### -->
+    </div>
 
     <div class="contact-area d-flex align-items-center">
 
