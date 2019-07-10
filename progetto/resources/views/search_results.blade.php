@@ -25,7 +25,7 @@
 <!-- ##### Header Area End ##### -->
 
 <div class="right-side-cart-area">
-@include ('cartprod', ['carts' => $carts])
+@include ('cart', ['carts' => $carts])
 <!-- ##### Right Side Cart End ##### -->
 </div>
 <!-- ##### Breadcumb Area Start ##### -->

@@ -37,8 +37,15 @@ class singleproductController extends Controller
         ->where('category.name','like',"%{$query}%",'OR','product.brand','like',"%{$query}%" )
         ->where('product.brand','like',"%{$query}%",'OR','product.brand','like',"%{$query}%" )->get();
 
+        $carts= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
+            ->groupby('product.id', 'gallery.product_id')
+            ->get() ;
 
-        return view ('search_results')->with('products', $products);
+
+        return view ('search_results' , compact('products','carts' ));
     }
 
     function addtocart($id) {
