@@ -57,7 +57,7 @@
                             <!-- Widget Title -->
                             <h6 class="widget-title mb-30">Categories</h6>
 
-
+                            <!--href="/shop/Woman/Dresses"-->
 
                             <!--  Catagories  -->
                             <div class="catagories-menu">
@@ -67,8 +67,8 @@
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">
-                                            <li><a href="/shop/Woman">All</a></li>
-                                            <li><a href="/shop/Woman/Dresses">Dresses</a></li>
+                                            <li value="/shop/Woman/*" id="category"><a>All</a></li>
+                                            <li value="/shop/Woman/Dresses" id="category" ><a>Dresses</a></li>
                                             <li><a class="Woman" href="#">T-Shirts</a></li>
                                             <li><a class="Woman" href="#">Jeans</a></li>
                                             <li><a class="Woman" href="#">Skirts</a></li>
@@ -156,9 +156,9 @@
                             </div>
                         </div>
 
-                        <div class="row destinazione">
+                        <div class="row destinazione" id="html">
 
-                            @include('productInclude', [$products])
+                            @include('productInclude', $products)
 
 
                         </div>
@@ -196,6 +196,8 @@
     <script src={{asset('js/classy-nav.min.js')}}></script>
     <!-- Active js -->
     <script src={{asset('js/active.js')}}></script>
+
+    <script src={{asset('js/CategoryFilter.js')}}></script>
 
     <!--script>
 
