@@ -57,15 +57,18 @@
                             <!-- Widget Title -->
                             <h6 class="widget-title mb-30">Categories</h6>
 
+
+
                             <!--  Catagories  -->
                             <div class="catagories-menu">
                                 <ul id="menu-content2" class="menu-content collapse show">
+
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">
-                                            <li><a class="Woman" id="All">All</a></li>
-                                            <li><a class="Woman" href="#">Dresses</a></li>
+                                            <li><a href="/shop/Woman">All</a></li>
+                                            <li><a href="/shop/Woman/Dresses">Dresses</a></li>
                                             <li><a class="Woman" href="#">T-Shirts</a></li>
                                             <li><a class="Woman" href="#">Jeans</a></li>
                                             <li><a class="Woman" href="#">Skirts</a></li>
@@ -76,8 +79,8 @@
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse" id="Man">
-                                            <li><a href="#">All</a></li>
-                                            <li><a href="#">Trousers</a></li>
+                                            <li><a href="/shop/Man">All</a></li>
+                                            <li><a href="/shop/Man/Trousers">Trousers</a></li>
                                             <li><a href="#">Jeans</a></li>
                                             <li><a href="#">T-Shirts</a></li>
                                             <li><a href="#">Shirts</a></li>
@@ -194,7 +197,7 @@
     <!-- Active js -->
     <script src={{asset('js/active.js')}}></script>
 
-    <script>
+    <!--script>
 
         $(document).ready(function() {
 
@@ -206,7 +209,7 @@
         });
 
 
-    </script>
+    </script-->
 
 </body>
 

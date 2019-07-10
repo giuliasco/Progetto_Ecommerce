@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
+class ComposerStaticInit76793cce544532b84ff4185a11a08c3d
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -502,6 +502,7 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
+        'App\\Http\\Controllers\\category' => __DIR__ . '/../..' . '/app/Http/Controllers/category.php',
         'App\\Http\\Controllers\\productController' => __DIR__ . '/../..' . '/app/Http/Controllers/productController.php',
         'App\\Http\\Controllers\\singleproductController' => __DIR__ . '/../..' . '/app/Http/Controllers/singleproductController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -532,7 +533,9 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         'Arrilot\\Widgets\\Misc\\EncryptException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/EncryptException.php',
         'Arrilot\\Widgets\\Misc\\InvalidWidgetClassException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/InvalidWidgetClassException.php',
         'Arrilot\\Widgets\\Misc\\LaravelApplicationWrapper' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/LaravelApplicationWrapper.php',
+        'Arrilot\\Widgets\\Misc\\NamespaceNotFoundException' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/NamespaceNotFoundException.php',
         'Arrilot\\Widgets\\Misc\\ViewExpressionTrait' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Misc/ViewExpressionTrait.php',
+        'Arrilot\\Widgets\\NamespacesRepository' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/NamespacesRepository.php',
         'Arrilot\\Widgets\\ServiceProvider' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/ServiceProvider.php',
         'Arrilot\\Widgets\\WidgetGroup' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/WidgetGroup.php',
         'Arrilot\\Widgets\\WidgetGroupCollection' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/WidgetGroupCollection.php',
@@ -3624,6 +3627,9 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         'PhpParser\\JsonDecoder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/JsonDecoder.php',
         'PhpParser\\Lexer' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer.php',
         'PhpParser\\Lexer\\Emulative' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php',
+        'PhpParser\\Lexer\\TokenEmulator\\CoaleseEqualTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/CoaleseEqualTokenEmulator.php',
+        'PhpParser\\Lexer\\TokenEmulator\\FnTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/FnTokenEmulator.php',
+        'PhpParser\\Lexer\\TokenEmulator\\TokenEmulatorInterface' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/TokenEmulatorInterface.php',
         'PhpParser\\NameContext' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NameContext.php',
         'PhpParser\\Node' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node.php',
         'PhpParser\\NodeAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeAbstract.php',
@@ -3643,6 +3649,7 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
         'PhpParser\\Node\\Expr\\ArrayDimFetch' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayDimFetch.php',
         'PhpParser\\Node\\Expr\\ArrayItem' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayItem.php',
         'PhpParser\\Node\\Expr\\Array_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/Array_.php',
+        'PhpParser\\Node\\Expr\\ArrowFunction' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrowFunction.php',
         'PhpParser\\Node\\Expr\\Assign' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/Assign.php',
         'PhpParser\\Node\\Expr\\AssignOp' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp.php',
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseAnd' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseAnd.php',
@@ -5218,10 +5225,10 @@ class ComposerStaticInitd749f289b89afa47a268f7ae4a25b003
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd749f289b89afa47a268f7ae4a25b003::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd749f289b89afa47a268f7ae4a25b003::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd749f289b89afa47a268f7ae4a25b003::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd749f289b89afa47a268f7ae4a25b003::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit76793cce544532b84ff4185a11a08c3d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit76793cce544532b84ff4185a11a08c3d::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit76793cce544532b84ff4185a11a08c3d::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit76793cce544532b84ff4185a11a08c3d::$classMap;
 
         }, null, ClassLoader::class);
     }
