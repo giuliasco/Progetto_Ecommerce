@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,13 +27,14 @@
 
 <!-- ##### Right Side Cart End ##### -->
 
+
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb_area bg-img" style="background-image: url(/img/bg-img/breadcumb.jpg">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="page-title text-center">
-                    <h2> ESSENCE</h2>
+                    <h2>MY ORDERS </h2>
                 </div>
             </div>
         </div>
@@ -60,8 +62,8 @@
                         <!--  Catagories  -->
                         <div class="catagories-menu">
                             <ul>
-                                <li > <a id="myorders" href={{route('orders.index')}} > My Orders</a></li>
-                                <li><a href={{route('users.edit')}}> My Data</a></li>
+                                <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
+                                <li><a href="{{route('users.edit')}}"> My Data</a></li>
                                 <li><a href="#">  My Adresses</a></li>
 
                             </ul>
@@ -75,20 +77,19 @@
 
             </div>
 
-                 <div id="d" class="col-12 col-md-8 col-lg-9">
+            <div id="d" class="col-12 col-md-8 col-lg-9">
 
 
-                     <h3> Welcome {{ Auth::user()->name }}!</h3>
-
-                                <P>From your ESSENCE account you can manage your orders, data and adresses details.</P>
 
 
-                            </div>
 
-                <!-- Pagination -->
-                <nav aria-label="navigation">
 
-                </nav>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="navigation">
+
+            </nav>
 
         </div>
     </div>
@@ -115,19 +116,19 @@
 
 <script>
 
-   // $(document).ready(function() {
-        // var url = $("#All").getAttribute("href");
-      //  $('#myorders').click(function(){
-         //   $.get("#d", function( data ) {
-       //         $( ".destinazione" ).html( data );
-           // });
-      //  });
-  //  });
-   $(document).ready(function(){
-       $("#myorders").click(function(){
-           $("d").hide();
-       });
-   });
+    // $(document).ready(function() {
+    // var url = $("#All").getAttribute("href");
+    //  $('#myorders').click(function(){
+    //   $.get("#d", function( data ) {
+    //         $( ".destinazione" ).html( data );
+    // });
+    //  });
+    //  });
+    // $(document).ready(function(){
+    // $("#myorders").click(function(){
+    //   $("d").hide();
+    //   });
+    // });
 
 
 </script>

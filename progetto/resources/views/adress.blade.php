@@ -82,7 +82,7 @@
 
 
                 <form method="POST" action="{{ route('users.update') }}">
-                 @method("patch")
+                    @method("patch")
                     @csrf
 
                     <div class="form-group row">
@@ -134,7 +134,7 @@
                         <div class="col-md-6 offset-md-4">
                             <p> to modify data click the button below</p>
                             <button type="submit" class="btn btn-primary">
-                              Update Data
+                                Update Data
                             </button>
                         </div>
                     </div>
@@ -182,11 +182,11 @@
     // });
     //  });
     //  });
-   // $(document).ready(function(){
-       // $("#myorders").click(function(){
-         //   $("d").hide();
-     //   });
-   // });
+    // $(document).ready(function(){
+    // $("#myorders").click(function(){
+    //   $("d").hide();
+    //   });
+    // });
 
 
 </script>
