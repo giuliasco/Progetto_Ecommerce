@@ -16,10 +16,6 @@ Route::get('/gg', function () {
 });
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
 Route::get('/checkout', function () {
     return view('checkout');
 });
@@ -37,7 +33,7 @@ Route::get('/regular-page', function () {
 Route::get('/Profile', function () {
     return view('Profile');
 });
-
+Route::get('/', 'HomeController@index');
 Route::get('/data' , 'UsersController@edit')->name('users.edit');
 Route::patch('/data' , 'UsersController@update')->name('users.update');
 
@@ -46,10 +42,9 @@ Route::get('/shop/{sex}', 'productController@index');
 Route::get('/shop', 'productController@collezione');
 
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
-Route::get('/shop/{sex}/{name}' , 'category@categoriaDonna');
+Route::get('/shop/single-product-details/{id}/add', 'singleproductController@addtocart');
 
-
-
+Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
 
 
 Route::group(['prefix' => 'admin'], function () {

@@ -26,13 +26,16 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Right Side Cart Area ##### -->
-    @include ('cart')
-    <!-- ##### Right Side Cart End ##### -->
+    <div class="cart-bg-overlay"></div>
 
+    <div class="right-side-cart-area">
+    @include ('cart', ['carts' => $carts])
+    <!-- ##### Right Side Cart End ##### -->
+    </div>
     <!-- ##### Single Product Details Area Start ##### -->
 
     <section class="single_product_details_area d-flex align-items-center">
-
+    @if(!(empty($details)))
         <!-- Single Product Thumb -->
         <div class="single_product_thumb clearfix">
                 <div class="product-img">
@@ -41,21 +44,23 @@
         </div>
 
         <!-- Single Product Description -->
-        <div class="single_product_desc clearfix">
+        <div class="single_product_desc clearfix" id="{{$details[0]->id}}">
             <span>{{$details[0]->brand}}</span>
             <a href="cart.html">
                 <h2>{{$details[0]->name}}</h2>
             </a>
             <p class="product-price">{{$details[0]->price}}</p>
             <p class="product-desc">{{$details[0]->description}}</p>
-
+@else
+    <p>ciao</p>
+            @endif
             <!-- Form -->
-            <form class="cart-form clearfix" method="post">
-                <!-- Select Box -->
+            <!--  <form class="cart-form clearfix" method="post"> -->
+                 <!-- Select Box -->
                 <div class="select-box d-flex mt-50 mb-30">
                     <select name="select" id="productSize" class="mr-5">
                         <option value="value">Size: XL</option>
-                        <option value="value">Size: X</option>
+                        <option value="value">Size: L</option>
                         <option value="value">Size: M</option>
                         <option value="value">Size: S</option>
                     </select>
@@ -68,17 +73,17 @@
                 </div>
                 <!-- Cart & Favourite Box -->
                 <div class="cart-fav-box d-flex align-items-center">
-                    <!-- Cart -->
-                    <button type="submit" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
+                    <!--Cart -->
+                    <button id="addcart" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
                     <!-- Favourite -->
                     <div class="product-favourite ml-4">
                         <a href="#" class="favme fa fa-heart"></a>
                     </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- ##### Single Product Details Area End ##### -->
+               </div>
+                <!-- </form> -->
+            </div>
+        </section>
+        <!-- ##### Single Product Details Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
     @include('footer')
@@ -100,3 +105,31 @@
 </body>
 
 </html>
+
+<script>
+    $( document ).ready(function() {
+        $('#addcart').click(function () {
+            var data = $('.single_product_desc').attr("id");
+            console.log(data) ;
+            $.get( "/shop/single-product-details/"+data+"/add", function( data ) {
+                $( ".right-side-cart-area" ).html( data );
+                alert( "Load was performed." );
+            });
+        });
+    });
+
+
+</script>
+<script>
+    $( document ).ready(function() {
+        $(document).on("click", '.product-remove', function () {
+            var data = $(this).attr("id");
+            console.log(data) ;
+            $.get( "/shop/single-product-details/"+data+"/remove", function( data ) {
+                $( ".right-side-cart-area" ).html( data );
+
+            });
+        });
+    });
+
+</script>

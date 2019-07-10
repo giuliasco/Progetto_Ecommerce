@@ -24,10 +24,10 @@
 @include('header')
 <!-- ##### Header Area End ##### -->
 
-<!-- ##### Right Side Cart Area ##### -->
-@include('cart')
+<div class="right-side-cart-area">
+@include ('cartprod', ['carts' => $carts])
 <!-- ##### Right Side Cart End ##### -->
-
+</div>
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb_area bg-img" style=background-image:url('{{asset('img/bg-img/breadcumb.jpg')}}');">
     <div class="container h-100">
