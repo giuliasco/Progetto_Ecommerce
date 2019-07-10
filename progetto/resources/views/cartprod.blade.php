@@ -6,7 +6,7 @@
             <img src={{asset('img/product-img/'.$cart->path.'.jpg')}} class="cart-thumb" alt="">
             <!-- Cart Item Desc -->
             <div class="cart-item-desc">
-                <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                <span id="{{$cart->id}}" class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
                 <span class="badge">{{$cart->brand}}</span>
                 <h6>{{$cart->name}}</h6>
                 <p class="size">Size: S</p>
@@ -17,3 +17,4 @@
     </div>
 
 @endforeach
+

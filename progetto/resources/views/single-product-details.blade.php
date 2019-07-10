@@ -120,3 +120,16 @@
 
 
 </script>
+<script>
+    $( document ).ready(function() {
+        $(document).on("click", '.product-remove', function () {
+            var data = $(this).attr("id");
+            console.log(data) ;
+            $.get( "/shop/single-product-details/"+data+"/remove", function( data ) {
+                $( ".right-side-cart-area" ).html( data );
+
+            });
+        });
+    });
+
+</script>

@@ -44,7 +44,7 @@ Route::get('/shop', 'productController@collezione');
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 Route::get('/shop/single-product-details/{id}/add', 'singleproductController@addtocart');
 
-
+Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
 
 
 Route::group(['prefix' => 'admin'], function () {
