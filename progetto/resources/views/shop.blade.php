@@ -76,7 +76,7 @@
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse" id="Man">
-                                            <li><a href="#" ">All</a></li>
+                                            <li><a href="#">All</a></li>
                                             <li><a href="#">Trousers</a></li>
                                             <li><a href="#">Jeans</a></li>
                                             <li><a href="#">T-Shirts</a></li>
