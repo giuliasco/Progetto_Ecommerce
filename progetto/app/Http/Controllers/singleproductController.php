@@ -18,8 +18,13 @@ class singleproductController extends Controller
             ->groupby('product.id', 'gallery.product_id')
             ->get() ;
 
-
-        return view('/single-product-details', compact('details'));
+        $carts= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
+            ->groupby('product.id', 'gallery.product_id')
+            ->get() ;
+        return view('/single-product-details', compact('details','carts'));
     }
 
     function search (Request $request){
@@ -34,5 +39,32 @@ class singleproductController extends Controller
 
 
         return view ('search_results')->with('products', $products);
+    }
+
+    function addtocart($id) {
+
+        DB::table('shopping_cart')->insert([
+            'product_id' => $id,
+            'users_id' => 1
+
+        ]);
+        $carts= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
+            ->groupby('product.id', 'gallery.product_id')
+            ->get() ;
+
+        return view('cart' , compact('carts', $carts));
+    }
+
+    function cartlist(){
+        $carts= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
+            ->groupby('product.id', 'gallery.product_id')
+            ->get() ;
+        return view('cart' )->with('carts', $carts);
     }
 }

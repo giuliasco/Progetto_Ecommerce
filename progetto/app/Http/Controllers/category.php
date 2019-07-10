@@ -16,7 +16,7 @@ class category extends Controller
             ->where('category.type',"=", $sex)
             ->get();
 
-        return view('/shop', compact('products'));
+        return view('productInclude', compact('products'));
 
     }
 }
