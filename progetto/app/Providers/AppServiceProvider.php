@@ -16,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            ['index', 'shop/{sex}', 'shop' , 'shop/single-product-details/{id}', 'shop/single-product-details/{id}/add',
-                'shop/single-product-details/{id}/remove', 'search_results', 'Profile', 'my_orders', 'data',
+            ['index', '/shop' , '/single-product-details', 'search_results', 'Profile', 'my_orders', 'data',
                 'contact', 'cart', 'checkout', 'adress'],
+
             function($view) {
                 $carts= DB::table('product')
                     ->join('gallery', 'product.id', '=', 'gallery.product_id')
