@@ -18,13 +18,8 @@ class singleproductController extends Controller
             ->groupby('product.id', 'gallery.product_id')
             ->get() ;
 
-        $carts= DB::table('product')
-            ->join('gallery', 'product.id', '=', 'gallery.product_id')
-            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
-            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
-            ->groupby('product.id', 'gallery.product_id')
-            ->get() ;
-        return view('/single-product-details', compact('details','carts'));
+
+        return view('/single-product-details', compact('details'));
     }
 
     function search (Request $request){
