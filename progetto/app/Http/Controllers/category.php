@@ -19,4 +19,17 @@ class category extends Controller
         return view('productInclude', compact('products'));
 
     }
+    /*function category_filterAll($sex)
+    {
+        $products = DB::table('product')
+            ->join('category', 'category.id', '=', 'product.category_id')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->select('product.name', 'gallery.path', 'product.id', 'product.price', 'product.brand')
+            ->where('category.type', '=', $sex)
+            ->get();
+
+
+        return view('productInclude', compact('products'));
+
+    }*/
 }

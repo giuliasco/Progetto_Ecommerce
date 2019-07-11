@@ -19,16 +19,6 @@
                     <ul>
 
                         <li><a href="/shop/Woman">Woman</a></li>
-                        {{--<ul class="dropdown">
-                            <li><a href="/shop">Dresses</a></li>
-                            <li><a href="/shop">Blouses &amp; Shirts</a></li>
-                            <li><a href="/shop">T-shirts</a></li>
-                            <li><a href="/shop">Rompers</a></li>
-                            <li><a href="/shop">Bras &amp; Panties</a></li>
-                            foreach($categories as $category)
-                           <li><a href="/shop">{{$category->name}}</a></li>
-                           @endforeach funzionante
-                        </ul>--}}
 
 
 

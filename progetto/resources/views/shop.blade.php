@@ -25,7 +25,12 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Right Side Cart Area ##### -->
-    @include('cart')
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+    @include ('cart', ['carts' => $carts])
+
+    </div>
     <!-- ##### Right Side Cart End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
@@ -67,38 +72,35 @@
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">
-                                            <li><a href="/shop/Woman">All</a></li>
-                                            <li value="/shop/Woman/Dresses"><a>Dresses</a></li>
-                                            <li><a class="Woman" href="#">T-Shirts</a></li>
-                                            <li><a class="Woman" href="#">Jeans</a></li>
-                                            <li><a class="Woman" href="#">Skirts</a></li>
-                                            <li><a class="Woman" href="#">Sweaters</a></li>
+                                            <li value="/shop/Woman/Dresses"><a href="#">Dresses</a></li>
+                                            <li value="/shop/Woman/T-Shirt"><a href="#">T-Shirts</a></li>
+                                            <li value="/shop/Woman/Jeans"><a href="#">Jeans</a></li>
+                                            <li value="/shop/Woman/Skirts"><a href="#">Skirts</a></li>
+                                            <li value="/shop/Woman/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse" id="Man">
-                                            <li><a href="/shop/Man">All</a></li>
-                                            <li><a href="/shop/Man/Trousers">Trousers</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">T-Shirts</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters</a></li>
+                                            <li value="/shop/Man/Trousers"><a href="#">Trousers</a></li>
+                                            <li value="/shop/Man/Jeans"><a href="#">Jeans</a></li>
+                                            <li value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
+                                            <li value="/shop/Man/Shirts"><a href="#">Shirts</a></li>
+                                            <li value="/shop/Man/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#Accessories" class="collapsed">
                                         <a href="#">Accessories</a>
                                         <ul class="sub-menu collapse" id="Accessories">
-                                            <li><a href="#">All</a></li>
-                                            <li><a href="#">Bags</a></li>
-                                            <li><a href="#">Caps</a></li>
-                                            <li><a href="#">Scarfs</a></li>
-                                            <li><a href="#">Bowties</a></li>
-                                            <li><a href="#">Sunglasses</a></li>
-                                            <li><a href="#">Belts</a></li>
-                                            <li><a href="#">Wallets</a></li>
+                                            <li value="/shop/Accessories/Woman Bags"><a href="#">Bags</a></li>
+                                            <li value="/shop/Accessories/Cap"><a href="#">Caps</a></li>
+                                            <li value="/shop/Accessories/Man Scarf"><a href="#">Scarfs</a></li>
+                                            <li value="/shop/Accessories/Bow Tie"><a href="#">Bowties</a></li>
+                                            <li value="/shop/Accessories/Sunglasses"><a href="#">Sunglasses</a></li>
+                                            <li value="/shop/Accessories/Woman Belt"><a href="#">Belts</a></li>
+                                            <li value="/shop/Accessories/Woman Wallet"><a href="#">Wallets</a></li>
                                         </ul>
                                     </li>
                                 </ul>
