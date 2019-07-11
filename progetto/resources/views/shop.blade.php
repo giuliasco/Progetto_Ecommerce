@@ -68,7 +68,7 @@
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">
                                             <li><a href="/shop/Woman">All</a></li>
-                                            <li><a href="/shop/Woman/Dresses">Dresses</a></li>
+                                            <li value="/shop/Woman/Dresses"><a>Dresses</a></li>
                                             <li><a class="Woman" href="#">T-Shirts</a></li>
                                             <li><a class="Woman" href="#">Jeans</a></li>
                                             <li><a class="Woman" href="#">Skirts</a></li>
@@ -156,9 +156,9 @@
                             </div>
                         </div>
 
-                        <div class="row destinazione">
+                        <div class="row destinazione" id="html">
 
-                            @include('productInclude', [$products])
+                            @include('productInclude', $products)
 
 
                         </div>
@@ -197,19 +197,7 @@
     <!-- Active js -->
     <script src={{asset('js/active.js')}}></script>
 
-    <!--script>
-
-        $(document).ready(function() {
-
-           // var url = $("#All").getAttribute("href");
-            $('.Woman').click().val()/*(function(){
-                var a = $(this).val();
-                console.log(a);
-        });*/
-        });
-
-
-    </script-->
+    <script src={{asset('js/CategoryFilter.js')}}></script>
 
 </body>
 

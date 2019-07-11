@@ -34,15 +34,23 @@ Route::get('/Profile', function () {
     return view('Profile');
 });
 Route::get('/', 'HomeController@index');
+
 Route::get('/data' , 'UsersController@edit')->name('users.edit');
+
 Route::patch('/data' , 'UsersController@update')->name('users.update');
+
 Route::get('/my_orders', 'OrdersController@index')->name('orders.index');
+
+
 Route::post('/adress', 'UsersController@store')->name('users.store');
+
 Route::get('/shop/{sex}', 'productController@index');
+
 
 Route::get('/shop', 'productController@collezione');
 
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
+
 Route::get('/shop/single-product-details/{id}/add', 'singleproductController@addtocart');
 
 Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
@@ -59,8 +67,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/shop/{sex}/All', 'productController@ciaociao');
 Route::get('/search', 'singleproductController@search')->name('search');
 
-Route::get('/shop/{sex}/All', 'productController@category_filter');
-
+Route::get('/shop/{sex}/{name}', 'category@categoriaDonna');
