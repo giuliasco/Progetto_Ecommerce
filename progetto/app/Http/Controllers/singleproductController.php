@@ -40,7 +40,7 @@ class singleproductController extends Controller
             ->get() ;
 
 
-        return view ('search_results' , compact('products','carts' ));
+        return view ('search_results' , compact('products' ));
     }
 
     function addtocart($id) {
