@@ -24,6 +24,13 @@
 @include('header')
 <!-- ##### Header Area End ##### -->
 
+<!-- ##### Right Side Cart Area ##### -->
+<div class="cart-bg-overlay"></div>
+
+<div class="right-side-cart-area">
+@include ('cart', ['carts' => $carts])
+<!-- ##### Right Side Cart End ##### -->
+</div>
 <!-- ##### Right Side Cart End ##### -->
 
 <!-- ##### Breadcumb Area Start ##### -->

@@ -26,7 +26,12 @@
 <!-- ##### Header Area End ##### -->
 
 <!-- ##### Right Side Cart End ##### -->
+<div class="cart-bg-overlay"></div>
 
+<div class="right-side-cart-area">
+@include ('cart', ['carts' => $carts])
+<!-- ##### Right Side Cart End ##### -->
+</div>
 
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb_area bg-img" style="background-image: url(/img/bg-img/breadcumb.jpg">

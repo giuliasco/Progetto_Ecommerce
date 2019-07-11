@@ -23,8 +23,9 @@
 <body>
     <!-- ##### Header Area Start ##### -->
    @include('header')
+
     <div class="right-side-cart-area">
-    @include ('cartprod', ['carts' => $carts])
+    @include ('cart', ['carts' => $carts])
     <!-- ##### Right Side Cart End ##### -->
     </div>
 
