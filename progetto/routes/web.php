@@ -36,7 +36,8 @@ Route::get('/Profile', function () {
 Route::get('/', 'HomeController@index');
 Route::get('/data' , 'UsersController@edit')->name('users.edit');
 Route::patch('/data' , 'UsersController@update')->name('users.update');
-
+Route::get('/my_orders', 'OrdersController@index')->name('orders.index');
+Route::post('/adress', 'UsersController@store')->name('users.store');
 Route::get('/shop/{sex}', 'productController@index');
 
 Route::get('/shop', 'productController@collezione');
