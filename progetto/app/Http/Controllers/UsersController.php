@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -24,7 +26,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,6 +37,17 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+       users::create([
+        'street' => $request->input('street'),
+          'city' => $request->input('city'),
+          'province' => $request->input('province'),
+          'cap' => $request->input('cap'),
+          'user_id' => Auth::user()->id
+       ]);
+
+
+
+
 
     }
 

@@ -86,64 +86,38 @@
 
 
 
-                <form method="POST" action="{{ route('users.update') }}">
-                    @method("patch")
-                    @csrf
+                <form action="{{route('users.store')}}" method="post">
+                   @csrf
+                    <div class="row">
 
-                    <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-right">Edit Name</label>
-
-                        <div class="col-md-6">
-                            <input id="name" type="text" class="form-control " name="name" value="{{ old('name', $user->name) }}" required autocomplete="name" autofocus>
-
-
+                        <div class="col-12 mb-3">
+                            <label for="street">Address <span>*</span></label>
+                            <input type="text" class="form-control mb-3" name="street" id="street" value="">
                         </div>
+                        <div class="col-12 mb-3">
+                            <label for="city">Town/City <span>*</span></label>
+                            <input type="text" class="form-control" name="city" id="city" value="">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="province">Province <span>*</span></label>
+                            <input type="text" class="form-control"  name="province" id="province" value="">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="cap">Postcode <span>*</span></label>
+                            <input type="text" class="form-control"  name="cap" id="cap" value="">
+                        </div>
+
+
                     </div>
 
-                    <div class="form-group row">
-                        <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                        <div class="col-md-6">
-                            <input id="email" type="email" class="form-control " name="email" value="{{ old('email' , $user->email)}}" required autocomplete="email">
-
-
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="phone" class="col-md-4 col-form-label text-md-right">Edit Phone Number</label>
-
-                        <div class="col-md-6">
-                            <input id="phone" class="form-control" type="text" name="phone"  placeholder="phone"  value="{{ old('phone' , $user->phone)}}"  autofocus>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="password" class="col-md-4 col-form-label text-md-right">Edit Password</label>
-
-                        <div class="col-md-6">
-                            <input id="password" type="password" class="form-control " name="password"  placeholder="password"  autocomplete="new-password">
-
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                        <div class="col-md-6">
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  placeholder="confirm password"  autocomplete="new-password">
-                        </div>
-                    </div>
-
-
-                    <div class="form-group row mb-0">
-                        <div class="col-md-6 offset-md-4">
-                            <p> to modify data click the button below</p>
-                            <button type="submit" class="btn btn-primary">
-                                Update Data
-                            </button>
-                        </div>
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-primary">
+                            Update Data
+                        </button>
                     </div>
                 </form>
+
+
 
 
 

@@ -69,7 +69,7 @@
                             <ul>
                                 <li > <a id="myorders" href={{route('orders.index')}} > My Orders</a></li>
                                 <li><a href={{route('users.edit')}}> My Data</a></li>
-                                <li><a href="#">  My Adresses</a></li>
+                                <li><a href="/adress">  My Adresses</a></li>
 
                             </ul>
                         </div>

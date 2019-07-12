@@ -43,7 +43,9 @@ Route::get('/my_orders', 'OrdersController@index')->name('orders.index');
 
 
 Route::post('/adress', 'UsersController@store')->name('users.store');
-
+Route::get('/adress', function () {
+    return view('adress');
+});
 Route::get('/shop/{sex}', 'productController@index');
 
 
