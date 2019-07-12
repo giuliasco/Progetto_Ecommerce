@@ -46,7 +46,7 @@
         <!-- Single Product Description -->
         <div class="single_product_desc clearfix" id="{{$details[0]->id}}">
             <span>{{$details[0]->brand}}</span>
-            <a href="cart.html">
+            <a>
                 <h2>{{$details[0]->name}}</h2>
             </a>
             <p class="product-price">{{$details[0]->price}}</p>
@@ -61,8 +61,6 @@
                         <option value="L">Size: L</option>
                         <option value="M">Size: M</option>
                         <option value="S">Size: S</option>
-                        <select name="select" id="productColor">
-                    </select>
                     </select>
                 </div>
 

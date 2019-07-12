@@ -50,6 +50,7 @@ class singleproductController extends Controller
             'users_id' => 1
 
         ]);
+
         $carts= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
