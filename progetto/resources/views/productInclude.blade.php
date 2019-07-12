@@ -25,12 +25,13 @@
 
                 <!-- Hover Content -->
                 <div class="hover-content">
-                    <!-- Add to Cart -->
+                    <!-- Add to Cart
                     <div class="add-to-cart-btn">
-                        <a href="#" class="btn essence-btn">Add to Cart</a>
-                    </div>
+                        <a id='addcart' value="{{$product->id}}" href="#" class="btn essence-btn">Add to Cart</a>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 @endforeach
+

@@ -523,6 +523,8 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
 
+    <script src={{asset('js/cart.js')}}></script>
+
 </body>
 
 </html>

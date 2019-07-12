@@ -2,7 +2,7 @@
 
     <!-- Cart Button -->
     <div class="cart-button">
-        <a href="#" id="rightSideCart"><img src={{asset('img/core-img/bag.svg')}} alt=""> <span>3</span></a>
+        <a href="#" id="rightSideCart"><img src={{asset('img/core-img/bag.svg')}} alt=""> </a>
     </div>
 
 

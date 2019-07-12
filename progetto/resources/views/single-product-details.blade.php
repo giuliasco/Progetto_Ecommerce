@@ -51,26 +51,21 @@
             </a>
             <p class="product-price">{{$details[0]->price}}</p>
             <p class="product-desc">{{$details[0]->description}}</p>
-@else
-    <p>ciao</p>
             @endif
             <!-- Form -->
             <!--  <form class="cart-form clearfix" method="post"> -->
                  <!-- Select Box -->
                 <div class="select-box d-flex mt-50 mb-30">
                     <select name="select" id="productSize" class="mr-5">
-                        <option value="value">Size: XL</option>
-                        <option value="value">Size: L</option>
-                        <option value="value">Size: M</option>
-                        <option value="value">Size: S</option>
+                        <option value="XL">Size: XL</option>
+                        <option value="L">Size: L</option>
+                        <option value="M">Size: M</option>
+                        <option value="S">Size: S</option>
+                        <select name="select" id="productColor">
                     </select>
-                    <select name="select" id="productColor">
-                        <option value="value">Color: Black</option>
-                        <option value="value">Color: White</option>
-                        <option value="value">Color: Red</option>
-                        <option value="value">Color: Purple</option>
                     </select>
                 </div>
+
                 <!-- Cart & Favourite Box -->
                 <div class="cart-fav-box d-flex align-items-center">
                     <!--Cart -->
@@ -102,34 +97,16 @@
     <!-- Active js -->
     <script src="{{asset('js/active.js')}}"></script>
 
+    <script src={{asset('js/cart.js')}}></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', '.option', function () {
+                console.log($(this).attr('data-value'));
+                $('.current').attr('value', $(this).attr('data-value'));
+            });
+        });
+    </script>
 </body>
 
 </html>
 
-<script>
-    $( document ).ready(function() {
-        $('#addcart').click(function () {
-            var data = $('.single_product_desc').attr("id");
-            console.log(data) ;
-            $.get( "/shop/single-product-details/"+data+"/add", function( data ) {
-                $( ".right-side-cart-area" ).html( data );
-                alert( "Load was performed." );
-            });
-        });
-    });
-
-
-</script>
-<script>
-    $( document ).ready(function() {
-        $(document).on("click", '.product-remove', function () {
-            var data = $(this).attr("id");
-            console.log(data) ;
-            $.get( "/shop/single-product-details/"+data+"/remove", function( data ) {
-                $( ".right-side-cart-area" ).html( data );
-
-            });
-        });
-    });
-
-</script>

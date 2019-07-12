@@ -200,6 +200,8 @@
     <script src={{asset('js/active.js')}}></script>
 
     <script src={{asset('js/CategoryFilter.js')}}></script>
+    <script src={{asset('js/shopcart.js')}}></script>
+
 
 </body>
 
