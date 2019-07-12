@@ -47,7 +47,8 @@ class singleproductController extends Controller
 
         DB::table('shopping_cart')->insert([
             'product_id' => $id,
-            'users_id' => 1
+            'users_id' => 1,
+            'size' => 'M'
 
         ]);
 

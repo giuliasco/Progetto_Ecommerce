@@ -9,7 +9,7 @@
                 <span id="{{$cart->id}}" class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
                 <span class="badge">{{$cart->brand}}</span>
                 <h6>{{$cart->name}}</h6>
-                <p class="size">Size: S</p>
+                <p class="size">M</p>
                 <p class="price">{{$cart->price}}</p>
             </div>
         </a>
