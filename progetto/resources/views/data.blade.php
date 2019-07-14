@@ -68,8 +68,8 @@
                         <div class="catagories-menu">
                             <ul>
                                 <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
-                                <li><a href="#"> My Data</a></li>
-                                <li><a href="#">  My Adresses</a></li>
+                                <li><a href="/adress"> My Data</a></li>
+                                <li><a href="/adress">  My Adresses</a></li>
 
                             </ul>
                         </div>
@@ -84,9 +84,14 @@
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
 
+             @if (session('success'))
+  <h6 style="color:green;"> {{session('success')}}</h6>
+                 @else
+                    <h6 style="color:green;"> {{session('message')}}</h6>
+ @endif
 
 
-                <form method="POST" action="{{ route('users.update') }}">
+                <form id ="updatedata" method="POST" action="{{ route('users.update') }}">
                  @method("patch")
                     @csrf
 
@@ -121,9 +126,14 @@
                         <label for="password" class="col-md-4 col-form-label text-md-right">Edit Password</label>
 
                         <div class="col-md-6">
-                            <input id="password" type="password" class="form-control " name="password"  placeholder="password"  autocomplete="new-password">
+                            <input id="password" type="password" class="form-control  @error('password') is-invalid @enderror" name="password"  placeholder="password"  autocomplete="new-password">
 
                         </div>
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                     </div>
 
                     <div class="form-group row">
@@ -138,9 +148,8 @@
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-4">
                             <p> to modify data click the button below</p>
-                            <button type="submit" class="btn btn-primary">
-                              Update Data
-                            </button>
+                            <input id="clickMe" type="button" value="Update Data" onclick="errorDetection();" />
+
                         </div>
                     </div>
                 </form>
@@ -179,19 +188,29 @@
 
 <script>
 
-    // $(document).ready(function() {
-    // var url = $("#All").getAttribute("href");
-    //  $('#myorders').click(function(){
-    //   $.get("#d", function( data ) {
-    //         $( ".destinazione" ).html( data );
-    // });
-    //  });
-    //  });
-   // $(document).ready(function(){
-       // $("#myorders").click(function(){
-         //   $("d").hide();
-     //   });
-   // });
+
+    function errorDetection() {
+
+        var p1 = document.getElementById('password').value;
+        var p2 = document.getElementById('password-confirm').value;
+
+        if (p1.length<8 && p1.length>0){
+        alert("password must be at least 8 characters!");
+        }
+        else if (p1!=p2)
+        {
+            alert("passwords don't match");
+        }
+        else if( p1.length=p2.length=0){
+         document.forms["updatedata"].submit();
+        }
+
+        else {
+            document.forms["updatedata"].submit();
+
+        }
+
+}
 
 
 </script>

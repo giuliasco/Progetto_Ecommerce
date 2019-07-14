@@ -39,7 +39,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="page-title text-center">
-                    <h2>MY DATA </h2>
+                    <h2>MY ADDRESSES </h2>
                 </div>
             </div>
         </div>
@@ -68,8 +68,8 @@
                         <div class="catagories-menu">
                             <ul>
                                 <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
-                                <li><a href="#"> My Data</a></li>
-                                <li><a href="#">  My Adresses</a></li>
+                                <li><a href="/data"> My Data</a></li>
+                                <li><a href="/adress">  My Adresses</a></li>
 
                             </ul>
                         </div>
@@ -78,45 +78,52 @@
             </div>
 
 
-            <div class="destinazione">
 
-            </div>
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
+                <div class="card">
+                    <div class="card-header  bg-secondary text-white">ADDRESES </div>
+                    <div class="card-body">
+
+                        <?php
+                        $addresses=  DB::table('address')
+                            //->join('category', 'category.id', '=', 'product.category_id')
+                            //->join('gallery', 'product.id', '=', 'gallery.product_id')
+                            ->select('address.street', 'address.city', 'address.province', 'address.cap')
+                            ->where('address.user_id' , '=',  Auth::user()->id)
+                            ->get();
+                        ?>
+
+                        @if (isset($addresses))
+                            @if (count($addresses)>0)
+                      @foreach($addresses as $address)
+                                        <p style="color: black; line-height:2px;"> Street: {{$address->street}} </p>
+                                        <p style="color: black; line-height:2px;"> City: {{$address->city}} </p>
+                                        <p style="color: black; line-height:2px;"> Province: {{$address->province}} </p>
+                                        <p style="color: black; line-height:2px;"> Cap: {{$address->cap}} <hr></p>
+
+                                @endforeach
+                                @else
+                                    <p class="card-text text-black">no addresses yet!</p>
+
+                                @endif
+                                    @endif
+
+                        <input id="addbutton" class="card-link"  type="button" value="Add ▼" onclick="addNewAddress();" />
+                        <form action="{{route('users.store')}}" method="post">
+                            @csrf
+                        <div id="addadress" class="add address">
 
 
 
-                <form action="{{route('users.store')}}" method="post">
-                   @csrf
-                    <div class="row">
 
-                        <div class="col-12 mb-3">
-                            <label for="street">Address <span>*</span></label>
-                            <input type="text" class="form-control mb-3" name="street" id="street" value="">
+
+
                         </div>
-                        <div class="col-12 mb-3">
-                            <label for="city">Town/City <span>*</span></label>
-                            <input type="text" class="form-control" name="city" id="city" value="">
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="province">Province <span>*</span></label>
-                            <input type="text" class="form-control"  name="province" id="province" value="">
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="cap">Postcode <span>*</span></label>
-                            <input type="text" class="form-control"  name="cap" id="cap" value="">
-                        </div>
-
-
+                        </form>
                     </div>
 
-                    <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
-                            Update Data
-                        </button>
-                    </div>
-                </form>
-
+                </div><br>
 
 
 
@@ -152,22 +159,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
+  function addNewAddress()
+  {
+   var x= document.getElementById("addbutton").value;
 
-    // $(document).ready(function() {
-    // var url = $("#All").getAttribute("href");
-    //  $('#myorders').click(function(){
-    //   $.get("#d", function( data ) {
-    //         $( ".destinazione" ).html( data );
-    // });
-    //  });
-    //  });
-    // $(document).ready(function(){
-    // $("#myorders").click(function(){
-    //   $("d").hide();
-    //   });
-    // });
+      if (x== "Add ▼"){
+
+          document.getElementById("addadress").innerHTML=('<br><div class="row"> <div class="col-12 mb-3"> <label for="street">Address <span>*</span></label>   <input type="text" class="form-control mb-3" name="street" id="street" value=""> </div> <div class="col-12 mb-3">  <label for="city">Town/City <span>*</span></label> <input type="text" class="form-control" name="city" id="city" value=""> </div>  <div class="col-12 mb-3"> <label for="province">Province <span>*</span></label>  <input type="text" class="form-control"  name="province" id="province" value=""> </div> <div class="col-12 mb-3"> <label for="cap">Postcode <span>*</span></label> <input type="text" class="form-control"  name="cap" id="cap" value=""> </div>  </div> <div class="col-md-6 offset-md-4"><button type="submit" class="btn btn-primary"> Update Data        </button>    </div>');
 
 
+
+
+
+          document.getElementById("addbutton").setAttribute("value","Add ▲");
+
+
+   }
+   else if (x=="Add ▲"){
+       document.getElementById("addbutton").setAttribute("value","Add ▼");
+          document.getElementById("addadress").innerText=' ';
+
+   }
+  }
 </script>
 </body>
 

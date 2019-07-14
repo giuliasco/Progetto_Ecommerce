@@ -14,4 +14,5 @@ class users extends Model
         'cap',
         'user_id',
     ];
+
 }
