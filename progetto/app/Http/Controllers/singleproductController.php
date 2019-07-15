@@ -43,19 +43,20 @@ class singleproductController extends Controller
         return view ('search_results' , compact('products' ));
     }
 
-    function addtocart($id) {
+    function addtocart($id, Request $request) {
 
         DB::table('shopping_cart')->insert([
             'product_id' => $id,
-            'users_id' => 1,
-            'size' => 'M'
+            'users_id' => 1
 
         ]);
-
+return $request->all() ;
         $carts= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
-            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
+            ->join('availability', 'product.id', '=', 'availability.product_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'availability.size' ,'product.description', 'product.price','product.brand')
+            ->where('availability.size', '=', $request->input('size'))
             ->groupby('product.id', 'gallery.product_id')
             ->get() ;
 

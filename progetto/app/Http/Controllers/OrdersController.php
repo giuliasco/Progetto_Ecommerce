@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
@@ -44,9 +46,21 @@ class OrdersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $orders= DB::table('order_composition')
+
+            ->join('order','order.id', '=', 'order_composition.order_id')
+            ->join('product','product.id','=','order_composition.order_id')
+           ->join('payment','payment.id','=','order.payment_id')
+            ->join('category','category.id', '=', 'product.category_id')
+            ->join('gallery','product.id','=','gallery.product_id')
+           ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand',
+                'payment.total_price','order.data')
+            ->where('order.user_id','=', Auth::user()->id)
+            ->get();
+
+        return view('/my_orders', compact('orders'));
     }
 
     /**

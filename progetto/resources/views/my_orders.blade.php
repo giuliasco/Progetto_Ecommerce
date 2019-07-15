@@ -69,7 +69,7 @@
                             <ul>
                                 <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
                                 <li><a href="{{route('users.edit')}}"> My Data</a></li>
-                                <li><a href="#">  My Adresses</a></li>
+                                <li><a href="/data">  My Adresses</a></li>
 
                             </ul>
                         </div>
@@ -78,14 +78,28 @@
             </div>
 
 
-            <div class="destinazione">
-
-            </div>
-
             <div id="d" class="col-12 col-md-8 col-lg-9">
+               <?php
+                $orders= DB::table('order_composition')
 
+                    ->join('order','order.id', '=', 'order_composition.order_id')
+                    ->join('product','product.id','=','order_composition.order_id')
+                    ->join('payment','payment.id','=','order.payment_id')
+                    ->join('category','category.id', '=', 'product.category_id')
+                    ->join('gallery','product.id','=','gallery.product_id')
+                    ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand',
+                        'payment.total_price','order.data')
+                    ->where('order.user_id','=', Auth::user()->id)
+                    ->get();
+                ?>
 
+                   orders
+                <p>
+                    @foreach($orders as $order)
+                    {{$order->name}};
+                        @endforeach
 
+                </p>
 
 
 
