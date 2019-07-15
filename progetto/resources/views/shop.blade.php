@@ -69,6 +69,7 @@
                                 <ul id="menu-content2" class="menu-content collapse show">
 
                                     <!-- Single Item -->
+
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">

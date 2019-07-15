@@ -36,6 +36,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\users' => $baseDir . '/app/users.php',
     'Arrilot\\Widgets\\AbstractWidget' => $vendorDir . '/arrilot/laravel-widgets/src/AbstractWidget.php',
     'Arrilot\\Widgets\\AsyncFacade' => $vendorDir . '/arrilot/laravel-widgets/src/AsyncFacade.php',
     'Arrilot\\Widgets\\Console\\WidgetMakeCommand' => $vendorDir . '/arrilot/laravel-widgets/src/Console/WidgetMakeCommand.php',
