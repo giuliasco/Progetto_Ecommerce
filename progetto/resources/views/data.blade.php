@@ -69,7 +69,7 @@
                             <ul>
                                 <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
                                 <li><a href="/adress"> My Data</a></li>
-                                <li><a href="/adress">  My Adresses</a></li>
+                                <li><a href="/adress"> My Adresses</a></li>
 
                             </ul>
                         </div>
@@ -148,7 +148,7 @@
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-4">
                             <p> to modify data click the button below</p>
-                            <input id="clickMe" type="button" value="Update Data" onclick="errorDetection();" />
+                            <input class="btn essence-btn id=clickMe" value="Update Data" onclick="errorDetection();" />
 
                         </div>
                     </div>
