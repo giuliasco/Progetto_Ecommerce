@@ -82,7 +82,7 @@
                <?php
                $orders= DB::table('order')
                    ->join('payment','payment.id','=','order.payment_id')
-                    ->select('order.id','payment.total_price')
+                    ->select('order.id','payment.total_price', 'order.status_order_id')
                     ->where('order.user_id','=', Auth::user()->id)
                     ->get();
                      foreach($orders as $order){
@@ -93,11 +93,23 @@
                              ->join('gallery','product.id','=','gallery.product_id')
 
                              ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand'
-                                 )
+                                )
                              ->where('order_id','=',$order->id)
                              ->get();
                      }
                           ?>
+
+                  @if( isset($orders))
+                       <div class="card" style="display:inline-block; width: 400px;">
+
+                           <div class="card-header  bg-secondary text-white"> Order#</div>
+                           <div class="card-body">
+
+                               <p style="color: black; line-height:7px;"> No orders yet!</p>
+
+                           </div>
+                       </div >
+                   @endif
 
                        <div style="float: left;">
                            @foreach($orders as $order)
@@ -105,10 +117,15 @@
 
                        <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
                        <div class="card-body">
-                           total price: {{$order->total_price}}  <hr>
+                           total price: {{$order->total_price}} <br>
+                         Delivery Status : @if($order->status_order_id==1)
+                                   Delivered
+                               @else Not Delivered
+                               @endif
+                           <hr>
                        @foreach($ods[$order->id] as $od)
                                <table  >
-                                   <tr><td>Product:</td><td> </td></tr>
+                                   <tr><td>Product:</td><td> </td> </td></td></tr>
                                    <tr >
                                        <td rowspan="3"> <img  style="height: 100px;" src="{{asset('img/product-img/'.$od->path.'.jpg')}}"> </td>
                                        <td style="padding:0 15px 0 15px;">
@@ -116,6 +133,8 @@
                            Brand:    {{$od->brand}}<br>
                            Price:    {{$od->price}}
                                        </td>
+                                       <td>
+
                                    </tr>
                              </table>
                                   <hr>
