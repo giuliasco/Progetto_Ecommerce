@@ -85,7 +85,9 @@
                     ->select('order.id','payment.total_price', 'order.status_order_id')
                     ->where('order.user_id','=', Auth::user()->id)
                     ->get();
+               $flag=false;
                      foreach($orders as $order){
+                         $flag=true;
                          $ods[$order->id]= DB::table('order_composition')
                              ->join('product','product.id','=','order_composition.product_id')
                              ->join('order','order.id', '=', 'order_composition.order_id')
@@ -99,7 +101,7 @@
                      }
                           ?>
 
-                  @if( isset($orders))
+                  @if( !$flag)
                        <div class="card" style="display:inline-block; width: 400px;">
 
                            <div class="card-header  bg-secondary text-white"> Order#</div>
@@ -109,7 +111,7 @@
 
                            </div>
                        </div >
-                   @endif
+                   @else
 
                        <div style="float: left;">
                            @foreach($orders as $order)
@@ -145,7 +147,7 @@
                            @endforeach
 </div>
 
-
+                   @endif
 
 
 
