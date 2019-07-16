@@ -80,26 +80,53 @@
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
                <?php
-                $orders= DB::table('order_composition')
-
-                    ->join('order','order.id', '=', 'order_composition.order_id')
-                    ->join('product','product.id','=','order_composition.order_id')
-                    ->join('payment','payment.id','=','order.payment_id')
-                    ->join('category','category.id', '=', 'product.category_id')
-                    ->join('gallery','product.id','=','gallery.product_id')
-                    ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand',
-                        'payment.total_price','order.data')
+               $orders= DB::table('order')
+                   ->join('payment','payment.id','=','order.payment_id')
+                    ->select('order.id','payment.total_price')
                     ->where('order.user_id','=', Auth::user()->id)
                     ->get();
-                ?>
+                     foreach($orders as $order){
+                         $ods[$order->id]= DB::table('order_composition')
+                             ->join('product','product.id','=','order_composition.product_id')
+                             ->join('order','order.id', '=', 'order_composition.order_id')
+                             ->join('category','category.id', '=', 'product.category_id')
+                             ->join('gallery','product.id','=','gallery.product_id')
 
-                   orders
-                <p>
-                    @foreach($orders as $order)
-                    {{$order->name}};
-                        @endforeach
+                             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand'
+                                 )
+                             ->where('order_id','=',$order->id)
+                             ->get();
+                     }
+                          ?>
 
-                </p>
+                       <div style="float: left;">
+                           @foreach($orders as $order)
+                       <div class="card" style="display:inline-block; width: 400px;">
+
+                       <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
+                       <div class="card-body">
+                           total price: {{$order->total_price}}  <hr>
+                       @foreach($ods[$order->id] as $od)
+                               <table  >
+                                   <tr><td>Product:</td><td> </td></tr>
+                                   <tr >
+                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('img/product-img/'.$od->path.'.jpg')}}"> </td>
+                                       <td style="padding:0 15px 0 15px;">
+                           Name:  {{$od->name}} <br>
+                           Brand:    {{$od->brand}}<br>
+                           Price:    {{$od->price}}
+                                       </td>
+                                   </tr>
+                             </table>
+                                  <hr>
+
+                              @endforeach
+                       </div>
+                   </div ><br><br>
+                           @endforeach
+</div>
+
+
 
 
 
