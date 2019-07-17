@@ -39,13 +39,11 @@ Route::get('/data' , 'UsersController@edit')->name('users.edit');
 
 Route::patch('/data' , 'UsersController@update')->name('users.update');
 
-Route::get('/my_orders', 'OrdersController@index')->name('orders.index');
+Route::get('/my_orders', 'OrdersController@show');
 
 
 Route::post('/adress', 'UsersController@store')->name('users.store');
-Route::get('/adress', function () {
-    return view('adress');
-});
+Route::get('/adress', 'UsersController@addresses');
 Route::get('/shop/{sex}', 'productController@index');
 
 
@@ -53,9 +51,11 @@ Route::get('/shop', 'productController@collezione');
 
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 
-Route::get('/shop/single-product-details/{id}/add', 'singleproductController@addtocart');
+Route::get('/shop/single-product-details/{id}/{size}/add', 'singleproductController@addtocart');
 
 Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
+
+Route::get('/shop/single-product-details/ciaone/{id}', 'singleproductController@addtocart');
 
 
 Route::group(['prefix' => 'admin'], function () {

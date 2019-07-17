@@ -119,15 +119,14 @@ class UsersController extends Controller
     }
     function addresses(){
 
-     //  $addresses=  DB::table('address')
-           // ->join('category', 'category.id', '=', 'product.category_id')
-            //->join('gallery', 'product.id', '=', 'gallery.product_id')
-         //   ->select('address.street', 'address.city', 'address.province', 'address.cap')
-         //  ->where('address.user_id' , '=',  Auth::user()->id)
-           // ->get();
+       $addresses=  DB::table('address')
+
+            ->select('address.street', 'address.city', 'address.province', 'address.cap')
+           ->where('address.user_id' , '=',  Auth::user()->id)
+            ->get();
 
 
-        //return view('/adress', compact('addresses'));
+       return view('/adress', compact('addresses'));
     }
 
 }

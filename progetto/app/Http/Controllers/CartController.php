@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
     function removefromcart($id) {
 
-        DB::table('shopping_cart')->where('product_id', '=' , $id)->delete() ;
+
+        DB::table('shopping_cart')->where('product_id', '=' , $id)
+            ->delete();
 
         $carts= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
@@ -18,7 +21,11 @@ class CartController extends Controller
             ->groupby('product.id', 'gallery.product_id')
             ->get() ;
 
-        return view('cart' , compact('carts', $carts));
+        $cartsubtotal=DB::table('shopping_cart')
+            ->select('subtotal')
+            ->sum('subtotal');
+
+        return view('cart' , compact('carts', 'cartsubtotal'));
 
     }
 }

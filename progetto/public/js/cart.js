@@ -5,7 +5,7 @@ $( document ).ready(function() {
         var data = $('.single_product_desc').attr("id");
         console.log(data);
         console.log(size);
-        $.post( "/shop/single-product-details/"+data+"/add" , {size},  function( data ) {
+        $.get( "/shop/single-product-details/"+data+"/"+size+"/add" ,{size:size},  function( data ) {
             $( ".right-side-cart-area" ).html( data);
                    });
     });

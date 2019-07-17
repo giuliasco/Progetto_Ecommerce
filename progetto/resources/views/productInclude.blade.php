@@ -23,7 +23,7 @@
                 <a href='/shop/single-product-details/{{$product->id}}'>
                     <h6>{{$product->name}}</h6>
                 </a>
-                <p class="product-price">{{$product->price}}</p>
+                <p class="product-price">{{$product->price}}€</p>
 
                 <!-- Hover Content -->
                 <div class="hover-content">

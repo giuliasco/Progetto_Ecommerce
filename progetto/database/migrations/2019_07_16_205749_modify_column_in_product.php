@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ModifyAvailability extends Migration
+class ModifyColumnInProduct extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class ModifyAvailability extends Migration
      */
     public function up()
     {
-       Schema::table('availability', function(Blueprint $table){
-           $table->dropColumn('size');
-       });
+        Schema::table('product', function (Blueprint $table) {
+            $table->dropColumn('price');
+        });
     }
 
     /**
@@ -25,8 +25,8 @@ class ModifyAvailability extends Migration
      */
     public function down()
     {
-        Schema::table('availability', function (Blueprint $table){
-            $table->enum('size', ['S','M','L','XL','null']);
+        Schema::table('product', function (Blueprint $table) {
+            $table->float('price', 10,2);
         });
     }
 }

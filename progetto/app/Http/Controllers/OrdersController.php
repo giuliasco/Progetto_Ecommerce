@@ -16,7 +16,7 @@ class OrdersController extends Controller
     public function index()
     {
 
-        return view('my_orders');
+     //   return view('my_orders');
     }
 
     /**
@@ -48,19 +48,28 @@ class OrdersController extends Controller
      */
     public function show()
     {
-        $orders= DB::table('order_composition')
+       $orders= DB::table('order')
+    ->join('payment','payment.id','=','order.payment_id')
+    ->select('order.id','payment.total_price', 'order.status_order_id')
+    ->where('order.user_id','=', Auth::user()->id)
+    ->get();
+      $flag=false ;
+foreach($orders as $order){
+    $flag =true;
+    $ods[$order->id]= DB::table('order_composition')
+        ->join('product','product.id','=','order_composition.product_id')
+        ->join('order','order.id', '=', 'order_composition.order_id')
+        ->join('category','category.id', '=', 'product.category_id')
+        ->join('gallery','product.id','=','gallery.product_id')
 
-            ->join('order','order.id', '=', 'order_composition.order_id')
-            ->join('product','product.id','=','order_composition.order_id')
-           ->join('payment','payment.id','=','order.payment_id')
-            ->join('category','category.id', '=', 'product.category_id')
-            ->join('gallery','product.id','=','gallery.product_id')
-           ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand',
-                'payment.total_price','order.data')
-            ->where('order.user_id','=', Auth::user()->id)
-            ->get();
+        ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand'
+        )
+        ->where('order_id','=',$order->id)
+        ->get();
+}
 
-        return view('/my_orders', compact('orders'));
+        return view('/my_orders', compact('orders','ods','flag'));
+
     }
 
     /**

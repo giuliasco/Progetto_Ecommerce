@@ -67,9 +67,9 @@
                         <!--  Catagories  -->
                         <div class="catagories-menu">
                             <ul>
-                                <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
+                                <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href="{{route('users.edit')}}"> My Data</a></li>
-                                <li><a href="/data">  My Adresses</a></li>
+                                <li><a href="/adress">  My Adresses</a></li>
 
                             </ul>
                         </div>
@@ -79,27 +79,54 @@
 
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
-               <?php
-                $orders= DB::table('order_composition')
 
-                    ->join('order','order.id', '=', 'order_composition.order_id')
-                    ->join('product','product.id','=','order_composition.order_id')
-                    ->join('payment','payment.id','=','order.payment_id')
-                    ->join('category','category.id', '=', 'product.category_id')
-                    ->join('gallery','product.id','=','gallery.product_id')
-                    ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand',
-                        'payment.total_price','order.data')
-                    ->where('order.user_id','=', Auth::user()->id)
-                    ->get();
-                ?>
+                  @if( !$flag)
+                       <div class="card" style="display:inline-block; width: 400px;">
 
-                   orders
-                <p>
-                    @foreach($orders as $order)
-                    {{$order->name}};
-                        @endforeach
+                           <div class="card-header  bg-secondary text-white"> Order#</div>
+                           <div class="card-body">
 
-                </p>
+                               <p style="color: black; line-height:7px;"> No orders yet!</p>
+
+                           </div>
+                       </div >
+                   @else
+
+                       <div style="float: left;">
+                           @foreach($orders as $order)
+                       <div class="card" style="display:inline-block; width: 400px;">
+
+                       <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
+                       <div class="card-body">
+                           total price: {{$order->total_price}} <br>
+                         Delivery Status : @if($order->status_order_id==1)
+                                   Delivered
+                               @else Not Delivered
+                               @endif
+                           <hr>
+                       @foreach($ods[$order->id] as $od)
+                               <table  >
+                                   <tr><td>Product:</td><td> </td> </td></td></tr>
+                                   <tr >
+                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('img/product-img/'.$od->path.'.jpg')}}"> </td>
+                                       <td style="padding:0 15px 0 15px;">
+                           Name:  {{$od->name}} <br>
+                           Brand:    {{$od->brand}}<br>
+                           Price:    {{$od->price}}
+                                       </td>
+                                       <td>
+
+                                   </tr>
+                             </table>
+                                  <hr>
+
+                              @endforeach
+                       </div>
+                   </div ><br><br>
+                           @endforeach
+</div>
+
+                   @endif
 
 
 
