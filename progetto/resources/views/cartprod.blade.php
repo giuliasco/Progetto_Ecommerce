@@ -10,7 +10,7 @@
                 <span class="badge">{{$cart->brand}}</span>
                 <h6>{{$cart->name}}</h6>
                 <p class="size">Size: {{$cart->size}}</p>
-                <p class="price">{{$cart->price}}</p>
+                <p class="price">{{$cart->price}}€</p>
             </div>
         </a>
     </div>

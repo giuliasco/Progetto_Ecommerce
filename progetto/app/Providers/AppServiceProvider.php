@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use OAuth2\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,17 +18,25 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer(
             ['index', '/shop' , '/single-product-details', 'search_results', 'Profile', 'my_orders', 'data',
-            'contact', 'cart', 'checkout', 'adress'],
+            '/contact', '/cart', '/checkout', 'adress'],
 
             function($view) {
-                $carts= DB::table('product')
+
+
+                $carts= DB::table('shopping_cart')
+                    ->join('product','shopping_cart.product_id','=','product.id')
                     ->join('gallery', 'product.id', '=', 'gallery.product_id')
-                    ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
-                    ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
-                    ->groupby('product.id', 'gallery.product_id')
+                    ->select('product.name', 'gallery.path' ,
+                        'product.id', 'product.description', 'shopping_cart.size', 'shopping_cart.subtotal',
+                        'product.price','product.brand')
                     ->get() ;
 
-                $view->with('carts', $carts);
+                $cartsubtotal=DB::table('shopping_cart')
+                    ->select('subtotal')
+                    ->sum('subtotal');
+
+                $view->with(compact('carts'))
+                    ->with(compact('cartsubtotal'));
             });
     }
 

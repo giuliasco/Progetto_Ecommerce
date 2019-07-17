@@ -29,7 +29,7 @@
     <div class="cart-bg-overlay"></div>
 
     <div class="right-side-cart-area">
-    @include ('cart', ['carts' => $carts])
+    @include ('cart',  [$carts, $cartsubtotal])
     <!-- ##### Right Side Cart End ##### -->
     </div>
     <!-- ##### Single Product Details Area Start ##### -->
@@ -49,7 +49,7 @@
             <a>
                 <h2>{{$details[0]->name}}</h2>
             </a>
-            <p class="product-price">{{$details[0]->price}}</p>
+            <p class="product-price">{{$details[0]->price}}€</p>
             <p class="product-desc">{{$details[0]->description}}</p>
             @endif
             <!-- Form -->
@@ -57,10 +57,10 @@
                  <!-- Select Box -->
                 <div class="select-box d-flex mt-50 mb-30">
                     <select name="select" id="productSize" class="mr-5">
-                        <option value="XL">Size: XL</option>
-                        <option value="L">Size: L</option>
-                        <option value="M">Size: M</option>
-                        <option value="S">Size: S</option>
+                        @foreach($measure as $m)
+                        <option value="{{$m->size}}">Size: {{$m->size}}</option>
+                            @endforeach
+
                     </select>
                 </div>
 

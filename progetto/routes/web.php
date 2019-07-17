@@ -53,9 +53,11 @@ Route::get('/shop', 'productController@collezione');
 
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 
-Route::get('/shop/single-product-details/{id}/add', 'singleproductController@addtocart');
+Route::get('/shop/single-product-details/{id}/{size}/add', 'singleproductController@addtocart');
 
 Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
+
+Route::get('/shop/single-product-details/ciaone/{id}', 'singleproductController@addtocart');
 
 
 Route::group(['prefix' => 'admin'], function () {
