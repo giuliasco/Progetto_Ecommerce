@@ -67,7 +67,7 @@
                         <!--  Catagories  -->
                         <div class="catagories-menu">
                             <ul>
-                                <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
+                                <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href="/data"> My Data</a></li>
                                 <li><a href="/adress">  My Adresses</a></li>
 
@@ -85,14 +85,7 @@
                     <div class="card-header  bg-secondary text-white">ADDRESES </div>
                     <div class="card-body">
 
-                        <?php
-                        $addresses=  DB::table('address')
-                            //->join('category', 'category.id', '=', 'product.category_id')
-                            //->join('gallery', 'product.id', '=', 'gallery.product_id')
-                            ->select('address.street', 'address.city', 'address.province', 'address.cap')
-                            ->where('address.user_id' , '=',  Auth::user()->id)
-                            ->get();
-                        ?>
+
 
                         @if (isset($addresses))
                             @if (count($addresses)>0)

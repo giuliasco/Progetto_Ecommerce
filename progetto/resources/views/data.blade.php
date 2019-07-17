@@ -67,8 +67,8 @@
                         <!--  Catagories  -->
                         <div class="catagories-menu">
                             <ul>
-                                <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
-                                <li><a href="/adress"> My Data</a></li>
+                                <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
+                                <li><a href="/data"> My Data</a></li>
                                 <li><a href="/adress"> My Adresses</a></li>
 
                             </ul>

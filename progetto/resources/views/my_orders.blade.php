@@ -67,9 +67,9 @@
                         <!--  Catagories  -->
                         <div class="catagories-menu">
                             <ul>
-                                <li > <a id="myorders" href="{{route('orders.index')}}" > My Orders</a></li>
+                                <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href="{{route('users.edit')}}"> My Data</a></li>
-                                <li><a href="/data">  My Adresses</a></li>
+                                <li><a href="/adress">  My Adresses</a></li>
 
                             </ul>
                         </div>
@@ -79,27 +79,6 @@
 
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
-               <?php
-               $orders= DB::table('order')
-                   ->join('payment','payment.id','=','order.payment_id')
-                    ->select('order.id','payment.total_price', 'order.status_order_id')
-                    ->where('order.user_id','=', Auth::user()->id)
-                    ->get();
-               $flag=false;
-                     foreach($orders as $order){
-                         $flag=true;
-                         $ods[$order->id]= DB::table('order_composition')
-                             ->join('product','product.id','=','order_composition.product_id')
-                             ->join('order','order.id', '=', 'order_composition.order_id')
-                             ->join('category','category.id', '=', 'product.category_id')
-                             ->join('gallery','product.id','=','gallery.product_id')
-
-                             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand'
-                                )
-                             ->where('order_id','=',$order->id)
-                             ->get();
-                     }
-                          ?>
 
                   @if( !$flag)
                        <div class="card" style="display:inline-block; width: 400px;">
