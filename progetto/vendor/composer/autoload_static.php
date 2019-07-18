@@ -504,6 +504,7 @@ class ComposerStaticInit76793cce544532b84ff4185a11a08c3d
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\OrdersController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrdersController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
+        'App\\Http\\Controllers\\WishlistController' => __DIR__ . '/../..' . '/app/Http/Controllers/WishlistController.php',
         'App\\Http\\Controllers\\category' => __DIR__ . '/../..' . '/app/Http/Controllers/category.php',
         'App\\Http\\Controllers\\productController' => __DIR__ . '/../..' . '/app/Http/Controllers/productController.php',
         'App\\Http\\Controllers\\singleproductController' => __DIR__ . '/../..' . '/app/Http/Controllers/singleproductController.php',

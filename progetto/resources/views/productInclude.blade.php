@@ -12,9 +12,7 @@
                 <!-- Hover Thumb -->
                 <!--   <img class="hover-img" src="img/product-img/product-1.jpg" alt="">-->
                 <!-- Favourite -->
-                <div class="product-favourite">
-                    <a href="#" class="favme fa fa-heart"></a>
-                </div>
+
             </div>
 
             <!-- Product Description -->

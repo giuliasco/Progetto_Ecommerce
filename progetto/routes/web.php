@@ -30,6 +30,8 @@ Route::get('/regular-page', function () {
     return view('regular-page');
 });
 
+Route::get('/wishlist', 'WishlistController@index');
+
 Route::get('/Profile', function () {
     return view('Profile');
 });

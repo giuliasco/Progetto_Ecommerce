@@ -71,7 +71,7 @@
                     <button id="addcart" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
                     <!-- Favourite -->
                     <div class="product-favourite ml-4">
-                        <a href="#" class="favme fa fa-heart"></a>
+                        <a href="/wishlist" class="favme fa fa-heart"></a>
                     </div>
                </div>
                 <!-- </form> -->

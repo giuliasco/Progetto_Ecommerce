@@ -49,7 +49,7 @@
             </div>
             <!-- Favourite Area -->
             <div class="favourite-area">
-                <a href="#"><img src={{asset('img/core-img/heart.svg')}} alt=""></a>
+                <a href="/wishlist"><img src={{asset('img/core-img/heart.svg')}} alt=""></a>
             </div>
             <!-- User Login Info -->
 
