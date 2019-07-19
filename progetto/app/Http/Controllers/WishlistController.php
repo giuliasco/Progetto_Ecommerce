@@ -20,4 +20,50 @@ class WishlistController extends Controller
         return view('/wishlist', compact('products'));
 
     }
+// da vedere come fare la insert nel db
+
+    function addToWishlist(Request $request){
+
+        $product_id = $request->input('id');
+        $userid = auth()->user()->id;
+        $currdate = date("Y-m-d H:i:s");
+
+        DB::table('wishlist')->insert([
+            'user_id' => $userid,
+            'product_id' => $product_id,
+            'created_at' => $currdate,
+            ]);
+
+
+        $alreadyWished = DB::table('wishlist')
+            ->where('product_id', '=', $product_id)
+            ->where('user_id', '=', $userid)
+            ->count();
+
+        if(empty($userid))
+        {
+            return ('0');
+        } else {
+            return view('wishlist', compact('alreadyWished'));
+        }
+    }
+
+
+    public function removeFromWish(Request $request)
+    {
+        $product_id = $request->input('id');
+        $userid = auth()->user()->id;
+        $currdate = date("Y-m-d H:i:s");
+
+        DB::table('wishlist')
+            ->where('user_id', '=', $userid)
+            ->where('product_id', '=', $product_id)
+            ->delete();
+
+
+        return 200 ;
+    }
 }
+
+
+
