@@ -1,11 +1,13 @@
 
 $( document ).ready(function() {
     $('#addcart').click(function () {
-        var size= $('.current').attr("value");
+
+        var sizes= $('.current').attr("value");
         var data = $('.single_product_desc').attr("id");
         console.log(data);
-        console.log(size);
-        $.get( "/shop/single-product-details/"+data+"/"+size+"/add" ,{size:size},  function( data ) {
+        console.log(sizes);
+        $.get( "/shop/single-product-details/"+data+"/"+sizes+"/add" ,  function( data ) {
+            console.log(data);
             $( ".right-side-cart-area" ).html( data);
                    });
     });

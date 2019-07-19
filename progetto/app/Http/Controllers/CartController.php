@@ -11,7 +11,7 @@ class CartController extends Controller
     function removefromcart($id) {
 
 
-        DB::table('shopping_cart')->where('product_id', '=' , $id)
+        DB::table('shopping_cart')->where('product_id', '=' , $id)//->where('size','=','$size')
             ->delete();
 
         $carts= DB::table('product')

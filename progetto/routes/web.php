@@ -55,7 +55,6 @@ Route::get('/shop/single-product-details/{id}/{size}/add', 'singleproductControl
 
 Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
 
-Route::get('/shop/single-product-details/ciaone/{id}', 'singleproductController@addtocart');
 
 
 Route::group(['prefix' => 'admin'], function () {
