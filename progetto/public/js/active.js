@@ -116,9 +116,7 @@
     // :: Favorite Button Active Code
     var favme = $(".favme");
 
-    favme.on('click', function () {
-        $(this).toggleClass('active');
-    });
+
 
     favme.on('click touchstart', function () {
         $(this).toggleClass('is_animating');

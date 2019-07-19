@@ -30,7 +30,6 @@ Route::get('/regular-page', function () {
     return view('regular-page');
 });
 
-Route::get('/wishlist', 'WishlistController@index');
 
 Route::get('/Profile', function () {
     return view('Profile');
@@ -48,9 +47,12 @@ Route::post('/adress', 'UsersController@store')->name('users.store');
 Route::get('/adress', 'UsersController@addresses');
 Route::get('/shop/{sex}', 'productController@index');
 
+Route::get('wishlist', 'WishlistController@index');
+
 
 Route::get('/shop', 'productController@collezione');
-
+Route::get('/shop/single-product-details/removefromwish', 'WishlistController@removeFromWish');
+Route::get('/shop/single-product-details/addtowish', 'WishlistController@addToWishlist');
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 
 Route::get('/shop/single-product-details/{id}/{size}/add', 'singleproductController@addtocart');

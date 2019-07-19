@@ -12,6 +12,14 @@ class singleproductController extends Controller
 {
     function dettagli($id)
     {
+
+        $userid= Auth::user()->id;
+
+        $wishlist= DB::table('wishlist')
+            ->where('product_id', "=", $id)
+            ->where('user_id', "=", $userid)
+            ->count();
+
         $details= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
@@ -23,12 +31,11 @@ class singleproductController extends Controller
             ->join('availability', 'product.id','=', 'availability.product_id')
             ->select('availability.size')
             ->where('availability.product_id', "=", $id)
-            ->where('availability.quantity', '>', '0')
             ->get() ;
 
 
 
-        return view('/single-product-details', compact('details','measure'));
+        return view('/single-product-details', compact('details','measure', 'wishlist'));
     }
 
     function search (Request $request){

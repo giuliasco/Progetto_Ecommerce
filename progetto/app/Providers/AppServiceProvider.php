@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer(
             ['index', '/shop' , '/single-product-details', 'search_results', 'Profile', '/my_orders', 'data',
-            '/contact', '/cart', '/checkout','/wishlist', '/adress'],
+            '/contact', '/cart', '/checkout','/wishlist', 'wishlist', '/adress'],
 
             function($view) {
 

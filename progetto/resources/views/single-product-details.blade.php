@@ -70,9 +70,15 @@
                     <!--Cart -->
                     <button id="addcart" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
                     <!-- Favourite -->
-                    <div class="product-favourite ml-4">
-                        <a href="/wishlist" class="favme fa fa-heart"></a>
+
+                    <div class="product-favourite ml-4" id="whisheshandler" >
+                        @if(empty($wishlist))
+                        <a class="favme fa fa-heart" id="add"></a>
+                        @else
+                            <a class="favme fa fa-heart active is_animating" id="remove"></a>
+                            @endif
                     </div>
+
                </div>
                 <!-- </form> -->
             </div>
@@ -97,6 +103,11 @@
     <script src="{{asset('js/active.js')}}"></script>
 
     <script src={{asset('js/cart.js')}}></script>
+
+    <script src={{asset('js/addtowish.js')}}></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
     <script>
         $(document).ready(function () {
             $(document).on('click', '.option', function () {
@@ -105,6 +116,8 @@
             });
         });
     </script>
+
+
 </body>
 
 </html>
