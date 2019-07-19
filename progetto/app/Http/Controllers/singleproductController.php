@@ -14,7 +14,8 @@ class singleproductController extends Controller
     {
         $details= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
-            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
+            ->join('category','category.id','=','product.category_id')
+            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand','category.type')
             ->where('product.id', "=", $id)
             ->groupby('product.id', 'gallery.product_id')
             ->get() ;
@@ -54,7 +55,7 @@ class singleproductController extends Controller
 
     function addtocart($id,$size) {
 
-     //   $iduser= Auth::user()->getAuthIdentifier();
+      $iduser= Auth::user()->getAuthIdentifier();
 
 
 
@@ -65,47 +66,27 @@ class singleproductController extends Controller
 
         $price1= $price[0];
 
-       /* $subtotal= $price1 * 1;*/
-
-       // $quantity= $request->input('quantity');
-
-      /*  $idmeasure = DB::table('availability')
-            ->select('id')
-            ->where('availability.size', '=', $size)
-            ->where('availability.product_id', '=', $id)
-            ->pluck('id');
-
-        $currDisp = DB::table('availability')
-            ->select('quantity')
-            ->where('id', '=', $idmeasure[0])
-            ->pluck('quantity');
-
-        $dispAfterCartAdd = $currDisp[0] - $quantity; */
-
 
         DB::table('shopping_cart')->insert([
             'product_id' => $id,
-            'users_id' => 1,
+            'users_id' => $iduser,
             'size' => $size,
             'quantity'=> 1,
             'subtotal' => $price1
 
         ]);
 
-     /*   DB::table('availability')
-            ->where('id', '=', $idmeasure[0])
-            ->update(['quantity' => $dispAfterCartAdd]); */
 
 
         $carts= DB::table('shopping_cart')
             ->join('product', 'product.id', '=', 'shopping_cart.product_id')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             //->join('availability', 'product.id', '=', 'availability.product_id')
-            ->select('product.name', 'gallery.path' ,'product.id','shopping_cart.size', 'shopping_cart.subtotal',
-                'product.description', 'product.price','product.brand')
-           // ->where('shopping_cart.subtotal',"=", $subtotal)
-            //->where('shopping_cart.size', "=", $size)
+            ->select('product.name', 'gallery.path' ,'product.id','shopping_cart.id','shopping_cart.size', 'shopping_cart.subtotal',
+                'product.description', 'product.price','product.brand','shopping_cart.quantity')
             ->get() ;
+
+
 
         $cartsubtotal=DB::table('shopping_cart')
             ->select('subtotal')
@@ -115,14 +96,5 @@ class singleproductController extends Controller
         return view('cart' , compact( 'carts', 'cartsubtotal'));
     }
 
-    /*function cartlist(){
-        $carts= DB::table('product')
-            ->join('gallery', 'product.id', '=', 'gallery.product_id')
-            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
-            ->select('product.name', 'gallery.path' , 'product.id', 'product.description',
-                'product.price','product.brand')
-            ->groupby('product.id', 'gallery.product_id')
-            ->get() ;
-        return view('cart' )->with('carts', $carts);
-    }*/
+
 }

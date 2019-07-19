@@ -49,7 +49,7 @@ Route::get('/adress', 'UsersController@addresses');
 Route::get('/shop/{sex}', 'productController@index');
 
 
-Route::get('/shop', 'productController@collezione');
+Route::get('/shopping', 'productController@collezione');
 
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 

@@ -25,6 +25,14 @@
    @include('header')
     <!-- ##### Header Area End ##### -->
 
+    <!-- ##### Right Side Cart Area ##### -->
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+        @include ('cart', ['carts' => $carts])
+
+    </div>
+
 
     <!-- ##### Right Side Cart End ##### -->
 
@@ -218,6 +226,8 @@
     <script src="js/classy-nav.min.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+
+    <script src={{asset('js/shopcart.js')}}></script>
 
 </body>
 

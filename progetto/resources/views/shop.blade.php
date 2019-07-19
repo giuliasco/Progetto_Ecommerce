@@ -60,18 +60,23 @@
                         <!-- ##### Single Widget ##### -->
                         <div class="widget catagory mb-50">
                             <!-- Widget Title -->
+
+
                             <h6 class="widget-title mb-30">Categories</h6>
 
 
 
                             <!--  Catagories  -->
+
                             <div class="catagories-menu">
                                 <ul id="menu-content2" class="menu-content collapse show">
 
                                     <!-- Single Item -->
 
+                                    @if($products[0]->type == 'Woman')
 
-                                    <li data-toggle="collapse" data-target="#Woman" class="collapsed">
+
+                                         <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">
                                             <li value="/shop/Woman/Dresses"><a href="#">Dresses</a></li>
@@ -81,7 +86,11 @@
                                             <li value="/shop/Woman/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
+                                    @endif
+
+
                                     <!-- Single Item -->
+                                    @if($products[0]->type == 'Man')
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse" id="Man">
@@ -92,7 +101,10 @@
                                             <li value="/shop/Man/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
+                                    @endif
+
                                     <!-- Single Item -->
+                                    @if($products[0]->type == 'Accessories')
                                     <li data-toggle="collapse" data-target="#Accessories" class="collapsed">
                                         <a href="#">Accessories</a>
                                         <ul class="sub-menu collapse" id="Accessories">
@@ -105,8 +117,10 @@
                                             <li value="/shop/Accessories/Woman Wallet"><a href="#">Wallets</a></li>
                                         </ul>
                                     </li>
+                                @endif
                                 </ul>
                             </div>
+
                         </div>
 
                         <!-- ##### Single Widget ##### -->

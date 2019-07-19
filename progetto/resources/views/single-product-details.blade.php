@@ -55,6 +55,7 @@
             <!-- Form -->
             <!--  <form class="cart-form clearfix" method="post"> -->
                  <!-- Select Box -->
+            @if($details[0]->type !== 'Accessories')
                 <div class="select-box d-flex mt-50 mb-30">
                     <select name="select" id="productSize" class="mr-5">
                         @foreach($measure as $m)
@@ -63,7 +64,7 @@
 
                     </select>
                 </div>
-
+            @endif
 
                 <!-- Cart & Favourite Box -->
                 <div class="cart-fav-box d-flex align-items-center">

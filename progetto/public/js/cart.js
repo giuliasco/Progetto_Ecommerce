@@ -7,7 +7,7 @@ $( document ).ready(function() {
         console.log(data);
         console.log(sizes);
         $.get( "/shop/single-product-details/"+data+"/"+sizes+"/add" ,  function( data ) {
-            console.log(data);
+
             $( ".right-side-cart-area" ).html( data);
                    });
     });
@@ -15,11 +15,13 @@ $( document ).ready(function() {
 
 
     $(document).on("click", '.product-remove', function () {
-        var data = $(this).attr("id");
-        console.log(data) ;
-        $.get( "/shop/single-product-details/"+data+"/remove", function( data ) {
-            $( ".right-side-cart-area" ).html( data );
+        var datas = $(this).attr("id");
 
-        });
+        console.log(datas) ;
+
+
+       $.get( "/shop/single-product-details/"+datas+"/remove", function( data ) {
+           $( ".right-side-cart-area" ).html( data );
+       });
     });
 

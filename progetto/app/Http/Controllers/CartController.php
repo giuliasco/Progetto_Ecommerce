@@ -11,19 +11,25 @@ class CartController extends Controller
     function removefromcart($id) {
 
 
-        DB::table('shopping_cart')->where('product_id', '=' , $id)//->where('size','=','$size')
-            ->delete();
+        DB::table('shopping_cart')->where('id', '=' , $id)//->where('size','=','$size')
+        ->delete();
 
-        $carts= DB::table('product')
+        $carts= DB::table('shopping_cart')
+            ->join('product', 'product.id', '=', 'shopping_cart.product_id')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
-            ->join('shopping_cart', 'product.id', '=', 'shopping_cart.product_id')
-            ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
-            ->groupby('product.id', 'gallery.product_id')
+            //->join('availability', 'product.id', '=', 'availability.product_id')
+            ->select('product.name', 'gallery.path' ,'shopping_cart.id','shopping_cart.size', 'shopping_cart.subtotal',
+                'product.description', 'product.price','product.brand', 'shopping_cart.quantity')
+
             ->get() ;
 
         $cartsubtotal=DB::table('shopping_cart')
             ->select('subtotal')
             ->sum('subtotal');
+
+
+
+
 
         return view('cart' , compact('carts', 'cartsubtotal'));
 
