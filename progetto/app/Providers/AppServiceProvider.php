@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            ['index', '/shop' , '/shopping','contact','wishlist','/single-product-details', 'search_results', 'Profile', '/my_orders', 'data',
+            ['index', '/shop' ,'checkout', '/shopping','contact','wishlist','/single-product-details', 'search_results', 'Profile', '/my_orders', 'data',
             '/contact', '/cart', '/checkout','/wishlist', '/adress'],
 
             function($view) {
@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
                 $carts= DB::table('shopping_cart')
                     ->join('product','shopping_cart.product_id','=','product.id')
                     ->join('gallery', 'product.id', '=', 'gallery.product_id')
-                    ->select('product.name', 'gallery.path' ,
+                    ->select('product.name', 'gallery.path' ,'shopping_cart.quantity',
                         'product.id', 'product.description', 'shopping_cart.size', 'shopping_cart.subtotal',
                         'product.price','product.brand')
                     ->get() ;

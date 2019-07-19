@@ -12,14 +12,14 @@ class singleproductController extends Controller
 {
     function dettagli($id)
     {
-
+         if (Auth::user()){
         $userid= Auth::user()->id;
 
         $wishlist= DB::table('wishlist')
             ->where('product_id', "=", $id)
             ->where('user_id', "=", $userid)
             ->count();
-
+         }
         $details= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             ->join('category','category.id','=','product.category_id')

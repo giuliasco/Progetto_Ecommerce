@@ -35,3 +35,6 @@
     </div>
 @endforeach
 
+{{ $products->links() }}
+
+

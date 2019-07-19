@@ -16,22 +16,25 @@ class productController extends Controller
             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand','category.type')
             ->where('category.type','=', $sex)
             ->groupby('product.id', 'gallery.product_id')
-            ->get();
+            ->paginate(15);
+
+
 
 
 
         return view('/shop', compact('products'));
 
     }
-    function collezione() {
+    function collezione(Request $request) {
         $products= DB::table('product')
 
             ->join('category','category.id', '=', 'product.category_id')
             ->join('gallery','product.id','=','gallery.product_id')
             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand','category.type')
             ->groupby('product.id', 'gallery.product_id')
-            ->get();
+            ->paginate(15);
 
+        if($request->ajax())             return view('/shopping', compact('products'))->render();
 
 
         return view('/shopping', compact('products'));

@@ -16,7 +16,15 @@ $( document ).ready(function() {
                 showConfirmButton: false,
                 timer: 3000
             });
-                   });
+                   })
+            .fail(function() {
+                Swal.fire({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'You have not logged in!',
+                    footer: '<a href="/login">Log in</a>'
+                })
+            });
     });
 });
 
