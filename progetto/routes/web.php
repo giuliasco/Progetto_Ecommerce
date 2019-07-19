@@ -50,7 +50,7 @@ Route::get('/shop/{sex}', 'productController@index');
 Route::get('wishlist', 'WishlistController@index');
 
 
-Route::get('/shop', 'productController@collezione');
+Route::get('/shopping', 'productController@collezione');
 Route::get('/shop/single-product-details/removefromwish', 'WishlistController@removeFromWish');
 Route::get('/shop/single-product-details/addtowish', 'WishlistController@addToWishlist');
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');

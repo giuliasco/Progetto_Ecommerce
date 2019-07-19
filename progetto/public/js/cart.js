@@ -9,6 +9,13 @@ $( document ).ready(function() {
         $.get( "/shop/single-product-details/"+data+"/"+sizes+"/add" ,  function( data ) {
 
             $( ".right-side-cart-area" ).html( data);
+
+            Swal.fire({
+                type: 'success',
+                title: 'Added to Cart!',
+                showConfirmButton: false,
+                timer: 3000
+            });
                    });
     });
 });

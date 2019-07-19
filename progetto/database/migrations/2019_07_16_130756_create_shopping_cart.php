@@ -13,7 +13,7 @@ class CreateShoppingCart extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('shopping_cart');
+      //  Schema::dropIfExists('shopping_cart');
 
     }
 

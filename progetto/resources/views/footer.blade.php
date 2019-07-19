@@ -39,7 +39,7 @@
                     </div>
 <div class="footer_menu">
     <ul>
-        <li><a href="/shop">shop</a></li>
+        <li><a href="/shopping">shop</a></li>
         <li><a href="/contact">Contact</a></li>
     </ul>
 </div>
