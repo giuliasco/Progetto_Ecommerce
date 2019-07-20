@@ -13,7 +13,7 @@ class CreateShoppingCartTable extends Migration
      */
     public function up()
     {
-      /*  Schema::create('shopping_cart', function (Blueprint $table) {
+        Schema::create('shopping_cart', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('users_id');
@@ -21,7 +21,7 @@ class CreateShoppingCartTable extends Migration
 
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-        });*/
+        });
     }
 
     /**
@@ -31,6 +31,6 @@ class CreateShoppingCartTable extends Migration
      */
     public function down()
     {
-     //   Schema::dropIfExists('shopping_cart');
+        Schema::dropIfExists('shopping_cart');
     }
 }

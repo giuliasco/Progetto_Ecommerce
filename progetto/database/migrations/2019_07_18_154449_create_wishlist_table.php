@@ -13,7 +13,7 @@ class CreateWishlistTable extends Migration
      */
     public function up()
     {
-       /* Schema::create('wishlist', function (Blueprint $table) {
+        Schema::create('wishlist', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('product_id');
@@ -21,8 +21,7 @@ class CreateWishlistTable extends Migration
 
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-        });*/
-
+        });
     }
 
     /**
@@ -30,8 +29,8 @@ class CreateWishlistTable extends Migration
      *
      * @return void
      */
-   // public function down()
-   // {
-   //     Schema::dropIfExists('wishlist');
-   // }
+    public function down()
+    {
+        Schema::dropIfExists('wishlist');
+    }
 }

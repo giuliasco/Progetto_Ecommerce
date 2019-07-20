@@ -13,9 +13,9 @@ class ModifyAvailability extends Migration
      */
     public function up()
     {
-      // Schema::table('availability', function(Blueprint $table){
-     //      $table->dropColumn('size');
-     //  });
+       Schema::table('availability', function(Blueprint $table){
+           $table->dropColumn('size');
+       });
     }
 
     /**
@@ -25,9 +25,8 @@ class ModifyAvailability extends Migration
      */
     public function down()
     {
-  //      Schema::table('availability', function (Blueprint $table){
-    //        $table->enum('size', ['S','M','L','XL','null']);
-      //  });
-
+        Schema::table('availability', function (Blueprint $table){
+            $table->enum('size', ['S','M','L','XL','null']);
+        });
     }
 }
