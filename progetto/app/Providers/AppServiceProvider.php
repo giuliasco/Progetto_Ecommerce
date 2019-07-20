@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            ['index', '/shop' ,'checkout', '/shopping','contact','wishlist','/single-product-details', 'search_results', 'Profile', '/my_orders', 'data',
+            ['/index', '/shop' ,'checkout', '/shopping','contact','wishlist','/single-product-details', 'search_results', 'Profile', '/my_orders', 'data',
             '/contact', '/cart', '/checkout','/wishlist', '/adress'],
 
             function($view) {

@@ -34,9 +34,38 @@ class singleproductController extends Controller
             ->where('availability.product_id', "=", $id)
             ->get() ;
 
+        $cat=DB::table('product')
+            ->join('category', 'category.id', "=", 'product.category_id')
+            ->select('category.name')
+            ->where('product.id', "=", $id)
+            ->value('name');
+
+        $type=DB::table('product')
+            ->join('category', 'category.id', "=", 'product.category_id')
+            ->select('category.type')
+            ->where('product.id', "=", $id)
+            ->value('type');
 
 
-        return view('/single-product-details', compact('details','measure', 'wishlist'));
+        $prds= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('category','category.id','=','product.category_id')
+            ->select ('product.name', 'path' , 'product.id', 'product.description',
+                'product.price','brand','category.type')
+            ->where('category.name', "=", $cat)
+            ->where('category.type', "=", $type)
+            ->groupby('product.id', 'gallery.product_id')
+            ->distinct()
+            ->inRandomOrder()
+            ->paginate(15)
+            ->take(4);
+
+
+        if (Auth::user()){
+            return view('/single-product-details', compact('details','measure', 'wishlist',  'prds'));
+        }
+else
+        return view('/single-product-details', compact('details','measure', 'prds'));
     }
 
     function search (Request $request){
