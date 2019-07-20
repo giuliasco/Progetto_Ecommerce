@@ -162,19 +162,7 @@
 
 <script>
 
-    // $(document).ready(function() {
-    // var url = $("#All").getAttribute("href");
-    //  $('#myorders').click(function(){
-    //   $.get("#d", function( data ) {
-    //         $( ".destinazione" ).html( data );
-    // });
-    //  });
-    //  });
-    // $(document).ready(function(){
-    // $("#myorders").click(function(){
-    //   $("d").hide();
-    //   });
-    // });
+
 
 
 </script>

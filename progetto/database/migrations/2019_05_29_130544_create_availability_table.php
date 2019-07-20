@@ -13,7 +13,7 @@ class CreateAvailabilityTable extends Migration
      */
     public function up()
     {
-        Schema::create('availability', function (Blueprint $table) {
+      /*  Schema::create('availability', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->enum('available', ['yes','no']);
@@ -22,7 +22,7 @@ class CreateAvailabilityTable extends Migration
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade')->onUpdate('cascade');
-        });
+        });*/
     }
 
     /**
@@ -32,6 +32,6 @@ class CreateAvailabilityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('availability');
+     //   Schema::dropIfExists('availability');
     }
 }

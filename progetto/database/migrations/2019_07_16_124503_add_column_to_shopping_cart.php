@@ -14,7 +14,7 @@ class AddColumnToShoppingCart extends Migration
     public function up()
     {
 
-        Schema::dropIfExists('shopping_cart');
+     //   Schema::dropIfExists('shopping_cart');
     }
 
     /**
@@ -24,7 +24,7 @@ class AddColumnToShoppingCart extends Migration
      */
     public function down()
     {
-        Schema::create('shopping_cart', function (Blueprint $table) {
+   /*   Schema::create('shopping_cart', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('users_id');
@@ -37,7 +37,7 @@ class AddColumnToShoppingCart extends Migration
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
 
 
-        });
+        });*/
     }
 }
 
