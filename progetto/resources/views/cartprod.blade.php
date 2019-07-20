@@ -3,7 +3,7 @@
 
     <div class="single-cart-item">
         <a href="#" class="product-image">
-            <img src={{asset('img/product-img/'.$cart->path.'.jpg')}} class="cart-thumb" alt="">
+            <img src={{asset('storage/img/'.$cart->path.'.jpg')}} class="cart-thumb" alt="">
             <!-- Cart Item Desc -->
             <div class="cart-item-desc">
 
