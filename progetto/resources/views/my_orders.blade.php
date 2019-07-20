@@ -99,7 +99,7 @@
                        <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
                        <div class="card-body">
                            total price: {{$order->total_price}} <br>
-                         Delivery Status : @if($order->status_order_id==1)
+                         Delivery Status : @if($order->status=="shipped")
                                    Delivered
                                @else Not Delivered
                                @endif
