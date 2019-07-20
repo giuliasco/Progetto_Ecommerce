@@ -63,7 +63,7 @@
                             <!-- Product Image -->
                             <div class="product-img">
                                 <a href='/shop/single-product-details/{{$prodwoman->id}}'>
-                                <img src="{{asset('img/product-img/'.$prodwoman->path.'.jpg')}}" alt="">
+                                <img src="{{asset('storage/img/'.$prodwoman->path.'.jpg')}}" alt="">
                                 </a>
                             </div>
                             <!-- Product Description -->
@@ -108,7 +108,7 @@
                             <!-- Product Image -->
                             <div class="product-img">
                                 <a href='/shop/single-product-details/{{$prodman->id}}'>
-                                <img src="{{asset('img/product-img/'.$prodman->path.'.jpg')}}" alt="">
+                                <img src="{{asset('storage/img/'.$prodman->path.'.jpg')}}" alt="">
                                 </a>
                             </div>
                             <!-- Product Description -->
@@ -149,7 +149,7 @@
                                 <!-- Product Image -->
                                 <div class="product-img">
                                     <a href='/shop/single-product-details/{{$accessorie->id}}'>
-                                        <img src="{{asset('img/product-img/'.$accessorie->path.'.jpg')}}" alt="">
+                                        <img src="{{asset('storage/img/'.$accessorie->path.'.jpg')}}" alt="">
                                     </a>
                                 </div>
                                 <!-- Product Description -->
