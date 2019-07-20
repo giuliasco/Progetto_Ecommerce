@@ -108,7 +108,7 @@
                                <table  >
                                    <tr><td>Product:</td><td> </td> </td></td></tr>
                                    <tr >
-                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('img/product-img/'.$od->path.'.jpg')}}"> </td>
+                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('storage/img/'.$od->path.'.jpg')}}"> </td>
                                        <td style="padding:0 15px 0 15px;">
                            Name:  {{$od->name}} <br>
                            Brand:    {{$od->brand}}<br>

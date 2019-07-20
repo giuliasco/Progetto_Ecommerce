@@ -39,7 +39,7 @@
         <!-- Single Product Thumb -->
         <div class="single_product_thumb clearfix">
                 <div class="product-img">
-                    <img src="{{asset('storage/img'.$details[0]->path.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/img/'.$details[0]->path.'.jpg')}}" alt="">
             </div>
         </div>
 
