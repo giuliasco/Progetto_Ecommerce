@@ -16,9 +16,7 @@ Route::get('/gg', function () {
 });
 */
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+Route::get('/checkout', 'checkOutController@ciccio');
 
 
 

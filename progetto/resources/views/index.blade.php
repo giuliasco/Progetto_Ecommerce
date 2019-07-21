@@ -11,7 +11,7 @@
     <!-- Title  -->
     <title>Essence - Fashion Ecommerce Template</title>
     <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
+    <link rel="icon" href="{{asset('storage/img/core-img/favicon.ico')}}">
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="{{asset('css/core-style.css')}}">
@@ -29,7 +29,8 @@
     <!-- ##### Right Side Cart End ##### -->
     </div>
 
-    <section class="welcome_area bg-img background-overlay" style="background-image: url(img/bg-img/bg-1.jpg);">
+    <section class="welcome_area bg-img background-overlay" style="background-image: url(
+   /img/bg-img/bg-1.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">

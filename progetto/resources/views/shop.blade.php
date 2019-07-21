@@ -78,7 +78,7 @@
 
                                          <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
-                                        <ul class="sub-menu collapse" id="Woman">
+                                        <ul class="sub-menu collapse show" id="Woman">
                                             <li value="/shop/Woman/Dresses"><a href="#">Dresses</a></li>
                                             <li value="/shop/Woman/T-Shirt"><a href="#">T-Shirts</a></li>
                                             <li value="/shop/Woman/Jeans"><a href="#">Jeans</a></li>
@@ -93,7 +93,7 @@
                                     @if($products[0]->type == 'Man')
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
-                                        <ul class="sub-menu collapse" id="Man">
+                                        <ul class="sub-menu collapse show" id="Man">
                                             <li value="/shop/Man/Trousers"><a href="#">Trousers</a></li>
                                             <li value="/shop/Man/Jeans"><a href="#">Jeans</a></li>
                                             <li value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
@@ -107,7 +107,7 @@
                                     @if($products[0]->type == 'Accessories')
                                     <li data-toggle="collapse" data-target="#Accessories" class="collapsed">
                                         <a href="#">Accessories</a>
-                                        <ul class="sub-menu collapse" id="Accessories">
+                                        <ul class="sub-menu collapse show" id="Accessories">
                                             <li value="/shop/Accessories/Woman Bags"><a href="#">Bags</a></li>
                                             <li value="/shop/Accessories/Cap"><a href="#">Caps</a></li>
                                             <li value="/shop/Accessories/Man Scarf"><a href="#">Scarfs</a></li>
@@ -182,17 +182,7 @@
                         </div>
                     </div>
                     <!-- Pagination -->
-                    <nav aria-label="navigation">
-                        <ul class="pagination mt-50 mb-70">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">21</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </nav>
+
                 </div>
             </div>
         </div>
