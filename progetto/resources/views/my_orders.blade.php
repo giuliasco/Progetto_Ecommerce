@@ -99,7 +99,7 @@
                        <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
                        <div class="card-body">
                            total price: {{$order->total_price}} <br>
-                         Delivery Status : @if($order->status_order_id==1)
+                         Delivery Status : @if($order->status=="shipped")
                                    Delivered
                                @else Not Delivered
                                @endif
@@ -108,7 +108,7 @@
                                <table  >
                                    <tr><td>Product:</td><td> </td> </td></td></tr>
                                    <tr >
-                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('img/product-img/'.$od->path.'.jpg')}}"> </td>
+                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('storage/img/'.$od->path.'.jpg')}}"> </td>
                                        <td style="padding:0 15px 0 15px;">
                            Name:  {{$od->name}} <br>
                            Brand:    {{$od->brand}}<br>
