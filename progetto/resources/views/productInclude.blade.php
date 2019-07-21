@@ -35,6 +35,11 @@
     </div>
 @endforeach
 
-{{ $products->links() }}
+@if($products instanceof \Illuminate\Pagination\LengthAwarePaginator )
 
+    <div class="w-100">
+        {{ $products->links() }}
+    </div>
+
+@endif
 

@@ -131,7 +131,7 @@
                         <p class="widget-title2 mb-30">Price</p>
                         <div class="range-price">
                             <ul>
-                                <li> <a href="#" > 0 - 20€</a></li>
+                                <li value="/shopping/price1"> <a href="#" > 0 - 20€</a></li>
                                 <li><a href="#"> 20 - 50€</a></li>
                                 <li><a href="#"> 50 - 100€</a></li>
                                 <li><a href="#"> > 100€</a></li>
@@ -182,17 +182,7 @@
                     </div>
                 </div>
                 <!-- Pagination -->
-                <nav aria-label="navigation">
-                    <ul class="pagination mt-50 mb-70">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">21</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                </nav>
+
             </div>
         </div>
     </div>

@@ -7,29 +7,37 @@ use Illuminate\Support\Facades\DB;
 
 class category extends Controller
 {
-    function categoriaDonna($sex, $name ){
+    function categoriaDonna(Request $request, $sex, $name ){
         $products = DB::table('product')
             ->join('category' , 'category.id' , '=', 'product.category_id' )
             ->join('gallery','product.id','=','gallery.product_id')
             ->select('product.name', 'gallery.path' , 'product.id', 'product.description', 'product.price','product.brand')
             ->where('category.name', "=", $name)
             ->where('category.type',"=", $sex)
-            ->get();
+            ->paginate(9);
+
+        if($request->ajax())             return view('productInclude', compact('products'))->render();
+
 
         return view('productInclude', compact('products'));
 
     }
-    /*function category_filterAll($sex)
+    function categoryPrice1(Request $request)
     {
         $products = DB::table('product')
             ->join('category', 'category.id', '=', 'product.category_id')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             ->select('product.name', 'gallery.path', 'product.id', 'product.price', 'product.brand')
-            ->where('category.type', '=', $sex)
-            ->get();
+            ->where('product.price', '=', 25)
+            ->paginate(9);
+
+        if($request->ajax())             return view('productInclude', compact('products'))->render();
 
 
         return view('productInclude', compact('products'));
 
-    }*/
+    }
+
+
+
 }

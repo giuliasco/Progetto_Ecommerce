@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class productController extends Controller
 {
-    function index($sex) {
+    function index(Request $request, $sex) {
         $products= DB::table('product')
 
             ->join('category','category.id', '=', 'product.category_id')
@@ -16,11 +16,10 @@ class productController extends Controller
             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand','category.type')
             ->where('category.type','=', $sex)
             ->groupby('product.id', 'gallery.product_id')
-            ->paginate(15);
+            ->paginate(9);
 
 
-
-
+        if($request->ajax())             return view('productInclude', compact('products'))->render();
 
         return view('/shop', compact('products'));
 
@@ -32,16 +31,16 @@ class productController extends Controller
             ->join('gallery','product.id','=','gallery.product_id')
             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand','category.type')
             ->groupby('product.id', 'gallery.product_id')
-            ->paginate(15);
+            ->paginate(9);
 
-        if($request->ajax())             return view('/shopping', compact('products'))->render();
+        if($request->ajax())             return view('productInclude', compact('products'))->render();
 
 
         return view('/shopping', compact('products'));
 
     }
 
-    function category_filter($sex)
+    function category_filter(Request $request, $sex)
     {
         $products = DB::table('product')
             ->join('category', 'category.id', '=', 'product.category_id')
@@ -49,10 +48,11 @@ class productController extends Controller
             ->select('product.name', 'gallery.path', 'product.id', 'product.price', 'product.brand')
             ->where('category.type', '=', $sex)
             ->groupby('product.id', 'gallery.product_id')
-            ->get();
+            ->paginate(9);
 
+        if($request->ajax())             return view('productInclude', compact('products'))->render();
 
-        return view('/productInclude', compact('products'));
+        return view('productInclude', compact('products'));
 
     }
 

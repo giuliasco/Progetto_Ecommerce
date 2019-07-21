@@ -76,14 +76,15 @@
                                     @if($products[0]->type == 'Woman')
 
 
-                                         <li data-toggle="collapse" data-target="#Woman" class="collapsed">
+                                         <li data-toggle="collapse" data-target="#Woman" class="collapsed show">
                                         <a href="#">Woman</a>
-                                        <ul class="sub-menu collapse" id="Woman">
+                                        <ul class="sub-menu collapse show" id="Woman">
                                             <li value="/shop/Woman/Dresses"><a href="#">Dresses</a></li>
                                             <li value="/shop/Woman/T-Shirt"><a href="#">T-Shirts</a></li>
                                             <li value="/shop/Woman/Jeans"><a href="#">Jeans</a></li>
                                             <li value="/shop/Woman/Skirts"><a href="#">Skirts</a></li>
                                             <li value="/shop/Woman/Sweaters"><a href="#">Sweaters</a></li>
+                                            <li>  <a href="/shop/Woman">All</a></li>
                                         </ul>
                                     </li>
                                     @endif
@@ -91,23 +92,24 @@
 
                                     <!-- Single Item -->
                                     @if($products[0]->type == 'Man')
-                                    <li data-toggle="collapse" data-target="#Man" class="collapsed">
+                                    <li data-toggle="collapse" data-target="#Man" class="collapsed show">
                                         <a href="#">Man</a>
-                                        <ul class="sub-menu collapse" id="Man">
+                                        <ul class="sub-menu collapse show" id="Man">
                                             <li value="/shop/Man/Trousers"><a href="#">Trousers</a></li>
                                             <li value="/shop/Man/Jeans"><a href="#">Jeans</a></li>
                                             <li value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
                                             <li value="/shop/Man/Shirts"><a href="#">Shirts</a></li>
                                             <li value="/shop/Man/Sweaters"><a href="#">Sweaters</a></li>
+                                            <li><a href="/shop/Man">All</a> </li>
                                         </ul>
                                     </li>
                                     @endif
 
                                     <!-- Single Item -->
                                     @if($products[0]->type == 'Accessories')
-                                    <li data-toggle="collapse" data-target="#Accessories" class="collapsed">
+                                    <li data-toggle="collapse" data-target="#Accessories" class="collapsed show">
                                         <a href="#">Accessories</a>
-                                        <ul class="sub-menu collapse" id="Accessories">
+                                        <ul class="sub-menu collapse show" id="Accessories">
                                             <li value="/shop/Accessories/Woman Bags"><a href="#">Bags</a></li>
                                             <li value="/shop/Accessories/Cap"><a href="#">Caps</a></li>
                                             <li value="/shop/Accessories/Man Scarf"><a href="#">Scarfs</a></li>
@@ -115,6 +117,7 @@
                                             <li value="/shop/Accessories/Sunglasses"><a href="#">Sunglasses</a></li>
                                             <li value="/shop/Accessories/Woman Belt"><a href="#">Belts</a></li>
                                             <li value="/shop/Accessories/Woman Wallet"><a href="#">Wallets</a></li>
+                                            <li><a href="/shop/Accessories">All</a> </li>
                                         </ul>
                                     </li>
                                 @endif
@@ -130,12 +133,15 @@
                             <!-- Widget Title 2 -->
                             <p class="widget-title2 mb-30">Price</p>
                             <div class="range-price">
+
                                 <ul>
-                                    <li> <a href="#" > 0 - 20€</a></li>
+
+                                    <li value="/shop/Woman/price2"> <a href="#" > 0 - 20€</a></li>
                                     <li><a href="#"> 20 - 50€</a></li>
                                     <li><a href="#"> 50 - 100€</a></li>
                                     <li><a href="#"> > 100€</a></li>
                                 </ul>
+
                             </div>
                         </div>
 
@@ -176,23 +182,16 @@
 
                         <div class="row destinazione" id="html">
 
-                            @include('productInclude', $products)
+                            @include('productInclude', $products )
+
 
 
                         </div>
                     </div>
-                    <!-- Pagination -->
-                    <nav aria-label="navigation">
-                        <ul class="pagination mt-50 mb-70">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">21</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </nav>
+
+
+
+
                 </div>
             </div>
         </div>
@@ -217,6 +216,7 @@
 
     <script src={{asset('js/CategoryFilter.js')}}></script>
     <script src={{asset('js/shopcart.js')}}></script>
+    <script src="{{asset('js/paginate.js')}}"></script>
 
 
 </body>

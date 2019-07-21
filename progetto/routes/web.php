@@ -44,21 +44,25 @@ Route::get('/my_orders', 'OrdersController@show');
 
 
 Route::post('/adress', 'UsersController@store')->name('users.store');
+
 Route::get('/adress', 'UsersController@addresses');
+
 Route::get('/shop/{sex}', 'productController@index');
 
 Route::get('wishlist', 'WishlistController@index');
 
 
 Route::get('/shopping', 'productController@collezione');
+
 Route::get('/shop/single-product-details/removefromwish', 'WishlistController@removeFromWish');
+
 Route::get('/shop/single-product-details/addtowish', 'WishlistController@addToWishlist');
+
 Route::get('/shop/single-product-details/{id}', 'singleproductController@dettagli');
 
 Route::get('/shop/single-product-details/{id}/{size}/add', 'singleproductController@addtocart');
 
 Route::get('/shop/single-product-details/{id}/remove', 'CartController@removefromcart');
-
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -75,3 +79,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search', 'singleproductController@search')->name('search');
 
 Route::get('/shop/{sex}/{name}', 'category@categoriaDonna');
+
+Route::get('/shopping/price1', 'category@categoryPrice1');
+
+Route::get('/shop/Woman/price2', 'price_controller@cazzi');

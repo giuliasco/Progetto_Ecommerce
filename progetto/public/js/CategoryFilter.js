@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('ul').on('click','li' ,function(e){
+    $('ul').on('click','li' ,function(){
 
         var pd = $(this).attr('value');
 
@@ -8,11 +8,13 @@ $(document).ready(function() {
 
             $.get(pd, function (data) {
                 $('#html').html(data);
-                console.log('cazzi');
+                console.log('ok');
             });
 
         }
 
 
 
-}); });
+    });
+});
+
