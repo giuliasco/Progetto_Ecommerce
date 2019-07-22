@@ -18,15 +18,12 @@ class CreateOrderTable extends Migration
             $table->dateTime('data');
             $table->integer('order_number');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('status_order_id');
-            $table->unsignedBigInteger('courier_id');
+            $table->integer('total_price');
             $table->unsignedBigInteger('payment_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('status_order_id')->references('id')->on('status_order')->onDelete('cascade');
-            $table->foreign('courier_id')->references('id')->on('courier');
-            $table->foreign('payment_id')->references('id')->on('payment');
+            $table->foreign('payment_id')->references('id')->on('payment_method');
         });
     }
 

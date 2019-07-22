@@ -18,7 +18,7 @@ class CreateAvailabilityTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->enum('available', ['yes','no']);
             $table->integer('quantity');
-            $table->string('size') ;
+            $table->enum('size', ['S','M','L','XL'])->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade')->onUpdate('cascade');

@@ -13,12 +13,12 @@ class CreateCourierTable extends Migration
      */
     public function up()
     {
-        Schema::create('courier', function (Blueprint $table) {
+        /*Schema::create('courier', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->enum('spedition_pay',['5','no']);
             $table->timestamps();
-        });
+        });*/
     }
 
     /**

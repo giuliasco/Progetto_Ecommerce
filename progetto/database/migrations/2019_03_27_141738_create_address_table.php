@@ -18,7 +18,7 @@ class CreateAddressTable extends Migration
             $table->string('street');
             $table->string('city');
             $table->string('province');
-            $table->decimal('cap',5);
+            $table->char('CAP');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

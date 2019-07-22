@@ -17,10 +17,15 @@ class CreateShoppingCartTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('users_id');
+            $table->enum('size', ['S','M','L','XL'])->nullable();
+            $table->integer('quantity');
+            $table->float('subtotal', 10,2);
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+
+
         });
     }
 

@@ -13,11 +13,11 @@ class CreateStatusOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('status_order', function (Blueprint $table) {
+        /*Schema::create('status_order', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->enum('status',['shipped','processing']);
             $table->timestamps();
-        });
+        });*/
     }
 
     /**

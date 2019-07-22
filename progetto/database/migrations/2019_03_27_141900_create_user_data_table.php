@@ -13,7 +13,7 @@ class CreateUserDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_data', function (Blueprint $table) {
+        /*Schema::create('user_data', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('surname');
@@ -22,7 +22,7 @@ class CreateUserDataTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
-        });
+        });*/
     }
 
     /**

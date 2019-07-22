@@ -13,7 +13,7 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+       /* Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('comment');
             $table->unsignedBigInteger('product_id');
@@ -22,7 +22,7 @@ class CreateCommentsTable extends Migration
 
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
             $table->foreign('users_id')->references('id')->on('users');
-        });
+        });*/
     }
 
     /**

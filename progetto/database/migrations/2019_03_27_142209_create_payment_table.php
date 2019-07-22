@@ -13,7 +13,7 @@ class CreatePaymentTable extends Migration
      */
     public function up()
     {
-        Schema::create('payment', function (Blueprint $table) {
+        /*Schema::create('payment', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('total_price');
             $table->dateTime('payment_data');
@@ -21,7 +21,7 @@ class CreatePaymentTable extends Migration
             $table->timestamps();
 
             $table->foreign('payment_method_id')->references('id')->on('payment_method');
-        });
+        });*/
     }
 
     /**

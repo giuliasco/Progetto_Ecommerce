@@ -15,8 +15,14 @@ class CreatePaymentMethodTable extends Migration
     {
         Schema::create('payment_method', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('type',['paypal','cash_on_delivery']);
+            $table->enum('type',['credit_card','cash_on_delivery']);
+            $table->bigInteger('card_number')->nullable();
+            $table->date('expiry_date')->nullable();
+            $table->integer('CVV')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
