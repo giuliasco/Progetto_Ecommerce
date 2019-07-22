@@ -49,9 +49,7 @@ class OrdersController extends Controller
     public function show()
     {
        $orders= DB::table('order')
-           ->join('payment','payment.id','=','order.payment_id')
-           ->join('status_order','status_order.id','=','order.status_order_id')
-    ->select('order.id','payment.total_price', 'status_order.status')
+    ->select('order.id','order.total_price')
     ->where('order.user_id','=', Auth::user()->id)
     ->get();
       $flag=false ;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Payment_method;
 use App\users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -46,6 +47,22 @@ class UsersController extends Controller
           'cap' => $request->input('cap'),
           'user_id' => Auth::user()->id
        ]);
+
+        return back();
+
+
+
+    }
+
+    public function cazzarola(Request $request)
+    {
+        Payment_method::create([
+            'type' => 'credit_card',
+            'card_number' => $request->input('card_number'),
+            'expiry_date' => $request->input('expiry_date'),
+            'CVV' => $request->input('CVV'),
+            'user_id' => Auth::user()->id
+        ]);
 
         return back();
 
@@ -127,6 +144,18 @@ class UsersController extends Controller
 
 
        return view('/adress', compact('addresses'));
+    }
+
+    function cards(){
+
+        $cards=  DB::table('payment_method')
+
+            ->select('payment_method.card_number', 'payment_method.expiry_date', 'payment_method.CVV')
+            ->where('payment_method.user_id' , '=',  Auth::user()->id)
+            ->get();
+
+
+        return view('/card', compact('cards'));
     }
 
 }

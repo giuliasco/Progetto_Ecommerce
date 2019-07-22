@@ -70,6 +70,7 @@
                                 <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href={{route('users.edit')}}> My Data</a></li>
                                 <li><a href="/adress">  My Adresses</a></li>
+                                <li><a href="/card">  My Card</a></li>
 
                             </ul>
                         </div>

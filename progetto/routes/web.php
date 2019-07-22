@@ -28,10 +28,18 @@ Route::get('/regular-page', function () {
     return view('regular-page');
 });
 
-
 Route::get('/Profile', function () {
     return view('Profile');
 });
+
+Route::get('/shop/{sex}/from_0_to_25', 'price_controller@case_one');
+
+Route::get('/shop/{sex}/from_25_to_50', 'price_controller@case_two');
+
+Route::get('/shop/{sex}/from_50_to_100', 'price_controller@case_three');
+
+Route::get('/shop/{sex}/upper_to_100', 'price_controller@case_four');
+
 Route::get('/', 'HomeController@index');
 
 Route::get('/data' , 'UsersController@edit')->name('users.edit');
@@ -43,7 +51,12 @@ Route::get('/my_orders', 'OrdersController@show');
 
 Route::post('/adress', 'UsersController@store')->name('users.store');
 
+Route::get('/pippo','placeOrderController@complete');
 Route::get('/adress', 'UsersController@addresses');
+
+Route::post('/card','UsersController@cazzarola')->name('Payment_method.cazzarola');
+
+Route::get('/card', 'UsersController@cards');
 
 Route::get('/shop/{sex}', 'productController@index');
 
@@ -79,5 +92,10 @@ Route::get('/search', 'singleproductController@search')->name('search');
 Route::get('/shop/{sex}/{name}', 'category@categoriaDonna');
 
 Route::get('/shopping/price1', 'category@categoryPrice1');
+Route::get('/shopping/price2', 'category@categoryPrice2');
+Route::get('/shopping/price3', 'category@categoryPrice3');
+Route::get('/shopping/price4', 'category@categoryPrice4');
 
-Route::get('/shop/Woman/price2', 'price_controller@cazzi');
+
+Route::post('/home/order_complete', 'placeOrderController@complete');
+

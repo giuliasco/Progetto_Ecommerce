@@ -71,24 +71,14 @@
                                 @if((empty($addresses[0])))
 
                                     <div class="col-12 mb-3">
-                                    <label for="street_address">Address <span>*</span></label>
-                                        <input type="text" class="form-control" id="state" value="">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="postcode">Postcode <span>*</span></label>
-                                    <input type="text" class="form-control" id="postcode" value="">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="city">Town/City <span>*</span></label>
-                                    <input type="text" class="form-control" id="city" value="">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="state">Province <span>*</span></label>
-                                    <input type="text" class="form-control" id="state" value="">
+                                   <li><a href="/adress">CLICK HERE TO ADD YOUR ADDRESS! </a> </li>
                                 </div>
                                 @else
+                                    <div class="col-12 mb-3">
+                                        <li><a href="/adress">CLICK HERE TO ADD A NEW ADDRESS! </a> </li>
+                                    </div>
                                 <div class="col-12 mb-3">
-                                        <label for="street_address">Address <span>*</span></label>
+                                    <label for="street_address">Address <span>*</span></label>
                                         <select class="w-100" id="Address">
                                             @foreach($addresses as $a)
                                                 <option value="Address 1">
@@ -142,45 +132,48 @@
 
                         <div id="accordion" role="tablist" class="mb-4">
                             <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <h6 class="mb-0">
-                                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fa fa-circle-o mr-3"></i>Paypal</a>
-                                    </h6>
-                                </div>
+                                <div class="col-12">
+                                    <div class="custom-control custom-checkbox d-block mb-2">
+                                        <h6 class="mb-0">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">CASH ON DELIVERY</label>
+                                        </h6>
+                                    </div>
 
-                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingTwo">
-                                    <h6 class="mb-0">
-                                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-circle-o mr-3"></i>cash on delievery</a>
-                                    </h6>
-                                </div>
-                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos.</p>
-                                    </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" role="tab" id="headingThree">
                                     <h6 class="mb-0">
-                                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-circle-o mr-3"></i>credit card</a>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">CREDIT CARD</a>
                                     </h6>
                                 </div>
                                 <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae</p>
-                                    </div>
+                                   @if(!(empty($cards[0])))
+                                    <label for="street_address">Your Cards</label>
+                                    <select class="w-100" id="Cards">
+                                        @foreach($cards as $card)
+                                            <option value="Cards">
+                                                <p style="color: black; line-height:2px;"> {{$card->card_number}} </p>
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                        <div class="col-12 mb-3">
+                                            <li><a href="/card">CLICK HERE TO ADD A CREDIT CARD! </a> </li>
+                                        </div>
+                                    @else
+                                        <div class="col-12 mb-3">
+                                            <li><a href="/card">CLICK HERE TO ADD YOUR CREDIT CARD! </a> </li>
+                                        </div>
+
+                                    @endif
+
+
                                 </div>
                             </div>
 
 
-                        <a href="#" class="btn essence-btn">Place Order</a>
+                        <a href="/pippo" class="btn essence-btn">Place Order</a>
                     </div>
                 </div>
             </div>

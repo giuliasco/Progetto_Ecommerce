@@ -27,8 +27,12 @@ class checkOutController extends Controller
             ->where('users.id','=',$id)
             ->get();
 
+        $cards=DB::table('payment_method')
+            ->select('payment_method.card_number')
+            ->where('user_id', "=", $id)
+            ->get();
 
-        return view('/checkout', compact('users','addresses'));
+        return view('/checkout', compact('users','addresses','cards'));
 
     }
 }

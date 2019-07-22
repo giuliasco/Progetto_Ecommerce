@@ -84,6 +84,50 @@
                 <!-- </form> -->
             </div>
         </section>
+
+    <section class="new_arrivals_area section-padding-80 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Suggested</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="popular-products-slides owl-carousel">
+                    @foreach($prds as $prd)
+                        <!-- Single Product -->
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <a href='/shop/single-product-details/{{$prd->id}}'>
+                                        <img src="{{asset('storage/img/'.$prd->path.'.jpg')}}" alt="">
+                                    </a>
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description">
+                                    <span>{{$prd->brand}}</span>
+                                    <a href="/shop/single-product-details/{{$prd->id}}">
+                                        <h6>{{$prd->name}}</h6>
+                                    </a>
+                                    <p class="product-price">{{$prd->price}}€</p>
+
+                                    <!-- Hover Content -->
+
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
         <!-- ##### Single Product Details Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->

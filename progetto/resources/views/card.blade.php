@@ -39,7 +39,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="page-title text-center">
-                    <h2>MY ORDERS </h2>
+                    <h2>MY ADDRESSES </h2>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                         <div class="catagories-menu">
                             <ul>
                                 <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
-                                <li><a href="{{route('users.edit')}}"> My Data</a></li>
+                                <li><a href="/data"> My Data</a></li>
                                 <li><a href="/adress">  My Adresses</a></li>
                                 <li><a href="/card">  My Card</a></li>
 
@@ -79,55 +79,45 @@
             </div>
 
 
+
+
             <div id="d" class="col-12 col-md-8 col-lg-9">
+                <div class="card">
+                    <div class="card-header  bg-secondary text-white">CREDIT CARD </div>
+                    <div class="card-body">
 
-                  @if( !$flag)
-                       <div class="card" style="display:inline-block; width: 400px;">
 
-                           <div class="card-header  bg-secondary text-white"> Order#</div>
-                           <div class="card-body">
 
-                               <p style="color: black; line-height:7px;"> No orders yet!</p>
+                        @if (isset($cards))
+                            @if (count($cards)>0)
+                                @foreach($cards as $card)
+                                    <p style="color: black; line-height:2px;">Card Number: {{$card->card_number}} </p>
+                                    <p style="color: black; line-height:2px;"> Expiry Date: {{$card->expiry_date}} </p>
+                                    <p style="color: black; line-height:2px;"> CVV: {{$card->CVV}} </p>
 
-                           </div>
-                       </div >
-                   @else
+                                @endforeach
+                            @else
+                                <p class="card-text text-black">no cards yet!</p>
 
-                       <div style="float: left;">
-                           @foreach($orders as $order)
-                       <div class="card" style="display:inline-block; width: 400px;">
+                            @endif
+                        @endif
 
-                       <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
-                       <div class="card-body">
-                           total price: {{$order->total_price}} <br>
-                         Delivery Status : @if($order->status=="shipped")
-                                   Delivered
-                               @else Not Delivered
-                               @endif
-                           <hr>
-                       @foreach($ods[$order->id] as $od)
-                               <table  >
-                                   <tr><td>Product:</td><td> </td> </td></td></tr>
-                                   <tr >
-                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('storage/img/'.$od->path.'.jpg')}}"> </td>
-                                       <td style="padding:0 15px 0 15px;">
-                           Name:  {{$od->name}} <br>
-                           Brand:    {{$od->brand}}<br>
-                           Price:    {{$od->price}}
-                                       </td>
-                                       <td>
+                        <input id="addbutton" class="card-link"  type="button" value="Add ▼" onclick="addNewCard();" />
+                        <form action="{{route('Payment_method.cazzarola')}}" method="post">
+                            @csrf
+                            <div id="addcard" class="add card">
 
-                                   </tr>
-                             </table>
-                                  <hr>
 
-                              @endforeach
-                       </div>
-                   </div ><br><br>
-                           @endforeach
-</div>
 
-                   @endif
+
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div><br>
+
 
 
 
@@ -162,22 +152,31 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
+    function addNewCard()
+    {
+        var x= document.getElementById("addbutton").value;
 
-    // $(document).ready(function() {
-    // var url = $("#All").getAttribute("href");
-    //  $('#myorders').click(function(){
-    //   $.get("#d", function( data ) {
-    //         $( ".destinazione" ).html( data );
-    // });
-    //  });
-    //  });
-    // $(document).ready(function(){
-    // $("#myorders").click(function(){
-    //   $("d").hide();
-    //   });
-    // });
+        if (x== "Add ▼"){
+
+            document.getElementById("addcard").innerHTML=('<br><div class="row"> <div class="col-12 mb-3"> <label for="card_number">Card Number <span>*</span></label>   <input type="text" class="form-control mb-3" name="card_number" id="card_number" value=""> </div> ' +
+                '<div class="col-12 mb-3">  <label for="expiry_date">Expiry Date<span>*</span></label> <input type="date" class="form-control" name="expiry_date" id="expiry_date" value=""> ' +
+                '</div>  <div class="col-12 mb-3"> <label for="CVV">CVV <span>*</span></label>  <input type="text" class="form-control"  name="CVV" id="CVV" value=""> ' +
+                '<div class="col-md-6 offset-md-4"><button type="submit" class="btn btn-primary"> Update Data        </button>    </div>');
 
 
+
+
+
+            document.getElementById("addbutton").setAttribute("value","Add ▲");
+
+
+        }
+        else if (x=="Add ▲"){
+            document.getElementById("addbutton").setAttribute("value","Add ▼");
+            document.getElementById("addcard").innerText=' ';
+
+        }
+    }
 </script>
 </body>
 

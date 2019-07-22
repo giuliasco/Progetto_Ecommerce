@@ -131,10 +131,23 @@
                             <p class="widget-title2 mb-30">Price</p>
                             <div class="range-price">
                                 <ul>
-                                    <li> <a href="#" > 0 - 20€</a></li>
-                                    <li><a href="#"> 20 - 50€</a></li>
-                                    <li><a href="#"> 50 - 100€</a></li>
-                                    <li><a href="#"> > 100€</a></li>
+                                    @if($products[0]->type == 'Woman')
+                                    <li value="/shop/Woman/from_0_to_25"> <a href="#" > 0 - 25€</a></li>
+                                    <li value="/shop/Woman/from_25_to_50"><a href="#"> 25 - 50€</a></li>
+                                    <li value="/shop/Woman/from_50_to_100"><a href="#"> 50 - 100€</a></li>
+                                    <li value="/shop/Woman/upper_to_100"><a href="#"> > 100€</a></li>
+
+                                        @elseif($products[0]->type == 'Man')
+                                            <li value="/shop/Man/from_0_to_25"> <a href="#" > 0 - 25€</a></li>
+                                            <li value="/shop/Man/from_25_to_50"><a href="#"> 25 - 50€</a></li>
+                                            <li value="/shop/Man/from_50_to_100"><a href="#"> 50 - 100€</a></li>
+                                            <li value="/shop/Man/upper_to_100"><a href="#"> > 100€</a></li>
+                                    @elseif($products[0]->type == 'Accessories')
+                                        <li value="/shop/Accessories/from_0_to_25"> <a href="#" > 0 - 25€</a></li>
+                                        <li value="/shop/Accessories/from_25_to_50"><a href="#"> 25 - 50€</a></li>
+                                        <li value="/shop/Accessories/from_50_to_100"><a href="#"> 50 - 100€</a></li>
+                                        <li value="/shop/Accessories/upper_to_100"><a href="#"> > 100€</a></li>
+                                        @endif
                                 </ul>
                             </div>
                         </div>
@@ -183,6 +196,7 @@
                     </div>
                     <!-- Pagination -->
 
+
                 </div>
             </div>
         </div>
@@ -207,7 +221,7 @@
 
     <script src={{asset('js/CategoryFilter.js')}}></script>
     <script src={{asset('js/shopcart.js')}}></script>
-
+    <script src="{{asset('js/paginate.js')}}"></script>
 
 </body>
 
