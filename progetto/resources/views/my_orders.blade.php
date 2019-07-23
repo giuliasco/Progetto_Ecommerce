@@ -81,56 +81,50 @@
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
 
-                  @if(empty($ods[$orders[0]->id]))
-                       <div class="card" style="display:inline-block; width: 400px;">
+                @if( !$flag)
+                    <div class="card" style="display:inline-block; width: 400px;">
 
-                           <div class="card-header  bg-secondary text-white"> Order#</div>
-                           <div class="card-body">
+                        <div class="card-header  bg-secondary text-white"> Order#</div>
+                        <div class="card-body">
 
-                               <p style="color: black; line-height:7px;"> No orders yet!</p>
+                            <p style="color: black; line-height:7px;"> No orders yet!</p>
 
-                           </div>
-                       </div >
-                   @else
+                        </div>
+                    </div >
+                @else
 
-                       <div style="float: left;">
-                           @foreach($orders as $order)
-                       <div class="card" style="display:inline-block; width: 400px;">
+                    <div style="float: left;">
+                        @foreach($orders as $order)
+                            <div class="card" style="display:inline-block; width: 400px;">
 
-                       <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
-                       <div class="card-body">
-                           total price: {{$order->total_price}} <br>
+                                <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
+                                <div class="card-body">
+                                    total price: {{$order->total_price}} <br>
 
-                           <hr>
-                           @foreach($ods[$order->id] as $od)
-                               <table  >
+                                    <hr>
+                                    @foreach($ods[$order->id] as $od)
+                                        <table  >
+                                            <tr><td>Product:</td><td> </td> </td></td></tr>
+                                            <tr >
+                                                <td rowspan="3"> <img  style="height: 100px;" src="{{asset('storage/img/'.$od->path.'.jpg')}}"> </td>
+                                                <td style="padding:0 15px 0 15px;">
+                                                    Name:  {{$od->name}} <br>
+                                                    Brand:    {{$od->brand}}<br>
+                                                    Price:    {{$od->price}}
+                                                </td>
+                                                <td>
 
-                                   <tr><td>Product:</td></tr>
+                                            </tr>
+                                        </table>
+                                        <hr>
 
-                                   <tr >
+                                    @endforeach
+                                </div>
+                            </div ><br><br>
+                        @endforeach
+                    </div>
 
-                                       <td rowspan="3"> <img  style="height: 100px;" src="{{asset('storage/img/'.$od->path.'.jpg')}}"> </td>
-                                       <td style="padding:0 15px 0 15px;">
-                                              Name:  {{$od->name}} <br>
-                                              Brand:    {{$od->brand}}<br>
-                                              Price:    {{$od->price}}
-                                       </td>
-
-                                   </tr>
-
-
-
-                               </table>
-                           @endforeach
-                                  <hr>
-
-
-                       </div>
-                   </div ><br><br>
-                           @endforeach
-</div>
-
-                   @endif
+                @endif
 
 
 

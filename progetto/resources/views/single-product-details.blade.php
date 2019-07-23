@@ -55,6 +55,18 @@
             <!-- Form -->
             <!--  <form class="cart-form clearfix" method="post"> -->
                  <!-- Select Box -->
+            @if(empty($measure[0]))
+                <div class="cart-fav-box d-flex align-items-center">
+                    <h4> This product is not available </h4>
+                    <div class="product-favourite ml-4" id="whisheshandler">
+                        @if(empty($wishlist))
+                            <a class="favme fa fa-heart" id="add"></a>
+                        @else
+                            <a class="favme fa fa-heart active is_animating" id="remove"></a>
+                        @endif
+                    </div>
+                </div>
+            @else
             @if($details[0]->type !== 'Accessories')
                 <div class="select-box d-flex mt-50 mb-30">
                     <select name="select" id="productSize" class="mr-5">
@@ -82,6 +94,7 @@
 
                </div>
                 <!-- </form> -->
+            @endif
             </div>
         </section>
 

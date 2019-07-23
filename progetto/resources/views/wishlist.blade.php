@@ -52,7 +52,8 @@
 
         <div class="section-heading text-center">
 
-            <h6>Non hai inserito nessun prodotto</h6>
+            <h6>you have no any product yet</h6>
+
             <div class="col-12 col-md-8 col-lg-9">
                 <div class="shop_grid_product_area">
                     <div class="row">

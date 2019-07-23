@@ -155,4 +155,6 @@ class category extends Controller
 
         return view('productInclude',compact('products'));
     }
+
+
 }

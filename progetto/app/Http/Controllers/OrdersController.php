@@ -65,14 +65,19 @@ class OrdersController extends Controller
           )
           ->where('order_id','=',$order->id)
           ->get();*/
-        $user_id=Auth::user()->getAuthIdentifier();
+
+
+
 
         $orders= DB::table('order')
       ->select('order.id','order.total_price')
-      ->where('order.user_id','=',$user_id)
+      ->where('order.user_id','=', Auth::user()->id)
       ->get();
+        $flag=false;
 
-     foreach ($orders as $order)
+     foreach ($orders as $order){
+
+         $flag=true;
         $ods[$order->id]=DB::table('order_composition')
            ->join('product','product.id','=','order_composition.product_id')
            ->join('order','order.id', '=', 'order_composition.order_id')
@@ -82,10 +87,9 @@ class OrdersController extends Controller
             ->where('order_id','=',$order->id)
            ->get();
 
+     }
 
-
-
-        return view('/my_orders', compact('ods','orders'));
+        return view('/my_orders', compact('ods','orders','flag'));
 
     }
 

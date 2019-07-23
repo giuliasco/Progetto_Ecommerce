@@ -148,7 +148,7 @@
                                         <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">CREDIT CARD</a>
                                     </h6>
                                 </div>
-                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                                    @if(!(empty($cards[0])))
                                     <label for="street_address">Your Cards</label>
 

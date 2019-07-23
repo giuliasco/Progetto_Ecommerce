@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Payment_method;
+use App\PaymentMethod;
 use App\users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -56,7 +56,7 @@ class UsersController extends Controller
 
     public function cazzarola(Request $request)
     {
-        Payment_method::create([
+        PaymentMethod::create([
             'type' => 'credit_card',
             'card_number' => $request->input('card_number'),
             'expiry_date' => $request->input('expiry_date'),
