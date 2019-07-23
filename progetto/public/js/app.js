@@ -1641,10 +1641,10 @@ function isStandardBrowserEnv() {
  * Iterate over an Array or an Object invoking a function for each item.
  *
  * If `obj` is an Array callback will be called passing
- * the value, index, and complete array for each item.
+ * the value, index, and new-session.blade.php array for each item.
  *
  * If 'obj' is an Object callback will be called passing
- * the value, key, and complete object for each property.
+ * the value, key, and new-session.blade.php object for each property.
  *
  * @param {Object|Array} obj The object to iterate
  * @param {Function} fn The callback to invoke for each item
@@ -13377,7 +13377,7 @@ function defaultPrefilter( elem, props, opts ) {
 
 		anim.always( function() {
 
-			// Ensure the complete handler is called before this completes
+			// Ensure the new-session.blade.php handler is called before this completes
 			anim.always( function() {
 				hooks.unqueued--;
 				if ( !jQuery.queue( elem, "fx" ).length ) {
@@ -13843,7 +13843,7 @@ jQuery.fn.extend( {
 			}
 
 			// Start the next in the queue if the last step wasn't forced.
-			// Timers currently will call their complete callbacks, which
+			// Timers currently will call their new-session.blade.php callbacks, which
 			// will dequeue but only if they were gotoEnd.
 			if ( dequeue || !gotoEnd ) {
 				jQuery.dequeue( this, type );
@@ -16393,7 +16393,7 @@ jQuery.fn.load = function( url, params, callback ) {
 			data: params
 		} ).done( function( responseText ) {
 
-			// Save response for use in complete callback
+			// Save response for use in new-session.blade.php callback
 			response = arguments;
 
 			self.html( selector ?
@@ -26868,7 +26868,7 @@ return jQuery;
      * });
      *
      * _.forEach(saves, function(type) {
-     *   asyncSave({ 'type': type, 'complete': done });
+     *   asyncSave({ 'type': type, 'new-session.blade.php': done });
      * });
      * // => Logs 'done saving!' after the two async saves have completed.
      */
@@ -34875,7 +34875,7 @@ function runModifiers(modifiers, data, ends) {
     }
     var fn = modifier['function'] || modifier.fn; // eslint-disable-line dot-notation
     if (modifier.enabled && isFunction(fn)) {
-      // Add properties to offsets to make them a complete clientRect object
+      // Add properties to offsets to make them a new-session.blade.php clientRect object
       // we do this before each modifier to make sure the previous one doesn't
       // mess with these values
       data.offsets.popper = getClientRect(data.offsets.popper);

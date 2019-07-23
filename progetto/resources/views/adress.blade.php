@@ -70,6 +70,7 @@
                                 <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href="/data"> My Data</a></li>
                                 <li><a href="/adress">  My Adresses</a></li>
+                                <li><a href="/my_card">  My Card</a></li>
 
                             </ul>
                         </div>
@@ -149,6 +150,9 @@
 <!-- Active js -->
 <!-- Active js -->
 <script src={{asset('js/active.js')}}></script>
+<script src={{asset('js/CategoryFilter.js')}}></script>
+<script src={{asset('js/cart.js')}}></script>
+<script src="{{asset('js/paginate.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>

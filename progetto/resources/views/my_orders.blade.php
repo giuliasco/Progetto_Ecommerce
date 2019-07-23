@@ -29,7 +29,7 @@
 <div class="cart-bg-overlay"></div>
 
 <div class="right-side-cart-area">
-@include ('cart', ['carts' => $carts])
+@include ('cart', [$carts , $cartsubtotal])
 <!-- ##### Right Side Cart End ##### -->
 </div>
 
@@ -70,7 +70,7 @@
                                 <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href="{{route('users.edit')}}"> My Data</a></li>
                                 <li><a href="/adress">  My Adresses</a></li>
-                                <li><a href="/card">  My Card</a></li>
+                                <li><a href="/my_card">  My Card</a></li>
 
                             </ul>
                         </div>
@@ -81,7 +81,7 @@
 
             <div id="d" class="col-12 col-md-8 col-lg-9">
 
-                  @if( !$flag)
+                  @if(empty($ods[$orders[0]->id]))
                        <div class="card" style="display:inline-block; width: 400px;">
 
                            <div class="card-header  bg-secondary text-white"> Order#</div>
@@ -100,28 +100,31 @@
                        <div class="card-header  bg-secondary text-white"> Order# {{$order->id}}</div>
                        <div class="card-body">
                            total price: {{$order->total_price}} <br>
-                         Delivery Status : @if($order->status=="shipped")
-                                   Delivered
-                               @else Not Delivered
-                               @endif
+
                            <hr>
-                       @foreach($ods[$order->id] as $od)
+                           @foreach($ods[$order->id] as $od)
                                <table  >
-                                   <tr><td>Product:</td><td> </td> </td></td></tr>
+
+                                   <tr><td>Product:</td></tr>
+
                                    <tr >
+
                                        <td rowspan="3"> <img  style="height: 100px;" src="{{asset('storage/img/'.$od->path.'.jpg')}}"> </td>
                                        <td style="padding:0 15px 0 15px;">
-                           Name:  {{$od->name}} <br>
-                           Brand:    {{$od->brand}}<br>
-                           Price:    {{$od->price}}
+                                              Name:  {{$od->name}} <br>
+                                              Brand:    {{$od->brand}}<br>
+                                              Price:    {{$od->price}}
                                        </td>
-                                       <td>
 
                                    </tr>
-                             </table>
+
+
+
+                               </table>
+                           @endforeach
                                   <hr>
 
-                              @endforeach
+
                        </div>
                    </div ><br><br>
                            @endforeach
@@ -156,9 +159,13 @@
 <script src={{asset('js/plugins.js')}}></script>
 <!-- Classy Nav js -->
 <script src={{asset('js/classy-nav.min.js')}}></script>
-<!-- Active js -->
-<!-- Active js -->
+
+<script src={{asset('js/CategoryFilter.js')}}></script>
+
+<script src={{asset('js/cart.js')}}></script>
+
 <script src={{asset('js/active.js')}}></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>

@@ -79,11 +79,11 @@
                                     <li data-toggle="collapse" data-target="#Woman" class="collapsed">
                                         <a href="#">Woman</a>
                                         <ul class="sub-menu collapse" id="Woman">
-                                            <li value="/shop/Woman/Dresses"><a href="#">Dresses</a></li>
-                                            <li value="/shop/Woman/T-Shirt"><a href="#">T-Shirts</a></li>
-                                            <li value="/shop/Woman/Jeans"><a href="#">Jeans</a></li>
-                                            <li value="/shop/Woman/Skirts"><a href="#">Skirts</a></li>
-                                            <li value="/shop/Woman/Sweaters"><a href="#">Sweaters</a></li>
+                                            <li id="Dresses" value="/shop/Woman/Dresses"><a href="#">Dresses</a></li>
+                                            <li id="T-Shirt" value="/shop/Woman/T-Shirt"><a href="#">T-Shirts</a></li>
+                                            <li id="Jeans" value="/shop/Woman/Jeans"><a href="#">Jeans</a></li>
+                                            <li id="Skirts" value="/shop/Woman/Skirts"><a href="#">Skirts</a></li>
+                                            <li id="Sweaters" value="/shop/Woman/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
 
@@ -94,11 +94,11 @@
                                     <li data-toggle="collapse" data-target="#Man" class="collapsed">
                                         <a href="#">Man</a>
                                         <ul class="sub-menu collapse" id="Man">
-                                            <li value="/shop/Man/Trousers"><a href="#">Trousers</a></li>
-                                            <li value="/shop/Man/Jeans"><a href="#">Jeans</a></li>
-                                            <li value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
-                                            <li value="/shop/Man/Shirts"><a href="#">Shirts</a></li>
-                                            <li value="/shop/Man/Sweaters"><a href="#">Sweaters</a></li>
+                                            <li  id="Trousers"  value="/shop/Man/Trousers"><a href="#">Trousers</a></li>
+                                            <li id="Jeans"  value="/shop/Man/Jeans"><a href="#">Jeans</a></li>
+                                            <li  id="T-Shirts" value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
+                                            <li id="Shirts"  value="/shop/Man/Shirts"><a href="#">Shirts</a></li>
+                                            <li  id="Sweaters" value="/shop/Man/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
                                     </li>
 
@@ -108,13 +108,13 @@
                                     <li data-toggle="collapse" data-target="#Accessories" class="collapsed">
                                         <a href="#">Accessories</a>
                                         <ul class="sub-menu collapse" id="Accessories">
-                                            <li value="/shop/Accessories/Woman Bags"><a href="#">Bags</a></li>
-                                            <li value="/shop/Accessories/Cap"><a href="#">Caps</a></li>
-                                            <li value="/shop/Accessories/Man Scarf"><a href="#">Scarfs</a></li>
-                                            <li value="/shop/Accessories/Bow Tie"><a href="#">Bowties</a></li>
-                                            <li value="/shop/Accessories/Sunglasses"><a href="#">Sunglasses</a></li>
-                                            <li value="/shop/Accessories/Woman Belt"><a href="#">Belts</a></li>
-                                            <li value="/shop/Accessories/Woman Wallet"><a href="#">Wallets</a></li>
+                                            <li id="Woman Bags" value="/shop/Accessories/Woman Bags"><a href="#">Bags</a></li>
+                                            <li id="Cap" value="/shop/Accessories/Cap"><a href="#">Caps</a></li>
+                                            <li id="Man Scarf" value="/shop/Accessories/Man Scarf"><a href="#">Scarfs</a></li>
+                                            <li id="Bow Tie" value="/shop/Accessories/Bow Tie"><a href="#">Bowties</a></li>
+                                            <li id="Sunglasses" value="/shop/Accessories/Sunglasses"><a href="#">Sunglasses</a></li>
+                                            <li id="Woman Belt" value="/shop/Accessories/Woman Belt"><a href="#">Belts</a></li>
+                                            <li id="Woman Wallet" value="/shop/Accessories/Woman Wallet"><a href="#">Wallets</a></li>
                                         </ul>
                                     </li>
 
@@ -130,10 +130,10 @@
                         <!-- Widget Title 2 -->
                         <p class="widget-title2 mb-30">Price</p>
                         <div class="range-price">
-                            <ul>
+                            <ul id="cazzettiPiccoli">
 
-                                <li value="/shopping/price1"> <a href="#" > 0 - 20€</a></li>
-                                <li value="/shopping/price2"><a href="#"> 20 - 50€</a></li>
+                                <li value="/shopping/price1"> <a href="#" > 0 - 25€</a></li>
+                                <li value="/shopping/price2"><a href="#"> 25 - 50€</a></li>
                                 <li value="/shopping/price3"><a href="#"> 50 - 100€</a></li>
                                 <li value="/shopping/price4"><a href="#"> > 100€</a></li>
 
@@ -151,7 +151,7 @@
                         <!-- Widget Title 2 -->
                         <p class="widget-title2 mb-30">Brands</p>
                         <div class="widget-desc">
-                            <ul>
+                            <ul id="cavoliAmari">
                                 <li><a href="#">Levi's</a></li>
                                 <li><a href="#">Mango</a></li>
                                 <li><a href="#">Bershka</a></li>
@@ -211,7 +211,7 @@
 <script src={{asset('js/active.js')}}></script>
 
 <script src={{asset('js/CategoryFilter.js')}}></script>
-<script src={{asset('js/shopcart.js')}}></script>
+<script src={{asset('js/cart.js')}}></script>
 <script src="{{asset('js/paginate.js')}}"></script>
 
 </body>

@@ -84,7 +84,7 @@ else
             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand')
         ->where('product.name','like',"%{$query}%",'OR','product.brand','like',"%{$query}%" )
         ->where('category.name','like',"%{$query}%",'OR','product.brand','like',"%{$query}%" )
-        ->where('product.brand','like',"%{$query}%",'OR','product.brand','like',"%{$query}%" )->paginate(6);
+        ->where('product.brand','like',"%{$query}%",'OR','product.brand','like',"%{$query}%" )->paginate(9);
 
         $carts= DB::table('product')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')

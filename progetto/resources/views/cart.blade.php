@@ -15,7 +15,7 @@
         </div>
 
 
-
+         @if(!(empty($carts[0])))
 
         <!-- Cart Summary -->
         <div class="cart-amount-summary">
@@ -29,5 +29,6 @@
                 <a href="/checkout" class="btn essence-btn">CHECKOUT</a>
             </div>
         </div>
+    @endif
     </div>
 </div>

@@ -126,10 +126,7 @@
 
 
                     </div>
-                </div>
-                <!-- Pagination -->
-            {{ $products->links() }}
-            </div>
+
         @endif
         </div>
     </div>
@@ -152,16 +149,12 @@
 <!-- Active js -->
 <script src={{asset('js/active.js')}}></script>
 
+<script src={{asset('js/CategoryFilter.js')}}></script>
+<script src={{asset('js/cart.js')}}></script>
+<script src="{{asset('js/paginate.js')}}"></script>
+
 <script>
 
-    $(document).ready(function() {
-        // var url = $("#All").getAttribute("href");
-        $('#All').click(function(){
-            $.get("/shop/Woman/All", function( data ) {
-                $( ".destinazione" ).html( data );
-            });
-        });
-    });
 
 
 </script>

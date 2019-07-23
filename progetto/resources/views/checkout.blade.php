@@ -151,19 +151,25 @@
                                 <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                                    @if(!(empty($cards[0])))
                                     <label for="street_address">Your Cards</label>
-                                    <select class="w-100" id="Cards">
+
                                         @foreach($cards as $card)
-                                            <option value="Cards">
-                                                <p style="color: black; line-height:2px;"> {{$card->card_number}} </p>
-                                            </option>
+                                            <div class="col-12">
+                                                <div class="custom-control custom-checkbox d-block mb-2">
+                                                    <h6 class="mb-0">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                        <label class="custom-control-label" for="customCheck3">{{$card->card_number}}</label>
+                                                    </h6>
+                                                </div>
+
+                                            </div>
                                         @endforeach
-                                    </select>
+
                                         <div class="col-12 mb-3">
-                                            <li><a href="/card">CLICK HERE TO ADD A CREDIT CARD! </a> </li>
+                                            <li><a href="/my_card">CLICK HERE TO ADD A CREDIT CARD! </a> </li>
                                         </div>
                                     @else
                                         <div class="col-12 mb-3">
-                                            <li><a href="/card">CLICK HERE TO ADD YOUR CREDIT CARD! </a> </li>
+                                            <li><a href="/my_card">CLICK HERE TO ADD YOUR CREDIT CARD! </a> </li>
                                         </div>
 
                                     @endif
@@ -198,7 +204,8 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
 
-    <script src={{asset('js/shopcart.js')}}></script>
+
+    <script src={{asset('js/cart.js')}}></script>
 
 </body>
 

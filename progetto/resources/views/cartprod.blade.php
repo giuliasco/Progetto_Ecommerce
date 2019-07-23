@@ -1,4 +1,6 @@
 <!-- Single Cart Item -->
+@csrf
+
 @foreach($carts as $cart)
 
     <div class="single-cart-item">

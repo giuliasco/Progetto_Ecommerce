@@ -48,26 +48,44 @@ class OrdersController extends Controller
      */
     public function show()
     {
-       $orders= DB::table('order')
-    ->select('order.id','order.total_price')
-    ->where('order.user_id','=', Auth::user()->id)
-    ->get();
-      $flag=false ;
-foreach($orders as $order){
-    $flag =true;
-    $ods[$order->id]= DB::table('order_composition')
-        ->join('product','product.id','=','order_composition.product_id')
-        ->join('order','order.id', '=', 'order_composition.order_id')
-        ->join('category','category.id', '=', 'product.category_id')
-        ->join('gallery','product.id','=','gallery.product_id')
+        /* $orders= DB::table('order')
+      ->select('order.id','order.total_price')
+      ->where('order.user_id','=', Auth::user()->id)
+      ->get();
+        //$flag=false ;
+  foreach($orders as $order){
+      $flag =true;
+      $ods[$order->id]= DB::table('order_composition')
+          ->join('product','product.id','=','order_composition.product_id')
+          ->join('order','order.id', '=', 'order_composition.order_id')
+          ->join('category','category.id', '=', 'product.category_id')
+          ->join('gallery','product.id','=','gallery.product_id')
 
-        ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand'
-        )
-        ->where('order_id','=',$order->id)
-        ->get();
-}
+          ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand'
+          )
+          ->where('order_id','=',$order->id)
+          ->get();*/
+        $user_id=Auth::user()->getAuthIdentifier();
 
-        return view('/my_orders', compact('orders','ods','flag'));
+        $orders= DB::table('order')
+      ->select('order.id','order.total_price')
+      ->where('order.user_id','=',$user_id)
+      ->get();
+
+     foreach ($orders as $order)
+        $ods[$order->id]=DB::table('order_composition')
+           ->join('product','product.id','=','order_composition.product_id')
+           ->join('order','order.id', '=', 'order_composition.order_id')
+           ->join('category','category.id', '=', 'product.category_id')
+           ->join('gallery','product.id','=','gallery.product_id')
+           ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand','order.total_price','order_id')
+            ->where('order_id','=',$order->id)
+           ->get();
+
+
+
+
+        return view('/my_orders', compact('ods','orders'));
 
     }
 

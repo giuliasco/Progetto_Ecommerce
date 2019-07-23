@@ -70,7 +70,7 @@
                                 <li > <a id="myorders" href="/my_orders" > My Orders</a></li>
                                 <li><a href={{route('users.edit')}}> My Data</a></li>
                                 <li><a href="/adress">  My Adresses</a></li>
-                                <li><a href="/card">  My Card</a></li>
+                                <li><a href="/my_card">  My Card</a></li>
 
                             </ul>
                         </div>
@@ -120,6 +120,12 @@
 <!-- Active js -->
 <script src={{asset('js/active.js')}}></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src={{asset('js/CategoryFilter.js')}}></script>
+<script src={{asset('js/cart.js')}}></script>
+<script src="{{asset('js/paginate.js')}}"></script>
+
+
 
 <script>
 

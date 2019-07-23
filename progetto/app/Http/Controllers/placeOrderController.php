@@ -44,9 +44,64 @@ class placeOrderController extends Controller
         $order_id= DB::table('order')
             ->select('order.id')
             ->where('order.user_id','=',$user_id)
-            ->get()
-        DB::table('')
+            ->orderBy('order.id','DESC')
+            ->limit(1)
+            ->pluck('id');
 
+      $products=DB::table('shopping_cart')
+          ->select('product_id')
+          ->pluck('product_id');
+
+      foreach ($products as $p){
+          foreach ($order_id as $o){
+          DB::table('order_composition')
+              ->insert([
+                  'order_id'=>$o,
+                  'product_id'=>$p,
+              ]);
+         }
+      }
+
+      DB::table('shopping_cart')
+          ->delete();
+
+        $prodwomans= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('category','category.id','=','product.category_id')
+            ->select('product.name', 'path' , 'product.id', 'product.description',
+                'product.price','brand','category.type')
+            ->where('category.type', "=", 'Woman')
+            ->groupby('product.id', 'gallery.product_id')
+            ->inRandomOrder()
+            ->distinct()
+            ->paginate(15)
+            ->take(4);
+
+        $prodmans= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('category','category.id','=','product.category_id')
+            ->select('product.name', 'path' , 'product.id', 'product.description',
+                'product.price','brand','category.type')
+            ->where('category.type', "=", 'Man')
+            ->groupby('product.id', 'gallery.product_id')
+            ->inRandomOrder()
+            ->distinct()
+            ->paginate(15)
+            ->take(4);
+
+        $accessories= DB::table('product')
+            ->join('gallery', 'product.id', '=', 'gallery.product_id')
+            ->join('category','category.id','=','product.category_id')
+            ->select('product.name', 'path' , 'product.id', 'product.description',
+                'product.price','brand','category.type')
+            ->where('category.type', "=", 'Accessories')
+            ->groupby('product.id', 'gallery.product_id')
+            ->inRandomOrder()
+            ->distinct()
+            ->paginate(15)
+            ->take(4);
+
+     return view('/new-session',compact('prodwomans','prodmans','accessories'));
     }
 
 }

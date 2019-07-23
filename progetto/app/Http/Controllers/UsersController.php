@@ -155,7 +155,7 @@ class UsersController extends Controller
             ->get();
 
 
-        return view('/card', compact('cards'));
+        return view('/my_card', compact('cards'));
     }
 
 }

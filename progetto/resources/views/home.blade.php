@@ -116,7 +116,9 @@
 <script src={{asset('js/classy-nav.min.js')}}></script>
 <!-- Active js -->
 <script src={{asset('js/active.js')}}></script>
-
+<script src={{asset('js/CategoryFilter.js')}}></script>
+<script src={{asset('js/cart.js')}}></script>
+<script src="{{asset('js/paginate.js')}}"></script>
 <script>
 
     $(document).ready(function() {

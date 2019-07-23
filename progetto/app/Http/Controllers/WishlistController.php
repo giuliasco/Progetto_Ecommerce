@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class WishlistController extends Controller
@@ -14,8 +15,9 @@ class WishlistController extends Controller
             ->join('product', 'product.id','=','wishlist.product_id')
             ->join('gallery','product.id','=','gallery.product_id')
             ->select('product.name', 'gallery.path' , 'product.id', 'product.price','product.brand')
+            ->where('wishlist.user_id','=',Auth::id())
             ->groupby('product.id', 'gallery.product_id')
-            ->get();
+            ->paginate(6);
 
         return view('/wishlist', compact('products'));
 

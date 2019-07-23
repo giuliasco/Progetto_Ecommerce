@@ -19,7 +19,6 @@ Route::get('/gg', function () {
 Route::get('/checkout', 'checkOutController@ciccio');
 
 
-
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -49,14 +48,15 @@ Route::patch('/data' , 'UsersController@update')->name('users.update');
 Route::get('/my_orders', 'OrdersController@show');
 
 
+
 Route::post('/adress', 'UsersController@store')->name('users.store');
 
-Route::get('/pippo','placeOrderController@complete');
+
 Route::get('/adress', 'UsersController@addresses');
 
-Route::post('/card','UsersController@cazzarola')->name('Payment_method.cazzarola');
+Route::post('/my_card','UsersController@cazzarola')->name('Payment_method.cazzarola');
 
-Route::get('/card', 'UsersController@cards');
+Route::get('/my_card', 'UsersController@cards');
 
 Route::get('/shop/{sex}', 'productController@index');
 
@@ -82,6 +82,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -96,6 +97,8 @@ Route::get('/shopping/price2', 'category@categoryPrice2');
 Route::get('/shopping/price3', 'category@categoryPrice3');
 Route::get('/shopping/price4', 'category@categoryPrice4');
 
+Route::get('/pippo','placeOrderController@complete');
 
-Route::post('/home/order_complete', 'placeOrderController@complete');
+
+Route::get('/new-session', 'placeOrderController@final');
 

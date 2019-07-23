@@ -68,6 +68,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
     <script src="js/map-active.js"></script>
 
+    <script src={{asset('js/CategoryFilter.js')}}></script>
+    <script src={{asset('js/cart.js')}}></script>
+    <script src="{{asset('js/paginate.js')}}"></script>
+
 </body>
 
 </html>

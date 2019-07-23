@@ -35,4 +35,5 @@ class checkOutController extends Controller
         return view('/checkout', compact('users','addresses','cards'));
 
     }
+
 }
