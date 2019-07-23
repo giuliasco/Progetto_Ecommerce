@@ -30,13 +30,13 @@ $(document).ready(function() {
     // il name è tipo shirt, tshirt capss...
     // sex è woman man
 
-    
+
     $('#cazzettiPiccoli').on('click','li', function () {
-       console.log('------------------------------------------------------------------------')
+        console.log('------------------------------------------------------------------------');
 
         console.log(name);
         console.log(sex);
-        console.log(brand)
+        // console.log(brand)
         var pd = $(this).attr('value');
         console.log(pd);
 
@@ -52,10 +52,10 @@ $(document).ready(function() {
 
 
 
-    })
+    });
 
-    $('#cavoliAmari').on('click','li', function () {
-        console.log('------------------------------------------------------------------------')
+    $('#canePazzoPazzoCane').on('click','li', function () {
+        console.log('------------------------------------------------------------------------');
 
         console.log(name);
         console.log(sex);
@@ -69,6 +69,8 @@ $(document).ready(function() {
                 $('#html').html(data);
                 console.log('ok');
             });
+
+
 
         }
 
@@ -76,4 +78,3 @@ $(document).ready(function() {
 
     })
 });
-

@@ -102,3 +102,5 @@ Route::get('/pippo','placeOrderController@complete');
 
 Route::get('/new-session', 'placeOrderController@final');
 
+Route::get('/shopping/brand/{brand}', 'category@FilterBrand');
+

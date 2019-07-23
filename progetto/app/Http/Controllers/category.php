@@ -128,15 +128,31 @@ class category extends Controller
 
     }
 
-    function FilterBrand(){
 
-        $products= DB::table('product')
-            ->join('category', 'category_id', "=", 'product.category_id')
+    function FilterBrand(Request $request, $brand){
+
+
+
+        $sex = $request->input('sex');
+        $name = $request->input('name');
+        $products = DB::table('product')
+            ->join('category', 'category.id', '=', 'product.category_id')
             ->join('gallery', 'product.id', '=', 'gallery.product_id')
             ->select('product.name', 'gallery.path', 'product.id', 'product.price', 'product.brand','category.type')
-            ->where('product.brand', "=" , )
+            ->where('product.brand', "=" , $brand)
+            ->where(function($query) use($sex)
+            {
+                if(!is_null($sex)) $query->where('category.type',$sex);
+            })
+            ->where(function($query) use($name)
+            {
+                if(!is_null($name)) $query->where('category.name',$name);
+            })
             ->paginate(9);
 
-             return view('productInclude',compact('products'));
+
+        if($request->ajax())             return view('productInclude', compact('products'))->render();
+
+        return view('productInclude',compact('products'));
     }
 }

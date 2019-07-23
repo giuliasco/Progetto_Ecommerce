@@ -96,7 +96,7 @@
                                         <ul class="sub-menu collapse" id="Man">
                                             <li  id="Trousers"  value="/shop/Man/Trousers"><a href="#">Trousers</a></li>
                                             <li id="Jeans"  value="/shop/Man/Jeans"><a href="#">Jeans</a></li>
-                                            <li  id="T-Shirts" value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
+                                            <li  id="T-Shirt" value="/shop/Man/T-Shirt"><a href="#">T-Shirts</a></li>
                                             <li id="Shirts"  value="/shop/Man/Shirts"><a href="#">Shirts</a></li>
                                             <li  id="Sweaters" value="/shop/Man/Sweaters"><a href="#">Sweaters</a></li>
                                         </ul>
@@ -146,18 +146,18 @@
 
 
 
-                    <!-- ##### Single Widget ##### -->
                     <div class="widget brands mb-50">
                         <!-- Widget Title 2 -->
                         <p class="widget-title2 mb-30">Brands</p>
                         <div class="widget-desc">
-                            <ul id="cavoliAmari">
-                                <li><a href="#">Levi's</a></li>
-                                <li><a href="#">Mango</a></li>
-                                <li><a href="#">Bershka</a></li>
-                                <li><a href="#">Napapijri</a></li>
-                                <li><a href="#">Nike</a></li>
-                                <li><a href="#">Adidas</a></li>
+                            <ul id="canePazzoPazzoCane">
+                                <li value="/shopping/brand/Levis"><a href="#">Levi's</a></li>
+                                <li value="/shopping/brand/Mango"><a href="#">Mango</a></li>
+                                <li value="/shopping/brand/Bershka"><a href="#">Bershka</a></li>
+                                <li value="/shopping/brand/Napapijri" ><a href="#">Napapijri</a></li>
+                                <li  value="/shopping/brand/Nike"><a href="#">Nike</a></li>
+                                <li  value="/shopping/brand/Adidas"><a href="#">Adidas</a></li>
+                                <li  value="/shopping/brand/Pirex"><a href="#">Pirex</a></li>
                             </ul>
                         </div>
                     </div>
